@@ -1,0 +1,778 @@
+// This schema defines the AxiaMeetings database.
+// 
+// DATA ACCESS RULES FOR AI AGENT:
+// 1. UNAUTHENTICATED USERS: Can only be given general aggregated stats (e.g., total counts of Companies, Users, References) or public AxiaMeetings workflow/guide info. Do not expose specific PII or records.
+// 2. ADMIN USERS: All data queries MUST be scoped to the Admin's `companyId`. An Admin can only see Users, Meetings, Documents, etc., linked to their specific Company.
+// 3. PARTICIPANT USERS (Join Token): All data queries MUST be strictly scoped to the specific `Meeting` they have joined. They cannot see other meetings, users outside the meeting, or full company data.
+// 4. DEVELOPER USERS: Have unrestricted access to all tables and records (full system access).
+// 
+// Note: When answering a user's prompt, determine their role first, then use these relationship constraints to accurately filter the returned data.
+// ==========================================
+
+// When a user asks about specific data, use these endpoints:
+//
+// 🏢 COMPANIES & WORKSPACE:
+// - /api/companies/my -> Admin's own company details & relations
+// - /api/companies -> List of all companies (Developer/General stats)
+// - /api/companies/[id] -> Specific company details
+// - /api/companies/admins -> List of company admins
+//
+// 👥 USERS & AUTH:
+// - /api/users -> List of users (Filter by companyId if Admin)
+// - /api/users/[id] -> Specific user details
+// - /api/auth/session -> Current logged-in user context
+//
+// 📅 MEETINGS & AGENDAS:
+// - /api/meetings -> List of meetings (Filter by companyId if Admin)
+// - /api/meetings/[id] -> Details of a specific meeting
+// - /api/meetings/[id]/participants -> Who is attending a meeting
+// - /api/meetings/[id]/points -> Agenda points for a meeting
+// - /api/meetings/[id]/documents -> Documents attached to a meeting
+// - /api/meetings/[id]/pv -> Procès-Verbal (minutes) of a meeting
+//
+// ⚙️ SYSTEM & OVERVIEW:
+// - /api/overview -> General dashboard stats & counts
+// - /api/logs -> System logs and activities
+// - /api/references -> System references/lookups
+//
+// ALWAYS use GET requests. Read the model definitions below to understand what properties will be returned by these endpoints.
+// ==========================================
+
+/// ============================================================
+/// AXIAMEETINGS - DEEPLY DOCUMENTED PRISMA SCHEMA
+/// ============================================================
+/// PURPOSE: AI-readable schema with dense business context
+/// CONSTRAINT: no empty lines preserved in the generated file
+/// DOMAIN: AxiaMeetings platform
+/// ============================================================
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+/// PURPOSE: Global application configuration and SMTP settings
+/// ACCESS: DEVELOPER
+/// DOMAIN: Core settings
+model app_settings {
+  /// Primary key for the settings record
+  id                Int     @id @default(autoincrement())
+  /// SMTP account email used for outgoing messages
+  email             String
+  /// SMTP account password used for outgoing messages
+  email_password    String
+  /// SMTP host name or server address
+  host              String
+  /// SMTP server port
+  port              Int
+  /// Enables SSL for SMTP connections
+  ssl               Boolean
+  /// Default sender email address
+  from_email        String
+  /// Default sender display name
+  from_name         String
+  /// Public contact address
+  contact_adress    String?
+  /// Public contact email
+  contact_email     String?
+  /// Public contact phone number
+  contact_phone     String?
+  /// Facebook page or profile URL
+  facebook          String?
+  /// Favicon file name or path
+  favicon_file_name String?
+  /// LinkedIn page or profile URL
+  linkedin          String?
+  /// Logo file name or path
+  logo_file_name    String?
+  /// TikTok page or profile URL
+  tiktok            String?
+  /// Terms of use document or content
+  term_of_use       String?
+  /// Privacy policy document or content
+  privacy_policy    String?
+}
+
+/// PURPOSE: AI provider credentials, keys, limits, and activation state
+/// ACCESS: DEVELOPER
+/// DOMAIN: AI integrations
+model ia_tokens_keys {
+  /// Primary key for the token record
+  id             Int              @id @default(autoincrement())
+  /// AI provider name such as OpenAI, Gemini, or another vendor
+  provider       String?
+  /// Human-readable token label
+  name           String?
+  /// Allowed credit or quota limit stored as text by design
+  credit_limit   String?
+  /// Optional expiration timestamp
+  expiration     DateTime?
+  /// Optional websocket endpoint for realtime use cases
+  websocket_url  String?
+  /// Secret API key used for authentication
+  api_key        String
+  /// Optional API secret
+  api_secret     String?
+  /// Cloud project name
+  project_name   String?
+  /// Cloud project number or identifier
+  project_number String?
+  /// Indicates whether the token can be used
+  is_active      Boolean          @default(true)
+  /// Creation timestamp
+  created_at     DateTime         @default(now())
+  /// Usage history linked to this token
+  usage          ia_token_usage[]
+}
+
+/// PURPOSE: Audit trail for AI token usage
+/// ACCESS: DEVELOPER
+/// DOMAIN: AI integrations
+model ia_token_usage {
+  /// Primary key for the usage record
+  id       Int            @id @default(autoincrement())
+  /// Foreign key to ia_tokens_keys
+  token_id Int
+  /// Feature or service that consumed the token
+  feature  String
+  /// Usage timestamp
+  used_at  DateTime       @default(now())
+  /// Indicates whether the request succeeded
+  success  Boolean        @default(true)
+  /// Many-to-one relation to the parent token
+  token    ia_tokens_keys @relation(fields: [token_id], references: [id], onDelete: Cascade)
+
+  @@index([used_at])
+  @@index([token_id])
+}
+
+/// PURPOSE: Newsletter subscribers
+/// ACCESS: DEVELOPER, ADMIN
+/// DOMAIN: Marketing
+model newsletters {
+  /// Primary key for the subscriber record
+  id         Int      @id @default(autoincrement())
+  /// Subscriber email address
+  email      String
+  /// Subscription creation timestamp
+  created_at DateTime @default(now())
+}
+
+/// PURPOSE: Public references, partners, or customers displayed by the platform
+/// ACCESS: PUBLIC, ADMIN, DEVELOPER
+/// DOMAIN: Marketing
+model references {
+  /// Primary key for the reference record
+  id             Int    @id @default(autoincrement())
+  /// Reference or client name
+  name           String
+  /// Logo file name or path
+  logo_file_name String
+  /// Public website URL
+  website        String
+}
+
+/// PURPOSE: Subscription pricing pack
+/// ACCESS: ADMIN, DEVELOPER
+/// DOMAIN: Billing
+model packs {
+  /// Primary key for the pack
+  id          Int           @id @default(autoincrement())
+  /// Pack name shown in the UI
+  name        String
+  /// Monthly price
+  price_month Float
+  /// Yearly price
+  price_year  Float
+  /// Feature lines included in the pack
+  packs_lines packs_lines[] @relation("pack_id_in_packs_lines")
+}
+
+/// PURPOSE: Pack feature or detail line
+/// ACCESS: ADMIN, DEVELOPER
+/// DOMAIN: Billing
+model packs_lines {
+  /// Primary key for the feature line
+  id      Int    @id @default(autoincrement())
+  /// Foreign key to packs
+  pack_id Int
+  /// Feature or detail label
+  title   String
+  /// Parent pack relation
+  pack    packs  @relation("pack_id_in_packs_lines", fields: [pack_id], references: [id], onDelete: Cascade)
+}
+
+/// PURPOSE: Tenant company record controlling isolated business data
+/// ACCESS: ADMIN, DEVELOPER
+/// DOMAIN: Multi-tenant company management
+model companies {
+  /// Primary key for the company
+  id                                Int                      @id @default(autoincrement())
+  /// Company display name
+  name                              String
+  /// Company logo URL
+  logo_url                          String
+  /// Company website URL
+  url                               String
+  /// Dedicated database schema for this tenant
+  database_schema                   String
+  /// Enables the notifications integration flag
+  have_notifications_service        Boolean                  @default(false)
+  /// Foreign key to the notifications API endpoint
+  notifications_service_endpoint_id Int?
+  /// Enables the messages integration flag
+  have_messages_service             Boolean                  @default(false)
+  /// Foreign key to the messages API endpoint
+  messages_service_endpoint_id      Int?
+  /// Enables the SMS integration flag
+  have_sms_service                  Boolean                  @default(false)
+  /// Foreign key to the SMS API endpoint
+  sms_service_endpoint_id           Int?
+  /// Indicates whether platform mail is active for this company
+  mail_is_active                    Boolean                  @default(false)
+  /// Enables the mail service integration flag
+  have_mail_service                 Boolean                  @default(false)
+  /// Foreign key to the push mail API endpoint
+  push_mails_endpoint_id            Int?
+  /// Foreign key to the login API endpoint
+  login_endpoint_id                 Int?
+  /// Foreign key to the users API endpoint
+  users_endpoint_id                 Int?
+  /// Enables AI features for the company
+  ai_is_active                      Boolean                  @default(false)
+  /// Maximum meeting duration allowed for this company
+  meeting_time_limit                meetings_duration?       @default(ONE_HOUR)
+  /// Maximum number of users allowed for this company
+  users_number_limit                Int?                     @default(10)
+  /// Login API endpoint relation
+  login_endpoint                    companies_apis?          @relation("companies_apis_login_endpoint", fields: [login_endpoint_id], references: [id], onDelete: SetNull)
+  /// Messages API endpoint relation
+  messages_service_endpoint         companies_apis?          @relation("companies_apis_messages_endpoint", fields: [messages_service_endpoint_id], references: [id], onDelete: SetNull)
+  /// Notifications API endpoint relation
+  notifications_service_endpoint    companies_apis?          @relation("companies_apis_notifications_endpoint", fields: [notifications_service_endpoint_id], references: [id], onDelete: SetNull)
+  /// SMS API endpoint relation
+  sms_service_endpoint              companies_apis?          @relation("companies_apis_sms_endpoint", fields: [sms_service_endpoint_id], references: [id], onDelete: SetNull)
+  /// Push mail API endpoint relation
+  push_mails_endpoint               companies_apis?          @relation("companies_apis_push_mails_endpoint", fields: [push_mails_endpoint_id], references: [id], onDelete: SetNull)
+  /// Users API endpoint relation
+  users_endpoint                    companies_apis?          @relation("companies_apis_users_endpoint", fields: [users_endpoint_id], references: [id], onDelete: SetNull)
+  /// Related company admin login records
+  companies_admins_login            companies_admins_login[] @relation("company_id_in_companies_admins_login")
+  /// Related API endpoints
+  companies_apis_list               companies_apis[]         @relation("company_id_in_apis")
+  /// Related logs
+  logs                              logs[]                   @relation("company_id_in_logs")
+  /// Related meetings
+  meetings                          meetings[]               @relation("company_id_in_meetings")
+  /// Related users
+  users                             users[]                  @relation("company_id_in_users")
+}
+
+/// PURPOSE: External API configuration attached to a company
+/// ACCESS: ADMIN, DEVELOPER
+/// DOMAIN: Integrations
+model companies_apis {
+  /// Primary key for the API endpoint
+  id                              Int                 @id @default(autoincrement())
+  /// Endpoint path or URL
+  endpoint                        String
+  /// Example request payload
+  payload_example                 Json?
+  /// HTTP method used by the endpoint
+  method                          String
+  /// Example API response
+  response_example                Json?
+  /// Foreign key to the owning company
+  company_id                      Int
+  /// Companies using this endpoint as login endpoint
+  login_companies                 companies[]         @relation("companies_apis_login_endpoint")
+  /// Companies using this endpoint as messages endpoint
+  messages_service_companies      companies[]         @relation("companies_apis_messages_endpoint")
+  /// Companies using this endpoint as notifications endpoint
+  notifications_service_companies companies[]         @relation("companies_apis_notifications_endpoint")
+  /// Companies using this endpoint as SMS endpoint
+  sms_service_companies           companies[]         @relation("companies_apis_sms_endpoint")
+  /// Companies using this endpoint as push mail endpoint
+  push_mails_companies            companies[]         @relation("companies_apis_push_mails_endpoint")
+  /// Companies using this endpoint as users endpoint
+  users_companies                 companies[]         @relation("companies_apis_users_endpoint")
+  /// Owning company relation
+  company                         companies           @relation("company_id_in_apis", fields: [company_id], references: [id], onDelete: Cascade)
+  /// Field mappings for normalized responses
+  formated_responses              formated_response[] @relation("endpoint_id_in_formated_response")
+
+  @@index([company_id])
+}
+
+/// PURPOSE: Mapping between external response keys and internal normalized keys
+/// ACCESS: ADMIN, DEVELOPER
+/// DOMAIN: Integrations
+model formated_response {
+  /// Primary key for the mapping
+  id                    Int                    @id @default(autoincrement())
+  /// Foreign key to the endpoint
+  endpoint_id           Int
+  /// Key name received from the external payload or response
+  response_key          String
+  /// Internal field name used by the application
+  formated_response_key String
+  /// Target section where the mapping applies
+  format_for            formated_response_type @default(RESPONSE)
+  /// Relation back to the endpoint
+  endpoint              companies_apis         @relation("endpoint_id_in_formated_response", fields: [endpoint_id], references: [id], onDelete: Cascade)
+}
+
+/// PURPOSE: Meeting record and lifecycle state
+/// ACCESS: ADMIN, PARTICIPANT, DEVELOPER
+/// DOMAIN: Meetings
+model meetings {
+  /// Primary key for the meeting
+  id                     Int                      @id @default(autoincrement())
+  /// Meeting subject or title
+  subject                String
+  /// Meeting category
+  type                   meetings_types           @default(ORDINAIRE)
+  /// Meeting date stored as YYYY-MM-DD
+  date                   String
+  /// Meeting time stored as HH:MM
+  time                   String
+  /// Meeting mode
+  mode                   meetings_modes           @default(IN_PERSON)
+  /// Location or online meeting reference
+  location               String                   @default("")
+  /// Planned meeting duration
+  duration               meetings_duration        @default(ONE_HOUR)
+  /// Optional meeting description
+  description            String?
+  /// Indicates whether the meeting is online
+  isonline               meetings_isonline        @default(FALSE)
+  /// Current meeting status
+  status                 meetings_statut          @default(SCHEDULED)
+  /// Creator user ID with ownership context
+  creator_id             Int
+  /// Creation timestamp
+  created_at             DateTime                 @default(now())
+  /// Editor user ID
+  editor_id              Int
+  /// Automatic update timestamp
+  updated_at             DateTime                 @updatedAt
+  /// Owning company ID
+  company_id             Int
+  /// Optional generated summary
+  summary                String?
+  /// Owning company relation
+  company                companies                @relation("company_id_in_meetings", fields: [company_id], references: [id], onDelete: Cascade)
+  /// Attendance records
+  meetings_attendances   meetings_attendances[]   @relation("meeting_id_in_meetings_attendances")
+  /// Attached documents
+  meetings_documents     meetings_documents[]     @relation("meeting_id_in_documents")
+  /// Meeting invitations
+  meetings_invitations   meetings_invitations[]   @relation("meeting_id_in_meetings_invitations")
+  /// Meeting participants
+  meetings_participants  meetings_participants[]  @relation("meeting_id_in_meetings_participants")
+  /// Agenda points
+  meetings_points        meetings_points[]        @relation("meeting_id_in_meetings_points")
+  /// Speaking turn requests
+  meetings_turn_requests meetings_turn_requests[] @relation("meeting_id_in_turn_requests")
+
+  @@index([company_id])
+}
+
+/// PURPOSE: Agenda point inside a meeting, optionally nested
+/// ACCESS: ADMIN, PARTICIPANT, DEVELOPER
+/// DOMAIN: Meetings
+model meetings_points {
+  /// Primary key for the agenda point
+  id              Int                   @id @default(autoincrement())
+  /// Agenda point title
+  point           String
+  /// Optional agenda point description
+  description     String?
+  /// Point behavior: simple item or vote-enabled item
+  type            meetings_points_types @default(SIMPLE)
+  /// Foreign key to the parent meeting
+  meeting_id      Int
+  /// Optional self-reference to a parent agenda point
+  parent_id       Int?
+  /// Parent meeting relation
+  meeting         meetings              @relation("meeting_id_in_meetings_points", fields: [meeting_id], references: [id])
+  /// Parent point relation for nested agenda items
+  parent          meetings_points?      @relation("parent_id_in_meetings_points", fields: [parent_id], references: [id])
+  /// Child points relation
+  meetings_points meetings_points[]     @relation("parent_id_in_meetings_points")
+  /// Votes associated with this point
+  meetings_votes  meetings_votes[]      @relation("point_id_in_meetings_votes")
+
+  @@index([meeting_id])
+}
+
+/// PURPOSE: File or document attached to a meeting
+/// ACCESS: ADMIN, PARTICIPANT, DEVELOPER
+/// DOMAIN: Meetings
+model meetings_documents {
+  /// Primary key for the document
+  id         Int      @id @default(autoincrement())
+  /// Foreign key to the meeting
+  meeting_id Int
+  /// File title shown in the UI
+  file_title String
+  /// File storage path or URL
+  file_path  String
+  /// Owning meeting relation
+  meeting    meetings @relation("meeting_id_in_documents", fields: [meeting_id], references: [id])
+
+  @@index([meeting_id])
+}
+
+/// PURPOSE: External participant invited to a meeting
+/// ACCESS: ADMIN, PARTICIPANT, DEVELOPER
+/// DOMAIN: Meetings
+model meetings_participants {
+  /// Primary key for the participant record
+  id                     Int                      @id @default(autoincrement())
+  /// Participant email address
+  email                  String
+  /// Foreign key to the meeting
+  meeting_id             Int
+  /// Access token for participant actions
+  token                  String
+  /// Attendance history for this participant
+  meetings_attendances   meetings_attendances[]   @relation("meetings_participant_id_in_meetings_attendances")
+  /// Invitations sent to this participant
+  meetings_invitations   meetings_invitations[]   @relation("meetings_participant_id_in_meetings_invitations")
+  /// Owning meeting relation
+  meeting                meetings                 @relation("meeting_id_in_meetings_participants", fields: [meeting_id], references: [id])
+  /// Speaking turn requests created by this participant
+  meetings_turn_requests meetings_turn_requests[] @relation("meetings_participant_id_in_turn_requests")
+  /// Votes cast by this participant
+  meetings_votes         meetings_votes[]         @relation("meetings_participant_id_in_meetings_votes")
+
+  @@index([meeting_id])
+  @@index([email])
+}
+
+/// PURPOSE: Internal platform user account
+/// ACCESS: ADMIN, DEVELOPER
+/// DOMAIN: Authentication
+model users {
+  /// Primary key for the user
+  id                     Int                      @id @default(autoincrement())
+  /// Full display name
+  fullname               String?
+  /// Email address
+  email                  String?
+  /// Username or login alias
+  username               String?
+  /// Password hash or password value depending on implementation
+  password               String?
+  /// User role
+  role                   users_roles?             @default(PARTICIPANT)
+  /// Foreign key to the company
+  company_id             Int?
+  /// External identifier from another system
+  identifiant_extern     Int?
+  /// Phone number
+  phone                  String?
+  /// One-time token for password reset flow
+  reset_token            String?
+  /// Expiry timestamp for the password reset token
+  reset_token_expiry     DateTime?
+  /// Session version: every JWT carries it as `tv`; bumping it revokes all older tokens
+  /// (password reset/change, role or company change)
+  token_version          Int                      @default(0)
+  /// Company admin login records linked to this user
+  companies_admins_login companies_admins_login[] @relation("user_id_in_companies_admins_login")
+  /// Logs generated by this user
+  logs                   logs[]                   @relation("user_id_in_logs")
+  /// Owning company relation
+  company                companies?               @relation("company_id_in_users", fields: [company_id], references: [id], onDelete: Cascade)
+
+  @@index([company_id])
+}
+
+
+/// PURPOSE: Invitation sent to a participant for a meeting
+/// ACCESS: ADMIN, PARTICIPANT, DEVELOPER
+/// DOMAIN: Meetings
+model meetings_invitations {
+  /// Primary key for the invitation
+  id                       Int                                  @id @default(autoincrement())
+  /// Foreign key to the meeting
+  meeting_id               Int
+  /// Foreign key to the participant
+  meetings_participant_id  Int
+  /// Timestamp when the invitation was created
+  meetings_invitation_date DateTime                             @default(now())
+  /// Invitation response status
+  status                   meetings_invitations_response_status @default(PENDING)
+  /// Owning meeting relation
+  meeting                  meetings                             @relation("meeting_id_in_meetings_invitations", fields: [meeting_id], references: [id])
+  /// Owning participant relation
+  meetings_participant     meetings_participants                @relation("meetings_participant_id_in_meetings_invitations", fields: [meetings_participant_id], references: [id])
+
+  @@index([meeting_id])
+  @@index([meetings_participant_id])
+}
+
+/// PURPOSE: Attendance tracking for a participant in a meeting
+/// ACCESS: ADMIN, DEVELOPER
+/// DOMAIN: Meetings
+model meetings_attendances {
+  /// Primary key for the attendance record
+  id                          Int                         @id @default(autoincrement())
+  /// Foreign key to the meeting
+  meeting_id                  Int
+  /// Foreign key to the participant
+  meetings_participant_id     Int
+  /// Attendance status
+  meetings_attendances_status meetings_attendances_status @default(ABSENT)
+  /// Owning meeting relation
+  meeting                     meetings                    @relation("meeting_id_in_meetings_attendances", fields: [meeting_id], references: [id])
+  /// Owning participant relation
+  meetings_participant        meetings_participants       @relation("meetings_participant_id_in_meetings_attendances", fields: [meetings_participant_id], references: [id])
+
+  @@index([meeting_id])
+  @@index([meetings_participant_id])
+}
+
+/// PURPOSE: Vote cast by a participant on an agenda point
+/// ACCESS: PARTICIPANT, DEVELOPER
+/// DOMAIN: Meetings
+model meetings_votes {
+  /// Primary key for the vote
+  id                      Int                     @id @default(autoincrement())
+  /// Foreign key to the agenda point
+  point_id                Int
+  /// Foreign key to the participant
+  meetings_participant_id Int
+  /// Vote value
+  vote                    meetings_votes_response @default(NEUTRE)
+  /// Owning participant relation
+  meetings_participant    meetings_participants   @relation("meetings_participant_id_in_meetings_votes", fields: [meetings_participant_id], references: [id])
+  /// Owning point relation
+  point                   meetings_points         @relation("point_id_in_meetings_votes", fields: [point_id], references: [id])
+
+  @@index([point_id])
+  @@index([meetings_participant_id])
+}
+
+/// PURPOSE: System log entry for auditing and debugging
+/// ACCESS: DEVELOPER
+/// DOMAIN: Monitoring
+model logs {
+  /// Primary key for the log entry
+  id         Int        @id @default(autoincrement())
+  /// Human-readable log message
+  message    String
+  /// Timestamp when the log was created
+  timestamp  DateTime   @default(now())
+  /// Raw request data
+  request    Json?
+  /// Payload data captured with the log
+  payload    Json?
+  /// Response data captured with the log
+  response   Json?
+  /// Optional foreign key to the user
+  user_id    Int?
+  /// Optional foreign key to the company
+  company_id Int?
+  /// Owning company relation
+  company    companies? @relation("company_id_in_logs", fields: [company_id], references: [id], onDelete: Cascade)
+  /// Owning user relation
+  user       users?     @relation("user_id_in_logs", fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@index([user_id])
+  @@index([company_id])
+  @@index([timestamp])
+}
+
+/// PURPOSE: Company admin login and authentication bridge
+/// ACCESS: ADMIN, DEVELOPER
+/// DOMAIN: Authentication
+model companies_admins_login {
+  /// Primary key for the admin login record
+  id                 Int       @id @default(autoincrement())
+  /// Admin username
+  username           String?
+  /// Admin password
+  password           String?
+  /// Token identifier
+  token_id           String?
+  /// Foreign key to the user
+  user_id            Int
+  /// Foreign key to the company
+  company_id         Int
+  /// External identifier from a remote system
+  identifiant_extern Int?
+  /// Owning company relation
+  company            companies @relation("company_id_in_companies_admins_login", fields: [company_id], references: [id], onDelete: Cascade)
+  /// Owning user relation
+  user               users     @relation("user_id_in_companies_admins_login", fields: [user_id], references: [id], onDelete: Cascade)
+}
+
+/// PURPOSE: Participant turn request for speaking during a meeting
+/// ACCESS: PARTICIPANT, DEVELOPER
+/// DOMAIN: Meetings
+model meetings_turn_requests {
+  /// Primary key for the turn request
+  id                      Int                   @id @default(autoincrement())
+  /// Foreign key to the meeting
+  meeting_id              Int
+  /// Foreign key to the participant
+  meetings_participant_id Int
+  /// Current status of the request
+  status                  turn_request_status   @default(PENDING)
+  /// Creation timestamp
+  created_at              DateTime              @default(now())
+  /// Owning meeting relation
+  meeting                 meetings              @relation("meeting_id_in_turn_requests", fields: [meeting_id], references: [id])
+  /// Owning participant relation
+  meetings_participant    meetings_participants @relation("meetings_participant_id_in_turn_requests", fields: [meetings_participant_id], references: [id])
+
+  @@index([meeting_id, status])
+  @@index([meetings_participant_id])
+}
+
+/// PURPOSE: Chat session storing conversation state and metadata
+/// ACCESS: OWNER, ADMIN, DEVELOPER
+/// DOMAIN: Chat
+model chat_sessions {
+  /// Primary key for the chat session
+  id         Int      @id @default(autoincrement())
+  /// Optional foreign key to the user
+  user_id    Int?
+  /// Role used in the session context
+  role       String?
+  /// Conversation messages stored as JSON
+  messages   Json
+  /// Creation timestamp
+  created_at DateTime @default(now())
+  /// Automatic update timestamp
+  updated_at DateTime @updatedAt
+  /// Locale for the session UI
+  locale     String   @default("en")
+  /// Indicates whether the session is closed
+  is_closed  Boolean  @default(false)
+  /// Public unique session identifier
+  session_id String?  @unique
+
+  @@index([user_id])
+}
+
+/// PURPOSE: User roles
+enum users_roles {
+  DEVELOPER
+  ADMIN
+  PARTICIPANT
+}
+
+/// PURPOSE: Target type used by formatted response mappings
+enum formated_response_type {
+  PAYLOAD
+  RESPONSE
+}
+
+/// PURPOSE: Meeting category
+enum meetings_types {
+  ORDINAIRE
+  EXTRAORDINAIRE
+  COMPLEMENTAIRE
+  DELEGUES
+}
+
+/// PURPOSE: Meeting lifecycle state
+enum meetings_statut {
+  SCHEDULED
+  CANCELLED
+  STARTED
+  FINISHED
+}
+
+/// PURPOSE: Meeting execution mode
+enum meetings_modes {
+  IN_PERSON
+  ONLINE
+  HYBRID
+}
+
+/// PURPOSE: Whether a meeting is online
+enum meetings_isonline {
+  TRUE
+  FALSE
+}
+
+/// PURPOSE: Supported meeting durations
+enum meetings_duration {
+  ONE_HOUR
+  TWO_HOURS
+  THREE_HOURS
+  FOUR_HOURS
+  FIVE_HOURS
+}
+
+/// PURPOSE: Agenda point type
+enum meetings_points_types {
+  SIMPLE
+  VOTE
+}
+
+/// PURPOSE: Invitation response status
+enum meetings_invitations_response_status {
+  PENDING
+  ACCEPTED
+  REJECTED
+}
+
+/// PURPOSE: Attendance status
+enum meetings_attendances_status {
+  PRESENT
+  ABSENT
+}
+
+/// PURPOSE: Vote response value
+enum meetings_votes_response {
+  OUI
+  NON
+  NEUTRE
+}
+
+enum turn_request_status {
+  PENDING
+  ACCEPTED
+  REJECTED
+  FINISHED
+}
+
+/// PURPOSE: Contact messages sent by visitors or users
+/// ACCESS: DEVELOPER
+/// DOMAIN: Public communication
+model contact_messages {
+  id            Int       @id @default(autoincrement())
+  sender_name   String?
+  sender_email  String
+  subject       String
+  message       String
+  created_at    DateTime  @default(now())
+  reply_content String?
+  replied_at    DateTime?
+}
+
+/// PURPOSE: Signup and pack checkout requests
+/// ACCESS: DEVELOPER
+/// DOMAIN: Signup & Onboarding
+model signup_requests {
+  id                    Int       @id @default(autoincrement())
+  fullname              String
+  email                 String
+  password              String
+  company_name          String
+  company_url           String?
+  pack_id               Int
+  status                String    @default("PENDING") // PENDING, APPROVED, REJECTED
+  rejection_reason      String?
+  reviewed_at           DateTime?
+  provisioned_company_id Int?
+  created_at            DateTime  @default(now())
+}

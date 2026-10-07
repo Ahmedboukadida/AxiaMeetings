@@ -1,0 +1,65 @@
+# -----------------------------------------------------------------------------
+# Next.js & Node Standard
+# -----------------------------------------------------------------------------
+node_modules/
+.next/
+scratch/
+out/
+build/
+dist/
+.kiro/
+
+# -----------------------------------------------------------------------------
+# Environment Variables (CRITICAL)
+# -----------------------------------------------------------------------------
+.env*
+!.env.example
+!.env.docker.example
+
+# -----------------------------------------------------------------------------
+# Prisma / Database
+# -----------------------------------------------------------------------------
+prisma/*.db
+prisma/*.db-journal
+# (If using SQLite, ignore the local files. If using Postgres, env covers the URI)
+
+# -----------------------------------------------------------------------------
+# Logs & Caching
+# -----------------------------------------------------------------------------
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.npm
+.eslintcache
+.pnpm-store
+.vercel
+.claude
+
+# -----------------------------------------------------------------------------
+# OS, IDE & Backup Files
+# -----------------------------------------------------------------------------
+.DS_Store
+.vscode/
+.idea/
+*.log
+*.rar
+*.zip
+*.tar.gz
+temp_doc.html
+
+# -----------------------------------------------------------------------------
+# Typescript
+# -----------------------------------------------------------------------------
+next-env.d.ts
+*.tsbuildinfo
+# -----------------------------------------------------------------------------
+# Runtime uploads (user data, never commit)
+# -----------------------------------------------------------------------------
+public/uploads/meetings/
+public/uploads/pvs/
+# Local default upload directory (UPLOAD_DIR)
+storage/
+
+# DB integrity report output (contains personal data)
+integrity-report*.txt

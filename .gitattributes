@@ -1,0 +1,15 @@
+# Store text files with LF in the repository; Git converts to the OS line ending on checkout.
+* text=auto
+*.sh text eol=lf
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg text
+*.ttf binary
+*.woff binary
+*.woff2 binary
+*.pdf binary
+*.docx binary
+*.zip binary

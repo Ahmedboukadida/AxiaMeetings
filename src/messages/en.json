@@ -1,0 +1,2013 @@
+{
+    "Metadata": {
+        "title": "Axia Meetings",
+        "description": "Axia Meetings is a meeting management tool that helps you to organize and manage your meetings."
+    },
+    "Common": {
+        "total": "Total",
+        "showAll": "Show All",
+        "loading": "Loading...",
+        "save": "Save",
+        "cancel": "Cancel",
+        "delete": "Delete",
+        "edit": "Edit",
+        "confirm": "Confirm",
+        "back": "Back",
+        "dashboard": "Dashboard",
+        "logout": "Logout",
+        "login": "Login",
+        "getStarted": "Get Started",
+        "home": "Home",
+        "search": "Search...",
+        "noData": "No data found",
+        "success": "Success",
+        "error": "Error",
+        "processing": "Processing...",
+        "saving": "Saving...",
+        "ai": {
+            "loaderLabel": "AI is analyzing your data...",
+            "loaderSubLabel": "This may take a few seconds",
+            "time": "Time"
+        },
+        "userPicker": {
+            "placeholder": "Search users...",
+            "selectFromCompany": "Select participants from company...",
+            "selected": "{count} selected",
+            "available": "{count} available",
+            "noMatch": "No users match \"{term}\"",
+            "added": "Added",
+            "selectAll": "Select all ({count})",
+            "clearAll": "Clear all",
+            "manualEmail": "Or type an email manually..."
+        },
+        "table": {
+            "searchPlaceholder": "Search...",
+            "noResults": "No results found.",
+            "selected": "{count} selected",
+            "selectAll": "Select all",
+            "selectRow": "Select row",
+            "pagination": {
+                "noResults": "No results",
+                "showing": "Showing {from}–{to} of {total} results",
+                "filtered": " (filtered from {total})",
+                "perPage": "{count} / page",
+                "first": "First page",
+                "previous": "Previous page",
+                "next": "Next page",
+                "last": "Last page",
+                "page": "Page",
+                "of": "of"
+            },
+            "refresh": "Refresh",
+            "export": "Export",
+            "fetching": "Fetching data...",
+            "rowsPerPage": "Rows per page",
+            "pageInfo": "{current} / {total}",
+            "mobile": {
+                "select": "Select"
+            }
+        },
+        "actions": "Actions",
+        "details": "Details",
+        "status": "Status",
+        "date": "Date",
+        "time": "Time",
+        "location": "Location",
+        "description": "Description",
+        "subject": "Subject",
+        "type": "Type",
+        "mode": "Mode",
+        "duration": "Duration",
+        "company": "Company",
+        "user": "User",
+        "role": "Role",
+        "fullname": "Full Name",
+        "fullnamePlaceholder": "e.g. John Doe",
+        "email": "Email",
+        "emailPlaceholder": "e.g. john@example.com",
+        "username": "Username",
+        "usernamePlaceholder": "e.g. johndoe",
+        "password": "Password",
+        "passwordPlaceholder": "••••••••",
+        "phone": "Phone",
+        "address": "Address",
+        "confirmDelete": "Are you sure? This action cannot be undone.",
+        "deleteTitle": "Delete {item}",
+        "clear": "Clear",
+        "apply": "Apply",
+        "all": "All",
+        "of": "of",
+        "na": "N/A",
+        "yes": "Yes",
+        "no": "No",
+        "active": "Active",
+        "inactive": "Inactive",
+        "next": "Next",
+        "prev": "Previous",
+        "view": "View",
+        "download": "Download",
+        "print": "Print",
+        "main": "Main",
+        "administration": "Administration",
+        "developer": "Developer",
+        "system": "System",
+        "configurations": "Configurations",
+        "logs": "Logs",
+        "select": "Select",
+        "refresh": "Refresh",
+        "mo": "mo",
+        "yr": "yr",
+        "selectRequired": "Select (required)",
+        "none": "None",
+        "configure": "Configure",
+        "deleteSelected": "Delete Selected",
+        "confirmBulkDelete": "Are you sure you want to delete {count} items?",
+        "global": "Global",
+        "language": "Language",
+        "selectLanguage": "Select Language",
+        "notAvailable": "Not available",
+        "form": {
+            "optional": "optional"
+        },
+        "close": "Close",
+        "modals": {
+            "addDocument": {
+                "title": "Add Document",
+                "path": "File Path / URL",
+                "upload": "Upload File",
+                "fileTitle": "Document Title",
+                "submit": "Add Document",
+                "uploading": "Uploading...",
+                "drop": "Drop file here or click to upload",
+                "allowedTypes": "PDF, Word, Images, etc."
+            }
+        },
+        "required": "Required",
+        "visitor": "Visitor",
+        "participant": "Participant",
+        "toast": {
+            "error": "An error occurred"
+        }
+    },
+    "Navbar": {
+        "features": "Features",
+        "process": "Process",
+        "pricing": "Pricing",
+        "contact": "Contact",
+        "returnHome": "Back to Home",
+        "dashboard": "Dashboard",
+        "logout": "Logout",
+        "login": "Login",
+        "getStarted": "Get Started"
+    },
+    "Footer": {
+        "tagline": "Revolutionizing meetings through digital-first governance and absolute transparency.",
+        "connect": "Connect",
+        "directSupport": "Direct Support",
+        "emergencyHotline": "Emergency Hotline",
+        "presence": "Presence",
+        "headquarters": "Headquarters",
+        "globalRemote": "Global / Remote",
+        "rights": "© {year} Axia Meetings. All rights reserved.",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Use",
+        "newsletter": {
+            "title": "Stay in the loop.",
+            "loop": "Stay in the loop.",
+            "description": "Join 10,000+ governance professionals receiving our weekly insights.",
+            "placeholder": "Your professional email",
+            "subscribe": "Subscribe",
+            "success": "Subscribed successfully! Thank you.",
+            "error": "Error subscribing"
+        },
+        "processing": "Processing..."
+    },
+    "Auth": {
+        "login": {
+            "title": "Sign in to your account",
+            "subtitle": "Welcome back to excellence.",
+            "email": "Identity",
+            "emailPlaceholder": "Username or Email",
+            "password": "Security Key",
+            "submit": "Sign In",
+            "forgotPassword": "Forgot password?",
+            "noAccount": "Don't have an account?",
+            "termsNote": "I acknowledge and accept the <terms>Terms of Use</terms> and the <privacy>Privacy Policy</privacy>",
+            "errorFields": "Please enter your username and password",
+            "errorAuth": "Invalid credentials",
+            "errorNoCompany": "Your account is not linked to a company. Contact your administrator.",
+            "tabLogin": "Sign In",
+            "tabSignup": "Sign Up",
+            "titleSub": "Enter your credentials below to continue",
+            "signupLink": "Create one",
+            "secureGateway": "Secure Gateway",
+            "heroTitle": "Welcome",
+            "heroTitleHighlight": "back.",
+            "badgeEncrypted": "End-to-End Encrypted",
+            "badgeISO": "ISO 27001 Compliant",
+            "badgeAI": "AI-Powered Platform",
+            "allRightsReserved": "All rights reserved.",
+            "backToWebsite": "Back to website",
+            "termsOfUse": "Terms of Use",
+            "privacyPolicy": "Privacy Policy",
+            "encryptionEnabled": "End-to-End Encryption Enabled"
+        },
+        "logout": {
+            "title": "Logging out...",
+            "message": "You will be redirected to the home page.",
+            "clearingSession": "Securely clearing your session"
+        },
+        "guard": {
+            "checking": "Checking authentication..."
+        },
+        "forgotPassword": {
+            "title": "Forgot your password?",
+            "subtitle": "Enter your email and we'll send you a secure reset link.",
+            "heroSubtitle": "Don't worry — it happens to everyone. We'll have you back in no time.",
+            "emailLabel": "Email address",
+            "emailPlaceholder": "name@company.com",
+            "submit": "Send Reset Link",
+            "backToLogin": "Back to Sign In",
+            "rememberPassword": "Remembered your password?",
+            "signIn": "Sign In",
+            "successTitle": "Check your inbox!",
+            "successDesc": "We've sent a password reset link to",
+            "noEmail": "Didn't receive it?",
+            "tryAgain": "Try again",
+            "errorEmail": "Please enter your email address",
+            "errorGeneral": "Something went wrong. Please try again.",
+            "accountRecovery": "Account Recovery",
+            "forgot": "Forgot your",
+            "password": "password?",
+            "step1Title": "Enter your email",
+            "step1Desc": "We'll look up your account.",
+            "step2Title": "Check your inbox",
+            "step2Desc": "A secure reset link will be sent.",
+            "step3Title": "Set a new password",
+            "step3Desc": "Link expires in 1 hour for security.",
+            "allRightsReserved": "All rights reserved.",
+            "termsOfUse": "Terms of Use",
+            "privacyPolicy": "Privacy Policy",
+            "linkExpires": "Link expires in 1 hour",
+            "encryptionEnabled": "End-to-End Encryption Enabled"
+        },
+        "resetPassword": {
+            "title": "Set a new password",
+            "subtitle": "Your new password must be at least 8 characters long.",
+            "heroSubtitle": "Create a strong, unique password to secure your account.",
+            "passwordLabel": "New password",
+            "confirmLabel": "Confirm new password",
+            "showPassword": "Show password",
+            "hidePassword": "Hide password",
+            "submit": "Update Password",
+            "backToLogin": "Back to Sign In",
+            "signIn": "Sign In Now",
+            "successTitle": "Password updated!",
+            "successDesc": "Your password has been changed successfully. You can now sign in with your new password.",
+            "invalidTitle": "Link expired or invalid",
+            "invalidDesc": "This password reset link has expired or has already been used. Please request a new one.",
+            "requestNewLink": "Request new link",
+            "strength": "Strength",
+            "strengthWeak": "Weak",
+            "strengthFair": "Fair",
+            "strengthGood": "Good",
+            "strengthStrong": "Strong",
+            "tipLength": "At least 8 characters",
+            "tipUppercase": "One uppercase letter",
+            "tipNumber": "One number",
+            "tipSpecial": "One special character",
+            "errorFields": "Please fill in all fields",
+            "errorLength": "Password must be at least 10 characters and contain a letter and a digit",
+            "errorMatch": "Passwords do not match",
+            "errorGeneral": "Something went wrong. Please try again.",
+            "secureReset": "Secure Reset",
+            "createYour": "Create your",
+            "newPassword": "new password.",
+            "allRightsReserved": "All rights reserved.",
+            "termsOfUse": "Terms of Use",
+            "privacyPolicy": "Privacy Policy",
+            "encryptionEnabled": "End-to-End Encryption Enabled"
+        }
+    },
+    "Home": {
+        "hero": {
+            "badge": "Next-Gen AI Meeting Intelligence",
+            "title": "Decisions <br></br><highlight>Accelerated.</highlight>",
+            "subtitle": "The ultimate governance platform for modern boards. Real-time AI summaries, legally binding digital voting, and automated high-fidelity minutes—all in one secure ecosystem.",
+            "cta": "Launch Your First Meeting",
+            "watch": "See AI in Action",
+            "aiTag": "AI ASSISTANT",
+            "aiStatus": "Generating real-time minutes...",
+            "quorumTag": "QUORUM STATUS",
+            "quorumStatus": "98% Participation Reached"
+        },
+        "pillars": {
+            "item1": {
+                "title": "AI-Driven Intelligence",
+                "desc": "Leverage Gemini & Groq for instant high-fidelity minutes."
+            },
+            "item2": {
+                "title": "Legally Binding Votes",
+                "desc": "Cryptographically secured voting with real-time results."
+            },
+            "item3": {
+                "title": "Global Collaboration",
+                "desc": "Seamless translation in English, French, and Arabic."
+            }
+        },
+        "features": {
+            "tag": "FEATURES",
+            "title": "State-of-the-Art <br></br><highlight>Governance Tech.</highlight>",
+            "subtitle": "Harnessing Gemini & Groq to eliminate administrative overhead.",
+            "imageAlt": "Platform Preview",
+            "userAlt": "User",
+            "item1": {
+                "title": "AI-Generated Minutes",
+                "desc": "Our AI analyzes the entire session to generate professional, high-fidelity PVs and executive summaries instantly.",
+                "link": "Learn about AI"
+            },
+            "item2": {
+                "title": "Real-time Digital Voting",
+                "desc": "Secure, cryptographically verified voting with instant quorum calculation and live results visualization."
+            },
+            "item3": {
+                "title": "Global Mobility",
+                "desc": "Native apps and web access with real-time translation in English, French, and Arabic for international collaboration."
+            },
+            "item4": {
+                "title": "98% Engagement Rate",
+                "desc": "Automated reminders and seamless one-click joining links ensure maximum participant turnout."
+            }
+        },
+        "process": {
+            "tag": "HOW IT WORKS",
+            "imageAlt": "Process Illustration",
+            "step": "Phase",
+            "testimonial": "Axia's AI summaries are frighteningly accurate. It has completely removed the burden of manual note-taking from our board meetings.",
+            "testimonialAuthor": "Sarah J. Benson",
+            "testimonialRole": "Chief Governance Officer",
+            "title": "Intelligent. <br></br>Automated. Absolute.",
+            "subtitle": "Transforming the chaos of traditional meetings into a structured, digital-first workflow.",
+            "step1": {
+                "title": "Intelligent Onboarding",
+                "desc": "Sync your organization's data via secure APIs or use our AI to import participant lists from any source."
+            },
+            "step2": {
+                "title": "Interactive Live Sessions",
+                "desc": "Host high-definition hybrid sessions with live voting, hand-raising, and real-time AI agenda suggestions."
+            },
+            "step3": {
+                "title": "Instant Governance",
+                "desc": "AI automatically polishes the meeting record, generates the PV in Word/PDF, and distributes it to all stakeholders."
+            }
+        },
+        "pricing": {
+            "title": "Simple Pricing. <br></br>No Hidden Fees.",
+            "subtitle": "Choose the plan that fits your organization's scale.",
+            "comingSoon": "Pricing plans coming soon.",
+            "popular": "Popular",
+            "month": "/mo",
+            "yearly": "billed yearly",
+            "cta": "Start Free Trial"
+        },
+        "newsletter": {
+            "success": "Subscribed successfully! Thank you.",
+            "error": "Error subscribing"
+        },
+        "faq": {
+            "title": "Common Questions",
+            "subtitle": "Everything you need to know about Axia.",
+            "items": [
+                {
+                    "q": "Is Axia Meetings legally compliant?",
+                    "a": "Yes, our platform is built to meet European and International standards for digital governance, including eIDAS-compliant voting and cryptographic time-stamping."
+                },
+                {
+                    "q": "Do participants need an account?",
+                    "a": "No. Participants can join with a secure one-click link sent to their email. They only need a browser to participate and vote."
+                },
+                {
+                    "q": "Can we use our own branding?",
+                    "a": "Absolutely. Our Professional and Enterprise plans allow for full white-labeling, including your logo, colors, and custom email templates."
+                },
+                {
+                    "q": "What happens if someone loses connection?",
+                    "a": "Axia automatically syncs states. As soon as a participant reconnects, they are brought back to the current agenda point and voting status instantly."
+                }
+            ]
+        },
+        "cta": {
+            "title": "Ready for <br></br>the <highlight>Future?</highlight>",
+            "subtitle": "Join the organizations already saving thousands of hours every year.",
+            "primary": "Get Started for Free",
+            "secondary": "Talk to an Expert",
+            "rating": "4.9/5 Rating",
+            "soc2": "SOC2 Type II",
+            "support": "24/7 Support"
+        },
+        "stats": {
+            "meetings": "Meetings Hosted",
+            "users": "Active Users",
+            "saved": "Avg. Time Saved",
+            "rate": "Success Rate"
+        },
+        "labels": {
+            "liveVoting": "Live Voting",
+            "quorum": "\"98% Quorum Reached\"",
+            "realtimePv": "Real-time PV",
+            "generated": "Minutes Generated"
+        },
+        "legal": {
+            "termsTitle": "Terms of Use",
+            "privacyTitle": "Privacy Policy",
+            "noContent": "No content defined yet.",
+            "back": "Go Back",
+            "savePdf": "Save as PDF",
+            "printRecord": "Print Record",
+            "officialDocument": "Official Document",
+            "serviceAgreement": "Service Agreement",
+            "lastUpdated": "Last updated",
+            "usageRights": "Usage Rights & Responsibilities",
+            "complianceOverview": "Document Compliance Overview",
+            "noContentDesc": "The terms of use have not been published for this environment.",
+            "noContentDescPrivacy": "The administrative team has not yet published this document.",
+            "termsCompliance": "Terms Compliance",
+            "bindingAgreement": "Binding Agreement",
+            "secureProcessing": "Secure Processing",
+            "officialRecord": "Official Record",
+            "copyright": "Axia Meetings Administrative System"
+        },
+        "references": {
+            "title": "Powered by Leaders",
+            "subtitle": "Our Trusted References"
+        }
+    },
+    "Dashboard": {
+        "overview": {
+            "title": "Overview",
+            "welcome": "Welcome, {name}",
+            "stats": {
+                "totalMeetings": "Total Meetings",
+                "upcoming": "Upcoming",
+                "completed": "Completed",
+                "attendance": "Attendance Rate",
+                "apis": "APIs",
+                "admins": "Admins",
+                "createMeeting": "New Meeting",
+                "live": "LIVE",
+                "cancelled": "Cancelled",
+                "aiWorkers": "AI Workers"
+            },
+            "charts": {
+                "apisByMethod": "APIs / Method",
+                "volumeTitle": "Volume Analysis",
+                "volumeSubtitle": "{item} velocity over time",
+                "statusMix": "Status Mix",
+                "statusMixSubtitle": "Lifecycle distribution",
+                "noStatusData": "No status data",
+                "roleComposition": "Role Composition",
+                "roleCompositionSubtitle": "User ecosystem segmentation",
+                "systemActivity": "System Activity",
+                "systemActivitySubtitle": "Log intensity audit"
+            },
+            "header": {
+                "badge": "Enterprise Dashboard",
+                "outlook": "Schedule Outlook"
+            },
+            "quickAccess": {
+                "title": "Quick Access",
+                "subtitle": "Administrative Shortcuts"
+            },
+            "calendar": {
+                "days": [
+                    "Sun",
+                    "Mon",
+                    "Tue",
+                    "Wed",
+                    "Thu",
+                    "Fri",
+                    "Sat"
+                ],
+                "months": [
+                    "January",
+                    "February",
+                    "March",
+                    "April",
+                    "May",
+                    "June",
+                    "July",
+                    "August",
+                    "September",
+                    "October",
+                    "November",
+                    "December"
+                ],
+                "upcomingSchedules": "Upcoming Schedules",
+                "eventsHeader": "EVENTS:",
+                "noEvents": "No events scheduled for this month",
+                "viewAllMeetings": "View All Meetings"
+            },
+            "recentMeetings": "Recent Meetings",
+            "subject": "Subject",
+            "dateTime": "Date & Time",
+            "type": "Type",
+            "status": "Status",
+            "action": "Action",
+            "noMeetings": "No recent meetings found.",
+            "viewMeeting": "View Details",
+            "developer": {
+                "sectionTitle": "Developer Console Metrics",
+                "sectionDesc": "System diagnostics, tenant activity, and pending administrative tasks",
+                "pendingSignups": "Pending Signups",
+                "pendingContacts": "Unreplied Messages",
+                "aiKeys": "AI Providers Keys",
+                "aiUsage": "AI Request Success Rate",
+                "chatSessions": "Active Chat Sessions",
+                "topTenants": "Top Active Tenants",
+                "approveRequests": "Approve Requests",
+                "viewMessages": "View Messages",
+                "manageKeys": "Manage Keys",
+                "viewLogs": "View System Logs",
+                "activeOf": "{active} of {total} active",
+                "pendingOf": "{pending} pending of {total}",
+                "openOf": "{open} open of {total}",
+                "successRate": "{rate}% success rate",
+                "usersCount": "{count} users",
+                "recentLogs": "Recent System Logs",
+                "logMessage": "Message",
+                "logActor": "Actor",
+                "logTime": "Timestamp",
+                "logCompany": "Company",
+                "recentSignups": "Pending Signups Inbox",
+                "recentContacts": "Support Messages Inbox",
+                "sender": "Sender",
+                "companyName": "Company Name",
+                "pack": "Plan",
+                "aiFeatureUsage": "AI Capability Breakdown",
+                "aiFeatureTitle": "Feature",
+                "aiFeatureCalls": "API Calls",
+                "apiMethods": "API HTTP Methods",
+                "apiMethodsSubtitle": "Distribution of API endpoints by HTTP method",
+                "failedRate": "{rate}% error rate",
+                "success": "Success",
+                "failed": "Failed"
+            },
+            "periods": {
+                "day": "Today",
+                "days": "7 Days",
+                "week": "Weekly",
+                "month": "30 Days",
+                "3months": "3 Months",
+                "year": "Yearly",
+                "all": "All Time"
+            }
+        },
+        "sidebar": {
+            "overview": "Overview",
+            "meetings": "Meetings",
+            "companies": "Companies",
+            "users": "Users",
+            "logs": "Logs",
+            "config": "Settings",
+            "packs": "Packs & Pricing",
+            "linkApp": "Link Application",
+            "companyApis": "Company APIs",
+            "admins": "Admins",
+            "references": "References",
+            "newsletters": "Newsletters",
+            "chatSessions": "Chat Sessions",
+            "aiTokens": "AI Tokens",
+            "contactMessages": "Contact Messages",
+            "signupRequests": "Signup Requests"
+        },
+        "configurations": {
+            "title": "System Settings",
+            "subtitle": "Manage global platform configurations (SMTP, Branding, Legal).",
+            "smtp": {
+                "title": "Email Server (SMTP)",
+                "description": "Used to send invitations and meeting minutes via email.",
+                "email": "Server Email",
+                "emailPlaceholder": "e.g. smtp@example.com",
+                "host": "SMTP Host",
+                "hostPlaceholder": "e.g. smtp.gmail.com",
+                "port": "Port",
+                "fromEmail": "From Email",
+                "fromName": "Display Name",
+                "ssl": "Use SSL/TLS"
+            },
+            "branding": {
+                "title": "Visual Identity",
+                "subtitle": "Logo and favicon assets",
+                "logo": "Logo File Name",
+                "logoPlaceholder": "e.g. logo.svg",
+                "favicon": "Favicon File Name",
+                "faviconPlaceholder": "e.g. favicon.ico"
+            },
+            "contact": {
+                "title": "Contact Details",
+                "subtitle": "Public support information",
+                "phone": "Support Phone",
+                "email": "Support Email",
+                "address": "Physical Address"
+            },
+            "social": {
+                "title": "Social Networks",
+                "subtitle": "Digital presence links",
+                "facebook": "Facebook URL",
+                "facebookPlaceholder": "https://facebook.com/...",
+                "linkedin": "LinkedIn URL",
+                "linkedinPlaceholder": "https://linkedin.com/...",
+                "tiktok": "TikTok URL",
+                "tiktokPlaceholder": "https://tiktok.com/..."
+            },
+            "legal": {
+                "title": "Legal Documents",
+                "description": "Content of terms of use and privacy policy.",
+                "terms": "Terms of Use",
+                "termsPlaceholder": "Enter the official terms of use document content...",
+                "privacy": "Privacy Policy",
+                "privacyPlaceholder": "Enter the official privacy policy document content..."
+            },
+            "aiTokens": {
+                "title": "AI Tokens",
+                "description": "Manage API keys for Gemini, Groq & OpenRouter",
+                "longDescription": "Add and manage your AI provider API keys, monitor daily usage per key, and see which keys are active or exhausted.",
+                "button": "Manage AI Tokens"
+            }
+        },
+        "admins": {
+            "title": "Account Administrators",
+            "subtitle": "Manage administrators for each registered company.",
+            "subtitleCompany": "Administrators for company",
+            "add": "New Administrator",
+            "single": "the administrator",
+            "multiple": "administrators",
+            "empty": "No administrators found",
+            "table": {
+                "extId": "External ID",
+                "token": "Linking",
+                "noEmail": "no email"
+            },
+            "status": {
+                "linked": "Linked",
+                "notLinked": "Not linked"
+            },
+            "form": {
+                "addTitle": "Add Administrator",
+                "editTitle": "Edit Administrator",
+                "fullname": "Full Name",
+                "fullnamePlaceholder": "e.g. John Doe",
+                "email": "Email",
+                "emailPlaceholder": "e.g. john@example.com",
+                "username": "Username",
+                "usernamePlaceholder": "e.g. johndoe",
+                "extId": "External Identifier",
+                "extIdPlaceholder": "e.g. 12345",
+                "passwordPlaceholder": "••••••••",
+                "passwordEdit": "Security Key (leave blank for unchanged)",
+                "passwordEditPlaceholder": "••••••••"
+            }
+        },
+        "apis": {
+            "title": "API Endpoints",
+            "subtitle": "Manage API entry points for data integration.",
+            "subtitleCompany": "APIs for company",
+            "subtitleId": "APIs for company ID",
+            "add": "New Endpoint",
+            "import": "Import Swagger",
+            "single": "the endpoint",
+            "multiple": "endpoints",
+            "empty": "No API endpoints found",
+            "table": {
+                "method": "Method",
+                "endpoint": "Endpoint",
+                "mappings": "Mappings",
+                "mappingsLabel": "mapped keys",
+                "formatTip": "Configure response formatting"
+            },
+            "form": {
+                "addTitle": "Add Endpoint",
+                "editTitle": "Edit Endpoint",
+                "templates": "Quick Templates",
+                "endpoint": "Endpoint URL",
+                "endpointPlaceholder": "e.g. /api/users",
+                "method": "HTTP Method",
+                "payload": "Payload Example (JSON)",
+                "payloadPlaceholder": "'{' \n  \"username\": \"johndoe\",\n  \"password\": \"secret_password\"\n '}'",
+                "response": "Response Example (JSON)",
+                "responsePlaceholder": "'{' \n  \"status\": true,\n  \"data\": '{' \n    \"token\": \"abc...\",\n    \"user\": '{' \"id\": 1, \"name\": \"John\" '}' \n  '}' \n '}'"
+            },
+            "swagger": {
+                "title": "Import from Swagger/OpenAPI",
+                "description": "Scan a Swagger documentation to automatically import endpoints.",
+                "url": "Swagger JSON URL",
+                "placeholder": "https://api.example.com/swagger.json",
+                "fetch": "Scan",
+                "found": "Endpoints found",
+                "toggle": "Select/Deselect All",
+                "deselectAll": "Deselect All",
+                "noSummary": "No summary provided",
+                "importSelected": "Import Selected Endpoints"
+            },
+            "format": {
+                "title": "Response Formatting",
+                "description": "Map keys from the external API response to Axia standard keys.",
+                "empty": "No mappings configured.",
+                "theirKey": "External Key (e.g., user_name)",
+                "axiaKey": "Axia Key (e.g., fullname)",
+                "add": "Add mapping"
+            }
+        },
+        "companies": {
+            "title": "Company Management",
+            "subtitle": "Manage partner organizations and their configurations.",
+            "add": "New Company",
+            "single": "the company",
+            "multiple": "companies",
+            "empty": "No companies registered.",
+            "table": {
+                "services": "Active Services",
+                "noSchema": "Default"
+            },
+            "form": {
+                "addTitle": "Add Company",
+                "editTitle": "Edit Company",
+                "description": "Basic organizational information.",
+                "name": "Company Name",
+                "namePlaceholder": "e.g. Axia Meetings",
+                "logo": "Logo URL",
+                "logoPlaceholder": "e.g. https://...",
+                "url": "Site / App URL",
+                "urlPlaceholder": "e.g. axia-meetings.com",
+                "schema": "Database Schema (if multi-tenant)",
+                "schemaPlaceholder": "e.g. company_schema",
+                "timeLimit": "Meeting Time Limit",
+                "userLimit": "Users Number Limit",
+                "userLimitPlaceholder": "e.g. 10"
+            },
+            "config": {
+                "title": "Service Configuration",
+                "assignDescription": "Associate API endpoints with system services for {name}.",
+                "noCompanySelected": "No company selected.",
+                "noApisWarning": "This company does not have API endpoints configured yet.",
+                "addApisFirst": "Add APIs first",
+                "loginLabel": "Authentication Service",
+                "loginDesc": "Endpoint used for credential verification.",
+                "loginTip": "This endpoint must accept a POST method and return a valid token.",
+                "usersLabel": "User Synchronization Service",
+                "usersDesc": "Endpoint to fetch the participants list.",
+                "usersTip": "Used to import members during meeting creation.",
+                "notifLabel": "Push Notifications Service",
+                "notifDesc": "Activation of real-time alerts via API.",
+                "msgLabel": "Email Service",
+                "msgDesc": "Endpoint for custom email sending.",
+                "smsLabel": "SMS Service",
+                "smsDesc": "Endpoint for sending codes via SMS.",
+                "noApis": "No APIs configured",
+                "assign": "Assign APIs to",
+                "additionalServices": "Additional Services"
+            },
+            "ai": {
+                "title": "AI",
+                "enabled": "AI features enabled",
+                "disabled": "AI features disabled",
+                "clickToEnable": "Click to enable AI",
+                "clickToDisable": "Click to disable AI",
+                "on": "Active",
+                "off": "Inactive"
+            },
+            "new": "New Company",
+            "edit": "Edit Company"
+        },
+        "users": {
+            "title": "User Management",
+            "subtitle": "Manage users for your company.",
+            "allCompanies": "All Companies",
+            "import": "Import from App",
+            "add": "Add User",
+            "single": "the user",
+            "multiple": "users",
+            "empty": "No users found",
+            "table": {
+                "extId": "Ext. ID",
+                "username": "Username"
+            },
+            "form": {
+                "addTitle": "Add User",
+                "editTitle": "Edit User",
+                "fullname": "Full Name",
+                "fullnamePlaceholder": "e.g. John Doe",
+                "email": "Email",
+                "emailPlaceholder": "e.g. john@example.com",
+                "phone": "Phone",
+                "phonePlaceholder": "e.g. +1 234 567 890",
+                "extId": "External ID",
+                "extIdPlaceholder": "e.g. 12345",
+                "username": "Username",
+                "usernamePlaceholder": "e.g. johndoe",
+                "password": "Password",
+                "passwordPlaceholder": "••••••••",
+                "passwordEdit": "New password (leave blank to keep)",
+                "passwordEditPlaceholder": "••••••••",
+                "role": "Role",
+                "company": "Company"
+            },
+            "roles": {
+                "developer": "Developer",
+                "admin": "Admin",
+                "participant": "Participant"
+            },
+            "importModal": {
+                "title": "Import Users from App",
+                "description": "This will fetch users from your linked application and import them into Axia Meetings. Duplicates will be avoided.",
+                "selectAdmin": "Admin Account for Import API Key",
+                "selectAdminPlaceholder": "Select an admin...",
+                "success": "{count, plural, =0 {No users imported} one {1 user imported} other {# users imported}}",
+                "errorNoCompany": "Please select a company before importing users.",
+                "errorNoAdmin": "Please select an admin account to use for the import."
+            },
+            "toast": {
+                "usernameRequired": "Username is required",
+                "passwordRequired": "Password is required",
+                "updated": "User updated",
+                "created": "User created",
+                "deleted": "User deleted",
+                "bulkDeleted": "{count} users deleted",
+                "participantOnlyError": "Only participants can be deleted by an admin",
+                "fetchError": "Error fetching users",
+                "saveError": "Error saving user",
+                "deleteError": "Error deleting user",
+                "importFailed": "Import failed",
+                "importError": "Error importing users"
+            }
+        },
+        "link": {
+            "title": "Account Linking",
+            "description": "Associate your local account with an external company identity.",
+            "dev": {
+                "selectCompany": "Company",
+                "companyDesc": "Administrative organization context",
+                "selectAdmin": "Local Administrator",
+                "adminDesc": "Specify target admin user",
+                "selectionRequired": "Please select a company and an administrator to view status."
+            },
+            "info": {
+                "howTitle": "How it works?",
+                "howDesc": "Linking allows Axia to use your company credentials to synchronize data (participants, authentication).",
+                "howTip": "Your external credentials are never stored in plain text; they are used to obtain a secure access token.",
+                "proTip": "PRO TIP"
+            },
+            "status": {
+                "linked": "Account Linked",
+                "notLinked": "Linking Required",
+                "active": "Connected as {username}",
+                "tokenPrefix": "SECURE TOKEN",
+                "action": "Please provide your company credentials to activate services."
+            },
+            "form": {
+                "title": "Application Login",
+                "usernamePlaceholder": "Company Username",
+                "passwordPlaceholder": "Company Password",
+                "link": "Link Account Now",
+                "authRequired": "Authentication required"
+            },
+            "manage": {
+                "title": "Link Management",
+                "description": "Your account is currently synchronized. You can unlink at any time.",
+                "unlink": "Unlink account",
+                "proTip": "Keep your account linked for seamless synchronization."
+            }
+        },
+        "logs": {
+            "title": "Activity Logs",
+            "subtitle": "Security and operation audits.",
+            "analyze": "AI Analysis",
+            "analyzing": "Analyzing...",
+            "report": "Analysis Report",
+            "risk": "{level} Risk",
+            "anomalies": "Anomalies",
+            "activities": "Top Activities",
+            "recommendations": "Recommendations",
+            "companyInsights": "Company Insights",
+            "system": "System",
+            "detail": {
+                "payload": "Payload",
+                "response": "Response"
+            }
+        }
+    },
+    "Meetings": {
+        "aiSummary": {
+            "title": "AI Summary"
+        },
+        "title": "Meeting Management",
+        "subtitle": "Plan and track your work sessions.",
+        "new": "New Meeting",
+        "empty": "No meetings found",
+        "emptyDesc": "Start by scheduling your first administrative meeting today.",
+        "header": {
+            "viewGrid": "Grid",
+            "viewList": "List"
+        },
+        "reschedule": {
+            "title": "Reschedule Meeting",
+            "subtitle": "Choose a new date and time for this session.",
+            "description": "Choose a new date and time for {subject}.",
+            "button": "Reschedule"
+        },
+        "card": {
+            "at": "at",
+            "join": "Join",
+            "start": "Start",
+            "details": "Details",
+            "participants": "{count, plural, =0 {No participants} one {1 participant} other {# participants}}",
+            "noDocuments": "No documents",
+            "invitedBy": "Invited by {name}",
+            "status": {
+                "SCHEDULED": "Scheduled",
+                "STARTED": "Started",
+                "FINISHED": "Finished",
+                "CANCELLED": "Cancelled"
+            },
+            "time": "Time",
+            "attendees": "Attendees",
+            "location": "Location",
+            "virtual": "Virtual Conference",
+            "notSpecified": "Not Specified"
+        },
+        "toast": {
+            "loadError": "Failed to load meetings",
+            "deleteSuccess": "Meeting deleted",
+            "deleteError": "Error deleting meeting",
+            "errorFields": "Subject, date and time are required",
+            "errorSubject": "Please enter a meeting subject first",
+            "errorCompany": "Please select a company for this meeting."
+        },
+        "participation": "Participation",
+        "form": {
+            "edit": "Edit Meeting",
+            "editDesc": "Update the information of the existing meeting.",
+            "create": "Create Meeting",
+            "createDesc": "Fill in the details to organize a new session.",
+            "sections": {
+                "basic": "Basic configuration",
+                "logistics": "Logistics & Scheduling",
+                "description": "Detailed Description"
+            },
+            "durationLimit": "Duration Limit",
+            "maxLimit": "Max",
+            "participantsDesc": "Select internal members or add external emails",
+            "agendaDesc": "Agenda items & voting points",
+            "documentsDesc": "Share relevant files",
+            "subject": "Meeting Subject",
+            "subjectPlaceholder": "e.g., Q3 Board Meeting",
+            "date": "Meeting Date",
+            "time": "Start Time",
+            "location": "Location / Link",
+            "locationPlaceholderOnline": "Zoom link, Google Meet, etc.",
+            "locationPlaceholderInPerson": "Conference Room, Office...",
+            "duration": "Estimated Duration",
+            "durations": {
+                "oneHour": "1 hour",
+                "twoHours": "2 hours",
+                "threeHours": "3 hours",
+                "fourHours": "4 hours",
+                "fiveHours": "5 hours"
+            },
+            "type": "Meeting Type",
+            "mode": "Mode",
+            "modes": {
+                "inPerson": "In Person",
+                "online": "Online",
+                "hybrid": "Hybrid"
+            },
+            "isonline": "Online Meeting",
+            "descriptionPlaceholder": "Additional details or preparatory notes...",
+            "notifyLabel": "Send Notifications",
+            "notifyDescAdd": "Inform participants via email upon creation.",
+            "notifyDescEdit": "Notify members of the changes made.",
+            "participants": "Participants",
+            "participantsTip": "Separate emails with commas to add external guests.",
+            "addParticipant": "Add Participant",
+            "points": "Agenda",
+            "pointPlaceholder": "Topic to discuss...",
+            "pointTypes": {
+                "simple": "Information",
+                "vote": "Vote / Resolution"
+            },
+            "addPoint": "Add Point",
+            "documents": "Documents",
+            "addDocument": "Add Document",
+            "requiredFields": "Subject, date and time are required.",
+            "updated": "Meeting updated.",
+            "created": "Meeting created.",
+            "selectCompany": "Select company"
+        },
+        "modals": {
+            "edit": {
+                "title": "Edit Meeting",
+                "description": "Modify meeting details and logistics.",
+                "basicInfo": "Basic Information",
+                "subject": "Subject",
+                "type": "Meeting Type",
+                "logistics": "Logistics",
+                "date": "Date",
+                "time": "Time",
+                "mode": "Mode",
+                "duration": "Duration",
+                "location": "Location",
+                "generateDescription": "Description with AI",
+                "agendaItems": "Agenda Items",
+                "describeItem": "Describe agenda item..."
+            },
+            "reschedule": {
+                "title": "Reschedule Meeting",
+                "newDate": "New Date",
+                "newTime": "New Time"
+            },
+            "cancel": {
+                "title": "Cancel Meeting",
+                "description": "Are you sure you want to cancel \"{subject}\"? This will notify all participants."
+            },
+            "delete": {
+                "title": "Delete Meeting",
+                "description": "Permanently delete \"{subject}\"? This action cannot be undone."
+            },
+            "polish": {
+                "title": "Confirm AI Polish",
+                "description": "Would you like to replace the current description with this AI-polished version?",
+                "confirm": "Apply Polish"
+            }
+        },
+        "ai": {
+            "summary": "AI Summary",
+            "pv": "AI PV",
+            "polish": "AI Description",
+            "suggest": "AI Suggestions",
+            "timer": "AI is analyzing...",
+            "confirmTitle": "AI Description Suggestion",
+            "confirmDesc": "AI has generated a new description. Would you like to apply it?",
+            "change": "Change",
+            "subjectRequired": "A subject is required for AI suggestions.",
+            "success": "{count} agenda points have been added!",
+            "assistant": "AI ASSISTANT",
+            "analyzing": "Analyzing...",
+            "generating": "Generating...",
+            "pointsGenerated": "{count} points generated!",
+            "generationFailed": "Generation failed",
+            "generationError": "Generation error"
+        },
+        "types": {
+            "ORDINAIRE": "Ordinary",
+            "EXTRAORDINAIRE": "Extraordinary",
+            "COMPLEMENTAIRE": "Complementary",
+            "DELEGUES": "Delegates",
+            "ordinaire": "Ordinary",
+            "extraordinaire": "Extraordinary",
+            "complementaire": "Complementary",
+            "delegues": "Delegates"
+        },
+        "modes": {
+            "IN_PERSON": "In Person",
+            "ONLINE": "Online Only",
+            "HYBRID": "Hybrid"
+        },
+        "durations": {
+            "ONE_HOUR": "1 Hour",
+            "TWO_HOURS": "2 Hours",
+            "THREE_HOURS": "3 Hours",
+            "FOUR_HOURS": "4 Hours",
+            "FIVE_HOURS": "5 Hours"
+        },
+        "single": "Meeting",
+        "multiple": "Meetings",
+        "status": {
+            "scheduled": "Scheduled",
+            "started": "Live",
+            "finished": "Finished",
+            "cancelled": "Cancelled"
+        },
+        "live": {
+            "title": "Live"
+        },
+        "cancel": {
+            "title": "Cancel Meeting",
+            "description": "Cancel {subject}?",
+            "button": "Cancel"
+        }
+    },
+    "Newsletters": {
+        "title": "Newsletter Subscribers",
+        "subtitle": "{count} subscriber(s) collected from the homepage.",
+        "exportCsv": "Export CSV",
+        "csvFilename": "newsletters_export.csv",
+        "table": {
+            "email": "Email",
+            "subscribedAt": "Subscribed At",
+            "actions": "Actions"
+        },
+        "searchPlaceholder": "Search subscribers...",
+        "emptyMessage": "No subscribers yet",
+        "delete": {
+            "title": "Remove Subscriber",
+            "description": "Remove \"{email}\" from the newsletter list?",
+            "confirm": "Remove"
+        },
+        "bulkDelete": {
+            "title": "Remove {count} Subscribers",
+            "description": "Permanently remove {count} subscribers?",
+            "confirm": "Remove {count}"
+        },
+        "toast": {
+            "removed": "Subscriber removed",
+            "bulkRemoved": "{count} subscribers removed",
+            "fetchError": "Error fetching newsletters",
+            "deleteError": "Error deleting"
+        }
+    },
+    "Packs": {
+        "title": "Pricing Packs",
+        "subtitle": "Manage subscription plans displayed on the homepage.",
+        "currency": "TND",
+        "add": "Add Pack",
+        "searchPlaceholder": "Search packs...",
+        "empty": "No packs created yet",
+        "table": {
+            "pack": "Pack",
+            "monthly": "Monthly",
+            "yearly": "Yearly",
+            "features": "Features",
+            "featuresCount": "{count, plural, =0 {no features} one {1 feature} other {# features}}",
+            "more": "+{count} more"
+        },
+        "form": {
+            "addTitle": "Add Pack",
+            "editTitle": "Edit Pack",
+            "description": "Define the pack name, prices, and feature lines.",
+            "name": "Pack Name *",
+            "namePlaceholder": "e.g. Professional",
+            "priceMonth": "Monthly Price (TND) *",
+            "priceYear": "Yearly Price (TND) *",
+            "features": "Features / Lines",
+            "addLine": "Add Line",
+            "featurePlaceholder": "Feature {index}"
+        },
+        "delete": {
+            "title": "Delete Pack",
+            "description": "Delete \"{name}\"? All features will be lost.",
+            "bulkTitle": "Delete {count} Packs",
+            "bulkDescription": "Permanently delete {count} packs and all their features?"
+        },
+        "toast": {
+            "required": "Name and prices are required",
+            "updated": "Pack updated",
+            "created": "Pack created",
+            "deleted": "Pack deleted",
+            "bulkDeleted": "{count} packs deleted"
+        }
+    },
+    "References": {
+        "title": "References / Partners",
+        "subtitle": "Manage trusted partners displayed on the homepage.",
+        "add": "Add Reference",
+        "searchPlaceholder": "Search references...",
+        "empty": "No references added yet",
+        "table": {
+            "reference": "Reference",
+            "website": "Website"
+        },
+        "form": {
+            "addTitle": "Add Reference",
+            "editTitle": "Edit Reference",
+            "description": "Partner logos are displayed in the homepage references section.",
+            "name": "Company Name *",
+            "namePlaceholder": "e.g. Acme Corp",
+            "logo": "Logo URL or File Name *",
+            "logoPlaceholder": "e.g. logo.png or https://...",
+            "website": "Website URL *",
+            "websitePlaceholder": "e.g. https://acme.com"
+        },
+        "delete": {
+            "title": "Delete Reference",
+            "description": "Delete \"{name}\"? This cannot be undone.",
+            "bulkTitle": "Delete {count} References",
+            "bulkDescription": "Permanently delete {count} references?"
+        },
+        "toast": {
+            "required": "All fields are required",
+            "updated": "Reference updated",
+            "created": "Reference created",
+            "deleted": "Reference deleted",
+            "bulkDeleted": "{count} references deleted"
+        }
+    },
+    "AiTokens": {
+        "title": "AI Tokens",
+        "subtitle": "Manage API keys · using Groq→Gemini→OpenRouter",
+        "add": "Add Token",
+        "refresh": "Refresh",
+        "stats": {
+            "activeKeys": "Active Keys",
+            "todayCalls": "Today's Calls",
+            "successRate": "Success Rate",
+            "exhaustedToday": "Exhausted Today"
+        },
+        "empty": {
+            "title": "No AI tokens configured",
+            "subtitle": "Add your first API key to enable AI features"
+        },
+        "table": {
+            "provider": "Provider",
+            "name": "Name",
+            "providerName": "Provider / Name",
+            "apiKey": "API Key",
+            "todayUsed": "Today Used",
+            "remaining": "Remaining",
+            "success": "Success",
+            "byFeature": "By Feature",
+            "status": "Status",
+            "label": "Status",
+            "details": "Details",
+            "actions": "Actions"
+        },
+        "provider": {
+            "label": "Provider",
+            "chatOrder": "Chat #{order}",
+            "genOrder": "Gen #{order}",
+            "expired": "EXPIRED",
+            "noUsageToday": "No usage today",
+            "resetsAt": "Resets midnight UTC",
+            "more": "+{count} more"
+        },
+        "features": {
+            "chat": "Chat",
+            "chat-report": "Chat Report",
+            "ai-summary": "Summary",
+            "ai-pv": "PV",
+            "polish-text": "Polish",
+            "suggest-agenda": "Agenda",
+            "log-analyze": "Logs",
+            "unknown": "Other"
+        },
+        "form": {
+            "addTitle": "Add AI Token",
+            "editTitle": "Edit AI Token",
+            "provider": "Provider *",
+            "nameLabel": "Name / Label",
+            "namePlaceholder": "e.g. Gemini Key #1",
+            "apiKey": "API Key *",
+            "apiKeyPlaceholder": "Paste your API key here",
+            "baseUrl": "Base URL (optional)",
+            "baseUrlPlaceholder": "https://openrouter.ai/api/v1",
+            "dailyLimit": "Daily Limit (req/day)",
+            "dailyLimitPlaceholder": "e.g. 200 for Gemini, 14400 for Groq",
+            "expiration": "Expiration Date",
+            "activeLabel": "Active — used by AI features",
+            "activeDesc": "Token is enabled for all AI features",
+            "inactiveDesc": "Token is currently disabled",
+            "save": "Save",
+            "saving": "Saving..."
+        },
+        "delete": {
+            "title": "Delete Token",
+            "description": "Delete \"{name}\"? This cannot be undone.",
+            "confirm": "Delete"
+        },
+        "toast": {
+            "added": "Token added",
+            "updated": "Token updated",
+            "deleted": "Token deleted",
+            "loadError": "Failed to load AI tokens",
+            "saveError": "Error saving token",
+            "deleteError": "Error deleting token",
+            "toggleError": "Failed to toggle",
+            "apiKeyRequired": "API Key is required"
+        }
+    },
+    "ChatSessions": {
+        "title": "Chat Sessions",
+        "subtitle": "{total} total sessions · Last updated {time}",
+        "live": "Live",
+        "paused": "Paused",
+        "refresh": "Refresh",
+        "generateReport": "Generate AI Report",
+        "report": {
+            "title": "AI Analysis Report",
+            "close": "Close",
+            "analyzing": "Analyzing {count} sessions...",
+            "failed": "Failed to generate report. Try again.",
+            "stats": {
+                "sessions": "Sessions",
+                "avgMessages": "Avg Messages",
+                "satisfaction": "Satisfaction"
+            },
+            "satisfaction": {
+                "POOR": "Poor",
+                "FAIR": "Fair",
+                "GOOD": "Good",
+                "EXCELLENT": "Excellent"
+            },
+            "severity": {
+                "LOW": "Low",
+                "MEDIUM": "Medium",
+                "HIGH": "High"
+            },
+            "summary": "Summary",
+            "topTopics": "Top Topics",
+            "issues": "Issues to Fix",
+            "improvements": "Recommended Improvements"
+        },
+        "session": {
+            "active": "● ACTIVE",
+            "closed": "○ CLOSED",
+            "noUserMessages": "No user messages yet",
+            "noMessages": "No messages yet",
+            "liveUpdates": "Live · updates every 5s · {time}",
+            "sessionClosed": "Session closed",
+            "msgCount": "{count} msgs",
+            "user": "User",
+            "title": "Conversation Details",
+            "deleted": "Chat session deleted",
+            "bulkDeleted": "{count} chat sessions deleted",
+            "deleteError": "Error deleting chat session",
+            "deleteBulkError": "Error deleting chat sessions"
+        },
+        "empty": {
+            "title": "No chat sessions yet",
+            "subtitle": "Sessions will appear here in real-time as users chat"
+        },
+        "pagination": {
+            "previous": "Previous",
+            "next": "Next",
+            "pageInfo": "Page {page} of {total}"
+        },
+        "roles": {
+            "PUBLIC": "PUBLIC",
+            "DEVELOPER": "DEVELOPER",
+            "ADMIN": "ADMIN",
+            "PARTICIPANT": "PARTICIPANT"
+        }
+    },
+    "JoinMeeting": {
+        "title": "Meeting Invitation",
+        "info": {
+            "date": "Date",
+            "time": "Time",
+            "location": "Location",
+            "mode": "Mode",
+            "modes": {
+                "ONLINE": "Online",
+                "PRESENTIAL": "Presential",
+                "HYBRID": "Hybrid"
+            },
+            "invitedAs": "Invited as:",
+            "locationOnline": "Online"
+        },
+        "question": "Will you attend this meeting?",
+        "accept": "Accept",
+        "decline": "Decline",
+        "status": {
+            "accepted": {
+                "title": "You accepted!",
+                "message": "You will receive further details closer to the meeting date.",
+                "joinLive": "Join Live Meeting"
+            },
+            "declined": {
+                "title": "You declined",
+                "message": "You have declined this meeting invitation.",
+                "change": "Change my response"
+            }
+        },
+        "toast": {
+            "invalidLink": "Invalid invitation link",
+            "invalidInvitation": "Invalid invitation",
+            "errorLoading": "Error loading invitation",
+            "accepted": "Invitation accepted!",
+            "declined": "Invitation declined",
+            "errorResponding": "Error responding to invitation"
+        }
+    },
+    "LiveMeeting": {
+        "toasts": {
+            "requireAcceptance": "You must accept the invitation first",
+            "unauthorized": "Unauthorized access",
+            "livekitUnavailable": "LiveKit not configured — video/audio unavailable.",
+            "voteEnded": "The vote has ended.",
+            "handRaised": "{name} raised their hand",
+            "wordGranted": "Word granted",
+            "wordRefused": "Word refused",
+            "wordEnded": "Word ended",
+            "joinRequested": "{name} wants to join the meeting",
+            "joinAccepted": "You have been admitted to the meeting",
+            "joinRejected": "Your access request was rejected",
+            "meetingStarted": "The meeting has officially started!",
+            "meetingStartedAdmin": "Meeting started — notification emails sent to participants",
+            "notRegistered": "You are not registered as an official participant.",
+            "voteRecorded": "Vote recorded",
+            "notAuthorizedWord": "You are not authorized to request the word.",
+            "handRaisedSuccess": "Word request sent",
+            "finishedSuccess": "Meeting finished. The PV has been generated.",
+            "finishedError": "Error closing the meeting",
+            "docAdded": "Document added"
+        },
+        "loading": {
+            "preparing": "Preparing the room..."
+        },
+        "status": {
+            "soon": {
+                "title": "Starting Soon",
+                "message": "The host hasn't started the session yet. Please stay on this page; you will be admitted automatically once the meeting begins."
+            },
+            "waiting": {
+                "title": "Waiting Room",
+                "message": "Your access request has been sent to the organizers. Please wait while they validate your entry.",
+                "cancel": "Cancel Request"
+            },
+            "finished": "Finished"
+        },
+        "header": {
+            "live": "Live Session",
+            "statusLive": "Live",
+            "endButton": "End Meeting",
+            "endConfirm": "Are you sure you want to end this meeting? The PV will be generated automatically."
+        },
+        "banner": {
+            "ready": "Ready to begin?",
+            "desc": "Starting the meeting will notify all participants and open the room for everyone.",
+            "start": "Start Meeting Now",
+            "starting": "Starting..."
+        },
+        "video": {
+            "waiting": "Waiting for stream connection...",
+            "waitingAdmin": "The meeting is ready to be started. Use the button below or the banner above to begin.",
+            "preparing": "Preparing the secure connection...",
+            "livekitConnectivity": "LiveKit Connectivity"
+        },
+        "tabs": {
+            "agenda": "Agenda",
+            "participants": "Participants",
+            "documents": "Documents"
+        },
+        "agenda": {
+            "voteInProgress": "Vote in Progress",
+            "submittedToVote": "Submitted to vote",
+            "launchVote": "Launch Vote",
+            "voteTypes": {
+                "for": "For (YES)",
+                "against": "Against (NO)",
+                "neutral": "Abstain"
+            },
+            "stopVote": "Stop Vote"
+        },
+        "participants": {
+            "requests": "Access Requests",
+            "handRaises": "Word Requests",
+            "all": "All Participants"
+        },
+        "documents": {
+            "add": "Add Document",
+            "shared": "Shared Documents",
+            "empty": "No documents",
+            "open": "Open",
+            "download": "Download",
+            "fileDocument": "File • Document"
+        },
+        "actions": {
+            "requestWord": "Request Word",
+            "requestPending": "Request pending...",
+            "permissionGranted": "Permission granted",
+            "stopIntervention": "Stop intervention"
+        },
+        "permissions": {
+            "muteNote": "Your microphone is disabled by default. Request permission to intervene and activate your microphone once you have permission granted."
+        },
+        "overlays": {
+            "ending": {
+                "title": "Ending Meeting",
+                "desc": "Please wait while we finalize the session and record the data..."
+            },
+            "voteResults": {
+                "title": "Vote Results",
+                "autoClose": "Auto-closing..."
+            }
+        },
+        "modals": {
+            "endConfirm": {
+                "title": "Confirm End",
+                "desc": "This action will end the meeting for all participants.",
+                "irreversible": "This operation is irreversible."
+            },
+            "meetingOver": {
+                "title": "Meeting Over",
+                "desc": "The administrator has ended this session. Thank you for your participation.",
+                "backHome": "Back to Home"
+            }
+        },
+        "connection": {
+            "reconnecting": "Reconnecting…",
+            "videoReconnecting": "Video reconnecting…",
+            "duplicateTab": "You joined this meeting from another tab or device, so video was stopped here.",
+            "rejoinVideo": "Rejoin video",
+            "voteNotSaved": "Your vote was not saved. Please vote again."
+        }
+    },
+    "PV": {
+        "toasts": {
+            "loadError": "Unable to load PV data",
+            "genericError": "An error occurred",
+            "exportSuccess": "Word PV downloaded successfully!",
+            "exportError": "Word export failed",
+            "generationError": "Error during Word generation"
+        },
+        "loading": {
+            "message": "Generating High-Fidelity PV..."
+        },
+        "controls": {
+            "back": "Back",
+            "format": "Premium A4 Format",
+            "exportWord": "Export Word (.docx)",
+            "exporting": "Generating...",
+            "print": "Print PV"
+        },
+        "header": {
+            "title": "Meeting Minutes",
+            "at": "at",
+            "country": "Tunisia",
+            "ago": "Ordinary General Meeting",
+            "age": "Extraordinary General Meeting",
+            "ref": "Ref"
+        },
+        "sections": {
+            "general": {
+                "title": "1. General Information",
+                "subject": "Subject",
+                "chairedBy": "Chaired by",
+                "mode": "Mode",
+                "date": "Date",
+                "time": "Time",
+                "duration": "Duration",
+                "location": "Location",
+                "locationDefault": "General Directorate",
+                "platform": "Platform",
+                "platformOnline": "Online",
+                "platformPresential": "Presential"
+            },
+            "agenda": {
+                "title": "2. Agenda & Objectives",
+                "defaultDesc": "Present the results of the exercise, discuss strategic points, adopt the necessary resolutions, and define future actions."
+            },
+            "points": {
+                "title": "3. Agenda Items & Resolutions",
+                "table": {
+                    "number": "#",
+                    "point": "Item / Resolution",
+                    "type": "Type",
+                    "for": "For",
+                    "against": "Against",
+                    "abstain": "Abs"
+                }
+            },
+            "stats": {
+                "title": "Attendance Statistics",
+                "total": "Total Invited",
+                "present": "Present",
+                "absent": "Absent",
+                "location": "Location"
+            },
+            "signature": {
+                "title": "Signature & Stamp",
+                "stamp": "Company Stamp"
+            }
+        },
+        "modals": {
+            "overwrite": {
+                "title": "Existing PV Detected",
+                "description": "A minutes document has already been generated for this meeting. Do you want to replace it with a new version? The old file will be permanently deleted.",
+                "confirm": "Replace and Regenerate",
+                "cancel": "Keep Existing"
+            }
+        }
+    },
+    "VoteModal": {
+        "title": "Interactive Vote",
+        "question": "Please cast your vote for the current agenda item.",
+        "options": {
+            "yes": "I Approve",
+            "no": "I Disapprove",
+            "neutral": "I Abstain"
+        },
+        "disclaimer": "Your vote is cryptographically secured and legally binding."
+    },
+    "Chat": {
+        "title": "Axia Support",
+        "subtitle": "Online",
+        "welcome": "👋 Hello! I'm Axia Support. How can I help you today?",
+        "placeholder": "Type your message...",
+        "error": "Sorry, something went wrong. Please try again.",
+        "export": "Export conversation",
+        "poweredBy": "Powered by Axia AI",
+        "privacyNotice": "Your conversation is private, secure, and encrypted. Your personal information will not be shared."
+    },
+    "MeetingDetails": {
+        "back": "Back to meetings",
+        "status": {
+            "scheduled": "Scheduled",
+            "started": "Live",
+            "finished": "Finished",
+            "cancelled": "Cancelled"
+        },
+        "durations": {
+            "ONE_HOUR": "1 Hour",
+            "TWO_HOURS": "2 Hours",
+            "THREE_HOURS": "3 Hours",
+            "FOUR_HOURS": "4 Hours",
+            "FIVE_HOURS": "5 Hours"
+        },
+        "modes": {
+            "IN_PERSON": "In Person",
+            "ONLINE": "Online",
+            "HYBRID": "Hybrid"
+        },
+        "actions": {
+            "reschedule": "Reschedule",
+            "generatePv": "Generate PV",
+            "wordExport": "Export Word",
+            "join": "Join Session",
+            "start": "Start Meeting"
+        },
+        "ai": {
+            "assistant": "AI Assistant",
+            "summary": "AI Summary",
+            "pv": "AI PV",
+            "description": "✨ AI Description",
+            "analyzing": "Analyzing...",
+            "generating": "Generating...",
+            "pointsGenerated": "{count} points suggested by AI!",
+            "suggest": "Suggest",
+            "polish": "AI Description"
+        },
+        "info": {
+            "date": "Meeting Date",
+            "timeAndDuration": "Time & Duration",
+            "mode": "Meeting Mode",
+            "location": "Location",
+            "description": "Description & Objectives"
+        },
+        "agenda": {
+            "title": "Agenda",
+            "points": "{count} Points",
+            "noPoints": "No items on the agenda",
+            "submittedToVote": "Submitted to vote",
+            "votes": {
+                "for": "{count} For",
+                "against": "{count} Against",
+                "neutral": "{count} Neutral"
+            }
+        },
+        "participants": {
+            "title": "Participants"
+        },
+        "documents": {
+            "title": "Attached Documents",
+            "clickToView": "Click to view",
+            "noDocuments": "No documents"
+        },
+        "aiSummary": {
+            "title": "AI Summary",
+            "productive": "PRODUCTIVE",
+            "critical": "CRITICAL",
+            "decisions": "Key Decisions",
+            "actions": "Required Actions",
+            "viewFull": "View Full Summary",
+            "fullTitle": "✨ Meeting AI Summary",
+            "voteResults": "🗳️ Vote Results",
+            "attendance": "Attendance",
+            "summaryPlaceholder": "Write a meeting summary here...",
+            "noSummary": "No summary yet",
+            "writeSummary": "Write summary"
+        },
+        "modals": {
+            "edit": {
+                "title": "Edit Meeting",
+                "description": "Update meeting details.",
+                "basicInfo": "Basic Information",
+                "logistics": "Planning & Location",
+                "subject": "Subject / Meeting Object",
+                "type": "Meeting Type",
+                "date": "Date",
+                "time": "Start Time",
+                "mode": "Mode",
+                "duration": "Duration",
+                "location": "Location / Link",
+                "generateDescription": "Description with AI",
+                "agendaItems": "Agenda Items",
+                "describeItem": "Describe the item...",
+                "addDocument": "Add a document",
+                "errorRequired": "Subject, date and time are required",
+                "foundations": "Meeting Foundations",
+                "subjectPlaceholder": "Meeting subject",
+                "securityContext": "Security Context",
+                "adminAccess": "Administrative access",
+                "timeVenue": "Time & Venue",
+                "locationPlaceholder": "Physical or virtual address",
+                "contextualDescription": "Contextual Description"
+            },
+            "reschedule": {
+                "title": "Reschedule Meeting",
+                "newDate": "New Date",
+                "newTime": "New Time"
+            },
+            "cancel": {
+                "title": "Cancel Meeting",
+                "description": "Cancel \"{subject}\"? Participants will be notified."
+            },
+            "delete": {
+                "title": "Delete Meeting",
+                "description": "Delete \"{subject}\"? This action cannot be undone."
+            },
+            "polish": {
+                "title": "AI Description Suggestion",
+                "description": "The AI has generated a new description for your meeting. Would you like to apply it?",
+                "confirm": "Change"
+            }
+        },
+        "aiSubtitle": "Real-time administrative enhancement"
+    },
+    "Contact": {
+        "badge": "Get In Touch",
+        "title": "Contact Us",
+        "subtitle": "Have a question or need support? We'd love to hear from you.",
+        "info": {
+            "title": "Let's Talk",
+            "desc": "Reach out through the form and our team will get back to you shortly.",
+            "phone": "Phone",
+            "email": "Email",
+            "address": "Address",
+            "responseTime": "Response Time",
+            "responseValue": "Within 24 Hours",
+            "responseDesc": "We aim to respond to all inquiries within one business day."
+        },
+        "form": {
+            "title": "Send a Message",
+            "subtitle": "Fill in the form and we'll get back to you.",
+            "name": "Your Name",
+            "namePlaceholder": "e.g. John Doe",
+            "email": "Email Address",
+            "emailPlaceholder": "e.g. john@example.com",
+            "subject": "Subject",
+            "subjectPlaceholder": "e.g. Question about pricing",
+            "message": "Message",
+            "messagePlaceholder": "Tell us how we can help you...",
+            "submit": "Send Message"
+        },
+        "success": {
+            "title": "Message Sent!",
+            "desc": "Thank you for reaching out. We'll get back to you within 24 hours.",
+            "another": "Send another message"
+        },
+        "toast": {
+            "required": "Email, subject, and message are required",
+            "success": "Message sent successfully!",
+            "error": "Failed to send message. Please try again."
+        }
+    },
+    "Signup": {
+        "badge": "Sign Up",
+        "title": "Choose your workspace plan",
+        "subtitle": "Select the ideal plan for your organization size",
+        "step1": "Choose Plan",
+        "step2": "Your Details",
+        "free": "Free",
+        "perMonth": "/month",
+        "perYear": "/year",
+        "noPacks": "No plans available",
+        "noPacksDesc": "Please contact us for pricing information.",
+        "skipPack": "Skip Plan Selection",
+        "selectPack": "Select Plan",
+        "selectedPlan": "Selected Plan",
+        "changePlan": "Change plan",
+        "whatsIncluded": "What's included",
+        "feature1": "Full admin dashboard access",
+        "feature2": "AI-powered meeting tools",
+        "feature3": "Priority support",
+        "workspace": "Axia Workspace",
+        "startYour": "Start your",
+        "journey": "journey.",
+        "heroSubtitle": "Configure your custom meeting environment and empower your team today.",
+        "milestone1Title": "Select a customized plan",
+        "milestone1Desc": "Find the package that fits your organization.",
+        "milestone2Title": "Register your company",
+        "milestone2Desc": "Secure unique domain and user profiles.",
+        "milestone3Title": "Fast administrative approval",
+        "milestone3Desc": "We launch your meetings workspace instantly.",
+        "allRightsReserved": "All rights reserved.",
+        "backToWebsite": "Back to website",
+        "termsOfUse": "Terms of Use",
+        "privacyPolicy": "Privacy Policy",
+        "backToPlans": "Back to plans",
+        "form": {
+            "title": "Your Account Details",
+            "subtitle": "Create your admin account and company profile.",
+            "personalInfo": "Personal Information",
+            "companyInfo": "Company Information",
+            "fullname": "Full Name",
+            "fullnamePlaceholder": "e.g. John Doe",
+            "email": "Email Address",
+            "emailPlaceholder": "e.g. john@example.com",
+            "password": "Password",
+            "confirmPassword": "Confirm Password",
+            "companyName": "Company Name",
+            "companyNamePlaceholder": "e.g. Acme Corp",
+            "companyUrl": "Website / App URL",
+            "companyUrlPlaceholder": "e.g. https://acme.com",
+            "submit": "Submit Request",
+            "security": "Your data is securely encrypted"
+        },
+        "success": {
+            "title": "Request Submitted!",
+            "desc": "Your signup request is under review. You'll be notified once your account is activated.",
+            "note": "Pending developer approval",
+            "login": "Back to Login"
+        },
+        "toast": {
+            "selectPack": "Please select a plan first",
+            "required": "Please fill in all required fields",
+            "passwordMismatch": "Passwords do not match",
+            "passwordLength": "Password must be at least 10 characters and contain a letter and a digit",
+            "success": "Signup request submitted successfully!",
+            "error": "Failed to submit request. Please try again."
+        }
+    },
+    "ContactMessages": {
+        "title": "Contact Messages",
+        "subtitle": "{total} messages — {replied} replied",
+        "awaiting": "Awaiting",
+        "repliedLabel": "Replied",
+        "replied": "Replied",
+        "pending": "Pending",
+        "searchPlaceholder": "Search messages...",
+        "emptyMessage": "No contact messages found.",
+        "table": {
+            "sender": "Sender",
+            "subject": "Subject",
+            "date": "Date",
+            "status": "Status",
+            "actions": "Actions"
+        },
+        "detail": {
+            "subject": "Subject",
+            "message": "Message",
+            "replied": "Reply Sent",
+            "editReply": "Update Reply",
+            "writeReply": "Write a Reply",
+            "replyPlaceholder": "Type your reply here...",
+            "sendReply": "Send Reply"
+        },
+        "toast": {
+            "fetchError": "Failed to load messages",
+            "replyRequired": "Reply content cannot be empty",
+            "replySent": "Reply saved successfully!",
+            "replyError": "Failed to send reply",
+            "deleted": "Message deleted successfully",
+            "bulkDeleted": "Selected messages deleted successfully"
+        },
+        "delete": {
+            "title": "Delete Message",
+            "description": "Are you sure you want to delete this message? This action cannot be undone.",
+            "bulkTitle": "Delete Multiple Messages",
+            "bulkDescription": "Are you sure you want to delete these {count} messages? This action cannot be undone."
+        }
+    },
+    "SignupRequests": {
+        "title": "Signup Requests",
+        "subtitle": "{total} total signup requests",
+        "searchPlaceholder": "Search requests...",
+        "emptyMessage": "No signup requests found.",
+        "status": {
+            "pending": "Pending",
+            "approved": "Approved",
+            "rejected": "Rejected"
+        },
+        "stats": {
+            "pending": "Pending",
+            "approved": "Approved",
+            "rejected": "Rejected"
+        },
+        "table": {
+            "requester": "Requester",
+            "company": "Company",
+            "pack": "Pack",
+            "date": "Date",
+            "status": "Status"
+        },
+        "detail": {
+            "email": "Email",
+            "company": "Company Name",
+            "url": "Website",
+            "pack": "Selected Pack",
+            "submitted": "Submitted At",
+            "reviewed": "Reviewed At",
+            "provisionedId": "Provisioned",
+            "provisioned": "Account Provisioned",
+            "provisionedDesc": "The company and admin account have been created successfully.",
+            "rejectionReason": "Rejection Reason",
+            "rejectionReasonLabel": "Rejection Reason (optional)",
+            "rejectionPlaceholder": "Explain why this request is being rejected..."
+        },
+        "actions": {
+            "approve": "Approve & Provision",
+            "reject": "Reject"
+        },
+        "modal": {
+            "approveTitle": "Approve & Provision Account",
+            "approveDesc": "This will create a company account for {company} and an admin user for {name}. This action cannot be undone.",
+            "approveConfirm": "Approve & Create Account",
+            "rejectTitle": "Reject Request",
+            "rejectDesc": "Are you sure you want to reject {name}'s signup request?",
+            "rejectConfirm": "Reject Request"
+        },
+        "toast": {
+            "fetchError": "Failed to load signup requests",
+            "approved": "Request approved and account provisioned!",
+            "rejected": "Request rejected.",
+            "actionError": "Failed to process request",
+            "deleted": "Signup request deleted successfully",
+            "bulkDeleted": "Selected signup requests deleted successfully"
+        },
+        "delete": {
+            "title": "Delete Request",
+            "description": "Are you sure you want to delete this signup request? This action cannot be undone.",
+            "bulkTitle": "Delete Multiple Requests",
+            "bulkDescription": "Are you sure you want to delete these {count} signup requests? This action cannot be undone."
+        }
+    },
+    "PvView": {
+        "badge": "Minutes",
+        "pageTitle": "Meeting minutes",
+        "loading": "Loading the minutes...",
+        "viewer": "Personal link for {email}",
+        "info": {
+            "date": "Date",
+            "time": "Time",
+            "organization": "Organization",
+            "location": "Location"
+        },
+        "states": {
+            "invalidTitle": "Invalid or expired link",
+            "invalidMessage": "This link is no longer valid. Contact the meeting organizer to receive a new link.",
+            "notFinishedTitle": "Meeting not finished yet",
+            "notFinishedMessage": "The minutes will be available as soon as the meeting has ended. Come back later with this same link.",
+            "noPvTitle": "Minutes not available yet",
+            "noPvMessage": "No minutes have been published for this meeting yet.",
+            "errorTitle": "Loading error",
+            "errorMessage": "The minutes could not be loaded. Check your connection and try again.",
+            "retry": "Try again"
+        },
+        "sections": {
+            "minutes": "Minutes",
+            "attendance": "Attendance list",
+            "votes": "Agenda and vote results",
+            "documents": "Download the minutes"
+        },
+        "attendance": {
+            "participant": "Participant",
+            "status": "Attendance",
+            "present": "Present",
+            "absent": "Absent",
+            "summary": "{present} present out of {total}"
+        },
+        "votes": {
+            "for": "For",
+            "against": "Against",
+            "abstain": "Abstain",
+            "total": "Voters",
+            "adopted": "Adopted",
+            "rejected": "Rejected",
+            "inconclusive": "Inconclusive",
+            "noVotes": "No votes recorded",
+            "info": "Information",
+            "vote": "Vote"
+        },
+        "documents": {
+            "download": "Download",
+            "open": "Open",
+            "word": "Word document",
+            "html": "HTML document",
+            "file": "File"
+        },
+        "poweredBy": "Powered by the Axia Agile ecosystem",
+        "emails": {
+            "subject": "Minutes: {subject}",
+            "title": "Minutes available",
+            "greeting": "Hello,",
+            "intro": "The minutes of the meeting below are now available.",
+            "labelSubject": "Subject",
+            "labelDate": "Date",
+            "labelTime": "Time",
+            "labelOrganization": "Organization",
+            "button": "View the minutes (PV)",
+            "note": "This link is personal. It works once the meeting has ended and expires in {days} days.",
+            "fallback": "If the button does not work, copy this link into your browser:"
+        }
+    }
+}

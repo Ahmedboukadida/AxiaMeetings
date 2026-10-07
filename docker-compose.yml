@@ -1,0 +1,100 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# AxiaMeetings - local Docker stack (Docker Desktop on Windows)
+#
+#   app + redis run in Docker; PostgreSQL runs natively on the host and is
+#   reached at host.docker.internal:5432 (set DATABASE_URL in .env.docker).
+#
+#   Copy-Item .env.docker.example .env.docker   # then fill in the values
+#   docker compose --env-file .env.docker up -d --build
+#
+# No secrets or database URLs live in this file: everything comes from
+# .env.docker (env_file for the containers, --env-file for the ${...}
+# interpolation of the public build args below).
+# ─────────────────────────────────────────────────────────────────────────────
+
+name: axiameetings
+
+# Rotate container logs (Docker's json-file driver keeps them forever by default).
+x-logging: &default-logging
+  driver: json-file
+  options:
+    max-size: "10m"
+    max-file: "3"
+
+services:
+  redis:
+    image: redis:7-alpine
+    # Password-protected (REDIS_PASSWORD in .env.docker). The password is read from the
+    # container env by the shell ($$ = literal $ for compose), not baked into the command.
+    environment:
+      REDIS_PASSWORD: ${REDIS_PASSWORD:?set REDIS_PASSWORD in .env.docker and pass --env-file .env.docker}
+    command: ["sh", "-c", "exec redis-server --requirepass \"$$REDIS_PASSWORD\" --appendonly yes"]
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "redis-cli -a \"$$REDIS_PASSWORD\" --no-auth-warning ping | grep -q PONG"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+      start_period: 5s
+    logging: *default-logging
+    restart: unless-stopped
+
+  # One-shot: applies pending Prisma migrations, then exits.
+  migrate:
+    build:
+      context: .
+      target: migrate
+    image: axiameetings-migrate:local
+    env_file:
+      - .env.docker
+    environment:
+      # Migrations may need more rights than the app: set MIGRATE_DATABASE_URL (owner role)
+      # when DATABASE_URL uses the least-privilege app role (docs/db-least-privilege.sql).
+      # prisma.config.js prefers DIRECT_URL, so both point at the migration URL here.
+      DATABASE_URL: ${MIGRATE_DATABASE_URL:-${DATABASE_URL:?set DATABASE_URL in .env.docker and pass --env-file .env.docker}}
+      DIRECT_URL: ${MIGRATE_DATABASE_URL:-${DIRECT_URL:-${DATABASE_URL:?set DATABASE_URL in .env.docker and pass --env-file .env.docker}}}
+    volumes:
+      # A newly generated migration (e.g. prisma/migrations/0_init) is picked
+      # up without rebuilding the image.
+      - ./prisma:/app/prisma
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: "no"
+
+  app:
+    build:
+      context: .
+      target: runner
+      args:
+        NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL:?set NEXT_PUBLIC_SITE_URL in .env.docker and pass --env-file .env.docker}
+        NEXT_PUBLIC_LIVEKIT_URL: ${NEXT_PUBLIC_LIVEKIT_URL:-}
+    image: axiameetings-app:local
+    stop_grace_period: 15s
+    env_file:
+      - .env.docker
+    environment:
+      # Overrides any REDIS_URL from .env.docker: always the password-protected redis service.
+      REDIS_URL: redis://:${REDIS_PASSWORD:?set REDIS_PASSWORD in .env.docker and pass --env-file .env.docker}@redis:6379
+      # The owner-role URL is for the migrate service only; keep it out of the app.
+      MIGRATE_DATABASE_URL: ""
+    ports:
+      # Published on this computer only (localhost). APP_HOST_PORT changes the port on the
+      # Windows side if 3002 is reserved/busy; inside the container the app stays on 3002.
+      - "${APP_BIND_HOST:-127.0.0.1}:${APP_HOST_PORT:-3002}:3002"
+    volumes:
+      - uploads_data:/data/uploads
+    init: true
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+      redis:
+        condition: service_healthy
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    logging: *default-logging
+    restart: unless-stopped
+
+volumes:
+  redis_data:
+  uploads_data:

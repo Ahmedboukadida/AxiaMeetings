@@ -1,0 +1,56 @@
+# Build context for the AxiaMeetings image. Keep it small and secret-free.
+
+# ── Dependencies & build output (rebuilt inside the image) ──────────────────
+node_modules
+**/node_modules
+.next
+out
+build
+dist
+*.tsbuildinfo
+npm-debug.log*
+*.log
+
+# ── Secrets: never send env files to the daemon ─────────────────────────────
+.env*
+!.env.docker.example
+
+# ── VCS / tooling / editors ─────────────────────────────────────────────────
+.git
+.gitignore
+.gitattributes
+.github
+.claude
+.kiro
+.vscode
+.idea
+.eslintcache
+.DS_Store
+Thumbs.db
+
+# ── Docker files themselves ─────────────────────────────────────────────────
+Dockerfile
+docker-compose*.yml
+.dockerignore
+
+# ── Docs, scratch, archives, dumps ──────────────────────────────────────────
+*.md
+docs
+scratch
+*.zip
+*.rar
+*.tar.gz
+*.dump
+*.sql.gz
+backup.sql
+temp_doc.html
+Untitled-*.txt
+
+# ── Local data (runtime volumes, never baked into the image) ────────────────
+storage
+prisma/migrations_archive
+# User uploads only; static marketing images in public/ (and public/images/) are kept.
+public/uploads/meetings
+public/uploads/pvs
+**/.env*
+!.env.docker.example

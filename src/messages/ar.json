@@ -1,0 +1,2013 @@
+{
+    "Metadata": {
+        "title": "Axia Meetings | إدارة الاجتماعات",
+        "description": "منصة إدارة الاجتماعات والجمعيات العامة في الوقت الفعلي."
+    },
+    "Common": {
+        "total": "الإجمالي",
+        "showAll": "عرض الكل",
+        "loading": "جاري التحميل...",
+        "save": "حفظ",
+        "cancel": "إلغاء",
+        "delete": "حذف",
+        "edit": "تعديل",
+        "confirm": "تأكيد",
+        "back": "رجوع",
+        "dashboard": "لوحة القيادة",
+        "logout": "تسجيل الخروج",
+        "login": "تسجيل الدخول",
+        "getStarted": "ابدأ الآن",
+        "home": "الرئيسية",
+        "search": "بحث...",
+        "noData": "لم يتم العثور على بيانات",
+        "success": "نجاح",
+        "error": "خطأ",
+        "processing": "جاري المعالجة...",
+        "saving": "جاري الحفظ...",
+        "ai": {
+            "loaderLabel": "الذكاء الاصطناعي يحلل بياناتك...",
+            "loaderSubLabel": "قد يستغرق هذا بضع ثوانٍ",
+            "time": "الوقت"
+        },
+        "userPicker": {
+            "placeholder": "البحث عن مستخدمين...",
+            "selectFromCompany": "اختر مشاركين من المؤسسة...",
+            "selected": "تم اختيار {count}",
+            "available": "{count} متاح",
+            "noMatch": "لا يوجد مستخدمون يطابقون \"{term}\"",
+            "added": "تمت الإضافة",
+            "selectAll": "اختيار الكل ({count})",
+            "clearAll": "مسح الكل",
+            "manualEmail": "أو اكتب بريداً إلكترونياً يدوياً..."
+        },
+        "table": {
+            "searchPlaceholder": "بحث...",
+            "noResults": "لم يتم العثور على نتائج.",
+            "selected": "تم اختيار {count}",
+            "selectAll": "اختيار الكل",
+            "selectRow": "اختيار الصف",
+            "pagination": {
+                "noResults": "لا توجد نتائج",
+                "showing": "عرض {from}–{to} من {total} نتائج",
+                "filtered": " (تصفية من {total})",
+                "perPage": "{count} / صفحة",
+                "first": "الصفحة الأولى",
+                "previous": "الصفحة السابقة",
+                "next": "الصفحة التالية",
+                "last": "الصفحة الأخيرة",
+                "page": "صفحة",
+                "of": "من"
+            },
+            "refresh": "تحديث",
+            "export": "تصدير",
+            "fetching": "جاري جلب البيانات...",
+            "rowsPerPage": "صفوف لكل صفحة",
+            "pageInfo": "{current} / {total}",
+            "mobile": {
+                "select": "اختيار"
+            }
+        },
+        "actions": "الإجراءات",
+        "details": "التفاصيل",
+        "status": "الحالة",
+        "date": "التاريخ",
+        "time": "الوقت",
+        "location": "الموقع",
+        "description": "الوصف",
+        "subject": "الموضوع",
+        "type": "النوع",
+        "mode": "الوضع",
+        "duration": "المدة",
+        "company": "الشركة",
+        "user": "المستخدم",
+        "role": "الدور",
+        "fullname": "الاسم الكامل",
+        "fullnamePlaceholder": "مثال: فلان الفلاني",
+        "email": "البريد الإلكتروني",
+        "emailPlaceholder": "مثال: user@example.com",
+        "username": "اسم المستخدم",
+        "usernamePlaceholder": "مثال: username",
+        "password": "كلمة المرور",
+        "passwordPlaceholder": "••••••••",
+        "phone": "الهاتف",
+        "address": "العنوان",
+        "confirmDelete": "هل أنت متأكد؟ لا يمكن التراجع عن هذا الإجراء.",
+        "deleteTitle": "حذف {item}",
+        "clear": "مسح",
+        "apply": "تطبيق",
+        "all": "الكل",
+        "of": "من",
+        "na": "غير متوفر",
+        "yes": "نعم",
+        "no": "لا",
+        "active": "نشط",
+        "inactive": "غير نشط",
+        "next": "التالي",
+        "prev": "السابق",
+        "view": "عرض",
+        "download": "تحميل",
+        "print": "طباعة",
+        "main": "الرئيسية",
+        "administration": "الإدارة",
+        "developer": "المطور",
+        "system": "النظام",
+        "configurations": "الإعدادات",
+        "logs": "السجلات",
+        "select": "اختيار",
+        "refresh": "تحديث",
+        "mo": "شهر",
+        "yr": "سنة",
+        "selectRequired": "اختيار (مطلوب)",
+        "none": "لا شيء",
+        "configure": "تكوين",
+        "deleteSelected": "حذف المحدد",
+        "confirmBulkDelete": "هل أنت متأكد من حذف {count} عناصر؟",
+        "global": "عام",
+        "language": "اللغة",
+        "selectLanguage": "اختر اللغة",
+        "notAvailable": "غير متوفر",
+        "form": {
+            "optional": "اختياري"
+        },
+        "close": "إغلاق",
+        "modals": {
+            "addDocument": {
+                "title": "إضافة مستند",
+                "path": "مسار الملف / الرابط",
+                "upload": "رفع ملف",
+                "fileTitle": "عنوان المستند",
+                "submit": "إضافة المستند",
+                "uploading": "جاري الرفع...",
+                "drop": "اسحب الملف هنا أو انقر للرفع",
+                "allowedTypes": "PDF ، Word ، صور ، إلخ."
+            }
+        },
+        "required": "مطلوب",
+        "visitor": "زائر",
+        "participant": "مشارك",
+        "toast": {
+            "error": "حدث خطأ ما"
+        }
+    },
+    "Navbar": {
+        "features": "المميزات",
+        "process": "آلية العمل",
+        "pricing": "الأسعار",
+        "contact": "اتصل بنا",
+        "returnHome": "العودة للرئيسية",
+        "dashboard": "لوحة التحكم",
+        "logout": "تسجيل الخروج",
+        "login": "تسجيل الدخول",
+        "getStarted": "ابدأ الآن"
+    },
+    "Footer": {
+        "tagline": "إحداث ثورة في الاجتماعات من خلال الحوكمة الرقمية والشفافية المطلقة.",
+        "connect": "تواصل معنا",
+        "directSupport": "الدعم المباشر",
+        "emergencyHotline": "الخط الساخن للطوارئ",
+        "presence": "تواجدنا",
+        "headquarters": "المقر الرئيسي",
+        "globalRemote": "عالمي / عن بعد",
+        "rights": "© {year} Axia Meetings. جميع الحقوق محفوظة.",
+        "privacy": "سياسة الخصوصية",
+        "terms": "شروط الاستخدام",
+        "newsletter": {
+            "title": "ابق على اطلاع.",
+            "loop": "ابق على اطلاع.",
+            "description": "انضم إلى أكثر من 10,000 متخصص في الحوكمة يتلقون رؤانا الأسبوعية.",
+            "placeholder": "بريدك الإلكتروني المهني",
+            "subscribe": "اشترك",
+            "success": "تم الاشتراك بنجاح! شكرًا لك.",
+            "error": "خطأ في الاشتراك"
+        },
+        "processing": "جاري التحميل..."
+    },
+    "Auth": {
+        "login": {
+            "title": "تسجيل الدخول إلى حسابك",
+            "subtitle": "مرحباً بعودتك إلى التميز.",
+            "email": "الهوية",
+            "emailPlaceholder": "اسم المستخدم أو البريد الإلكتروني",
+            "password": "مفتاح الأمان",
+            "submit": "تسجيل الدخول",
+            "forgotPassword": "هل نسيت كلمة المرور؟",
+            "noAccount": "ليس لديك حساب؟",
+            "termsNote": "أقر وأقبل <terms>شروط الاستخدام</terms> و <privacy>سياسة الخصوصية</privacy>",
+            "errorFields": "يرجى إدخال اسم المستخدم وكلمة المرور",
+            "errorAuth": "بيانات الاعتماد غير صالحة",
+            "errorNoCompany": "حسابك غير مرتبط بأي شركة. يرجى التواصل مع المسؤول.",
+            "tabLogin": "تسجيل الدخول",
+            "tabSignup": "إنشاء حساب",
+            "titleSub": "أدخل بيانات الاعتماد الخاصة بك أدناه للمتابعة",
+            "signupLink": "إنشاء حساب جديد",
+            "secureGateway": "بوابة آمنة",
+            "heroTitle": "مرحباً",
+            "heroTitleHighlight": "بعودتك.",
+            "badgeEncrypted": "تشفير تام بين الأطراف",
+            "badgeISO": "متوافق مع ISO 27001",
+            "badgeAI": "منصة مدعومة بالذكاء الاصطناعي",
+            "allRightsReserved": "جميع الحقوق محفوظة.",
+            "backToWebsite": "العودة إلى الموقع",
+            "termsOfUse": "شروط الاستخدام",
+            "privacyPolicy": "سياسة الخصوصية",
+            "encryptionEnabled": "تشفير تام بين الأطراف نشط"
+        },
+        "logout": {
+            "title": "جاري تسجيل الخروج...",
+            "message": "سيتم توجيهك إلى الصفحة الرئيسية.",
+            "clearingSession": "إغلاق جلستك بشكل آمن"
+        },
+        "guard": {
+            "checking": "جاري التحقق من الهوية..."
+        },
+        "forgotPassword": {
+            "title": "نسيت كلمة المرور?",
+            "subtitle": "أدخل بريدك الإلكتروني وسنرسل لك رابط إعادة تعيين آمناً.",
+            "heroSubtitle": "لا تقلق — يحدث هذا للجميع. سنساعدك في العودة بسرعة.",
+            "emailLabel": "عنوان البريد الإلكتروني",
+            "emailPlaceholder": "name@company.com",
+            "submit": "إرسال رابط إعادة التعيين",
+            "backToLogin": "العودة إلى تسجيل الدخول",
+            "rememberPassword": "تذكرت كلمة المرور?",
+            "signIn": "تسجيل الدخول",
+            "successTitle": "تحقق من بريدك!",
+            "successDesc": "لقد أرسلنا رابط إعادة تعيين كلمة المرور إلى",
+            "noEmail": "لم تستلمها?",
+            "tryAgain": "حاول مجدداً",
+            "errorEmail": "يرجى إدخال عنوان بريدك الإلكتروني",
+            "errorGeneral": "حدث خطأ. يرجى المحاولة مرة أخرى.",
+            "accountRecovery": "استرداد الحساب",
+            "forgot": "هل نسيت",
+            "password": "كلمة المرور؟",
+            "step1Title": "أدخل بريدك الإلكتروني",
+            "step1Desc": "سنقوم بالبحث عن حسابك.",
+            "step2Title": "تحقق من بريدك الوارد",
+            "step2Desc": "سيتم إرسال رابط إعادة تعيين آمن.",
+            "step3Title": "تعيين كلمة مرور جديدة",
+            "step3Desc": "تنتهي صلاحية الرابط خلال ساعة واحدة لدواعي الأمان.",
+            "allRightsReserved": "جميع الحقوق محفوظة.",
+            "termsOfUse": "شروط الاستخدام",
+            "privacyPolicy": "سياسة الخصوصية",
+            "linkExpires": "تنتهي صلاحية الرابط خلال ساعة واحدة",
+            "encryptionEnabled": "تشفير تام بين الأطراف نشط"
+        },
+        "resetPassword": {
+            "title": "تعيين كلمة مرور جديدة",
+            "subtitle": "يجب أن تحتوي كلمة المرور الجديدة على 8 أحرف على الأقل.",
+            "heroSubtitle": "أنشئ كلمة مرور قوية وفريدة لتأمين حسابك.",
+            "passwordLabel": "كلمة المرور الجديدة",
+            "confirmLabel": "تأكيد كلمة المرور الجديدة",
+            "showPassword": "إظهار كلمة المرور",
+            "hidePassword": "إخفاء كلمة المرور",
+            "submit": "تحديث كلمة المرور",
+            "backToLogin": "العودة إلى تسجيل الدخول",
+            "signIn": "تسجيل الدخول الآن",
+            "successTitle": "تم تحديث كلمة المرور!",
+            "successDesc": "تم تغيير كلمة مرورك بنجاح. يمكنك الآن تسجيل الدخول بكلمة المرور الجديدة.",
+            "invalidTitle": "الرابط منتهي الصلاحية أو غير صالح",
+            "invalidDesc": "انتهت صلاحية هذا الرابط أو تم استخدامه بالفعل. يرجى طلب رابط جديد.",
+            "requestNewLink": "طلب رابط جديد",
+            "strength": "قوة كلمة المرور",
+            "strengthWeak": "ضعيفة",
+            "strengthFair": "مقبولة",
+            "strengthGood": "جيدة",
+            "strengthStrong": "قوية",
+            "tipLength": "لا تقل عن 8 أحرف",
+            "tipUppercase": "حرف كبير واحد",
+            "tipNumber": "رقم واحد",
+            "tipSpecial": "حرف خاص واحد",
+            "errorFields": "يرجى ملء جميع الحقول",
+            "errorLength": "يجب أن تحتوي كلمة المرور على 10 أحرف على الأقل، منها حرف ورقم",
+            "errorMatch": "كلمتا المرور غير متطابقتين",
+            "errorGeneral": "حدث خطأ. يرجى المحاولة مرة أخرى.",
+            "secureReset": "إعادة تعيين آمنة",
+            "createYour": "إنشاء كلمة",
+            "newPassword": "مرورك الجديدة.",
+            "allRightsReserved": "جميع الحقوق محفوظة.",
+            "termsOfUse": "شروط الاستخدام",
+            "privacyPolicy": "سياسة الخصوصية",
+            "encryptionEnabled": "تشفير تام بين الأطراف نشط"
+        }
+    },
+    "Home": {
+        "hero": {
+            "badge": "الجيل القادم من ذكاء الاجتماعات الاصطناعي",
+            "title": "قرارات <br></br><highlight>متسارعة.</highlight>",
+            "subtitle": "منصة الحوكمة النهائية لمجالس الإدارة الحديثة. ملخصات ذكاء اصطناعي فورية، تصويت رقمي ملزم قانونياً، ومحاضر اجتماعات آلية عالية الدقة—كل ذلك في نظام آمن وموحد.",
+            "cta": "ابدأ اجتماعك الأول",
+            "watch": "شاهد الذكاء الاصطناعي في العمل",
+            "aiTag": "مساعد الذكاء الاصطناعي",
+            "aiStatus": "جاري إنشاء المحضر في الوقت الفعلي...",
+            "quorumTag": "حالة النصاب القانوني",
+            "quorumStatus": "تم الوصول إلى مشاركة بنسبة 98%"
+        },
+        "pillars": {
+            "item1": {
+                "title": "الذكاء المدعوم بالذكاء الاصطناعي",
+                "desc": "استفد من Gemini و Groq للحصول على محاضر فورية عالية الدقة."
+            },
+            "item2": {
+                "title": "أصوات ملزمة قانوناً",
+                "desc": "تصويت مؤمن تشفيرياً مع نتائج في الوقت الفعلي."
+            },
+            "item3": {
+                "title": "تعاون عالمي",
+                "desc": "ترجمة سلسة باللغات الإنجليزية والفرنسية والعربية."
+            }
+        },
+        "features": {
+            "tag": "المميزات",
+            "title": "تكنولوجيا <br></br><highlight>حوكمة متطورة.</highlight>",
+            "subtitle": "تسخير تقنيات Gemini و Groq للقضاء على الأعباء الإدارية.",
+            "imageAlt": "معاينة المنصة",
+            "userAlt": "مستخدم",
+            "item1": {
+                "title": "محاضر اجتماعات بالذكاء الاصطناعي",
+                "desc": "يقوم ذكاؤنا الاصطناعي بتحليل الجلسة بالكامل لإنشاء محاضر احترافية وملخصات تنفيذية عالية الدقة فوراً.",
+                "link": "تعرف على الذكاء الاصطناعي"
+            },
+            "item2": {
+                "title": "تصويت رقمي في الوقت الفعلي",
+                "desc": "تصويت آمن وموثق تشفيرياً مع حساب فوري للنصاب القانوني وعرض مباشر للنتائج."
+            },
+            "item3": {
+                "title": "تنقل عالمي",
+                "desc": "تطبيقات أصلية ووصول عبر الويب مع ترجمة فورية باللغات الإنجليزية والفرنسية والعربية للتعاون الدولي."
+            },
+            "item4": {
+                "title": "معدل مشاركة 98%",
+                "desc": "تذكيرات آلية وروابط انضمام بنقرة واحدة تضمن أقصى حضور للمشاركين."
+            }
+        },
+        "process": {
+            "tag": "آلية العمل",
+            "imageAlt": "توضيح العملية",
+            "step": "المرحلة",
+            "testimonial": "ملخصات Axia بالذكاء الاصطناعي دقيقة بشكل مذهل. لقد أزالت تماماً عبء تدوين الملاحظات اليدوي من اجتماعات مجلس إدارتنا.",
+            "testimonialAuthor": "سارة ج. بنسون",
+            "testimonialRole": "مديرة الحوكمة",
+            "title": "ذكاء. <br></br>أتمتة. دقة.",
+            "subtitle": "تحويل فوضى الاجتماعات التقليدية إلى سير عمل رقمي منظم.",
+            "step1": {
+                "title": "انضمام ذكي",
+                "desc": "زامن بيانات مؤسستك عبر واجهات برمجة تطبيقات آمنة أو استخدم الذكاء الاصطناعي لاستيراد قوائم المشاركين."
+            },
+            "step2": {
+                "title": "جلسات تفاعلية مباشرة",
+                "desc": "استضف جلسات هجينة عالية الدقة مع تصويت مباشر وطلب للكلمة واقتراحات لجدول الأعمال بالذكاء الاصطناعي."
+            },
+            "step3": {
+                "title": "حوكمة فورية",
+                "desc": "يقوم الذكاء الاصطناعي بتنقيح سجل الاجتماع تلقائياً، وإنشاء المحضر بصيغة Word/PDF، وتوزيعه على أصحاب المصلحة."
+            }
+        },
+        "pricing": {
+            "title": "أسعار بسيطة. <br></br>لا توجد رسوم مخفية.",
+            "subtitle": "اختر الخطة التي تناسب حجم مؤسستك.",
+            "comingSoon": "خطط الأسعار ستتوفر قريباً.",
+            "popular": "الأكثر شيوعاً",
+            "month": "/شهرياً",
+            "yearly": "يتم دفعها سنوياً",
+            "cta": "ابدأ التجربة المجانية"
+        },
+        "newsletter": {
+            "success": "تم الاشتراك بنجاح! شكراً لك.",
+            "error": "خطأ أثناء الاشتراك"
+        },
+        "faq": {
+            "title": "الأسئلة الشائعة",
+            "subtitle": "كل ما تحتاج لمعرفته حول Axia.",
+            "items": [
+                {
+                    "q": "هل اجتماعات Axia متوافقة قانونياً؟",
+                    "a": "نعم، تم بناء منصتنا لتلبية المعايير الأوروبية والدولية للحوكمة الرقمية، بما في ذلك التصويت المتوافق مع eIDAS والختم الزمني المشفر."
+                },
+                {
+                    "q": "هل يحتاج المشاركون إلى حساب؟",
+                    "a": "لا. يمكن للمشاركين الانضمام من خلال رابط آمن بنقرة واحدة يتم إرساله إلى بريدهم الإلكتروني. يحتاجون فقط إلى متصفح للمشاركة والتصويت."
+                },
+                {
+                    "q": "هل يمكننا استخدام هويتنا التجارية الخاصة؟",
+                    "a": "بالتأكيد. تسمح باقاتنا الاحترافية والمؤسسية بوضع العلامة التجارية الكاملة، بما في ذلك شعارك وألوانك وقوالب البريد الإلكتروني المخصصة."
+                },
+                {
+                    "q": "ماذا يحدث إذا فقد شخص ما الاتصال؟",
+                    "a": "تقوم Axia بمزامنة الحالات تلقائياً. بمجرد إعادة اتصال المشارك، يتم إعادته على الفور إلى نقطة جدول الأعمال الحالية وحالة التصويت."
+                }
+            ]
+        },
+        "cta": {
+            "title": "هل أنت مستعد <br></br><highlight>للمستقبل؟</highlight>",
+            "subtitle": "انضم إلى المؤسسات التي توفر بالفعل آلاف الساعات كل عام.",
+            "primary": "ابدأ مجاناً",
+            "secondary": "تحدث إلى خبير",
+            "rating": "تقييم 4.9/5",
+            "soc2": "SOC2 Type II",
+            "support": "دعم 24/7"
+        },
+        "stats": {
+            "meetings": "اجتماع تم استضافته",
+            "users": "مستخدم نشط",
+            "saved": "متوسط الوقت الموفر",
+            "rate": "معدل النجاح"
+        },
+        "labels": {
+            "liveVoting": "تصويت مباشر",
+            "quorum": "\"تم الوصول إلى نصاب 98%\"",
+            "realtimePv": "محضر فوري",
+            "generated": "تم إنشاء المحضر"
+        },
+        "legal": {
+            "termsTitle": "شروط الاستخدام",
+            "privacyTitle": "سياسة الخصوصية",
+            "noContent": "لا يوجد محتوى محدد بعد.",
+            "back": "رجوع",
+            "savePdf": "حفظ كـ PDF",
+            "printRecord": "طباعة السجل",
+            "officialDocument": "وثيقة رسمية",
+            "serviceAgreement": "اتفاقية الخدمة",
+            "lastUpdated": "آخر تحديث",
+            "usageRights": "حقوق الاستخدام والمسؤوليات",
+            "complianceOverview": "نظرة عامة على امتثال الوثيقة",
+            "noContentDesc": "لم يتم نشر شروط الاستخدام لهذه البيئة بعد.",
+            "noContentDescPrivacy": "لم يقم الفريق الإداري بنشر هذه الوثيقة بعد.",
+            "termsCompliance": "الامتثال للشروط",
+            "bindingAgreement": "اتفاقية ملزمة",
+            "secureProcessing": "معالجة آمنة",
+            "officialRecord": "سجل رسمي",
+            "copyright": "نظام إدارة Axia Meetings"
+        },
+        "references": {
+            "title": "مدعوم من القادة",
+            "subtitle": "مراجعنا الموثوقة"
+        }
+    },
+    "Dashboard": {
+        "overview": {
+            "title": "نظرة عامة",
+            "welcome": "مرحباً، {name}",
+            "stats": {
+                "totalMeetings": "إجمالي الاجتماعات",
+                "upcoming": "القادمة",
+                "completed": "المنتهية",
+                "attendance": "نسبة الحضور",
+                "apis": "الواجهات البرمجية",
+                "admins": "المسؤولين",
+                "createMeeting": "اجتماع جديد",
+                "live": "مباشر",
+                "cancelled": "ملغاة",
+                "aiWorkers": "عمال الذكاء الاصطناعي"
+            },
+            "charts": {
+                "apisByMethod": "نقاط الاتصال / الطريقة",
+                "volumeTitle": "تحليل الحجم",
+                "volumeSubtitle": "سرعة {item} بمرور الوقت",
+                "statusMix": "مزيج الحالات",
+                "statusMixSubtitle": "توزيع دورة الحياة",
+                "noStatusData": "لا توجد بيانات حالة",
+                "roleComposition": "تكوين الأدوار",
+                "roleCompositionSubtitle": "تقسيم نظام المستخدمين",
+                "systemActivity": "نشاط النظام",
+                "systemActivitySubtitle": "تدقيق كثافة السجلات"
+            },
+            "header": {
+                "badge": "لوحة قيادة المؤسسة",
+                "outlook": "توقعات الجدول الزمني"
+            },
+            "quickAccess": {
+                "title": "وصول سريع",
+                "subtitle": "اختصارات إدارية"
+            },
+            "calendar": {
+                "days": [
+                    "أحد",
+                    "إثنين",
+                    "ثلاثاء",
+                    "أربعاء",
+                    "خميس",
+                    "جمعة",
+                    "سبت"
+                ],
+                "months": [
+                    "جانفي",
+                    "فيفري",
+                    "مارس",
+                    "أفريل",
+                    "ماي",
+                    "جوان",
+                    "جويلية",
+                    "أوت",
+                    "سبتمبر",
+                    "أكتوبر",
+                    "نوفمبر",
+                    "ديسمبر"
+                ],
+                "upcomingSchedules": "الجداول القادمة",
+                "eventsHeader": "الفعاليات:",
+                "noEvents": "لا توجد فعاليات مجدولة لهذا الشهر",
+                "viewAllMeetings": "عرض جميع الاجتماعات"
+            },
+            "recentMeetings": "الاجتماعات الأخيرة",
+            "subject": "الموضوع",
+            "dateTime": "التاريخ والوقت",
+            "type": "النوع",
+            "status": "الحالة",
+            "action": "الإجراء",
+            "noMeetings": "لم يتم العثور على اجتماعات حديثة.",
+            "viewMeeting": "عرض التفاصيل",
+            "developer": {
+                "sectionTitle": "مقاييس وحدة تحكم المطور",
+                "sectionDesc": "تشخيصات النظام، ونشاط المؤسسات، والمهام الإدارية المعلقة",
+                "pendingSignups": "طلبات التسجيل المعلقة",
+                "pendingContacts": "رسائل لم يتم الرد عليها",
+                "aiKeys": "مفاتيح مزودي الذكاء الاصطناعي",
+                "aiUsage": "معدل نجاح طلبات الذكاء الاصطناعي",
+                "chatSessions": "جلسات المحادثة النشطة",
+                "topTenants": "المؤسسات الأكثر نشاطاً",
+                "approveRequests": "الموافقة على الطلبات",
+                "viewMessages": "عرض الرسائل",
+                "manageKeys": "إدارة المفاتيح",
+                "viewLogs": "عرض سجلات النظام",
+                "activeOf": "نشط {active} من أصل {total}",
+                "pendingOf": "معلق {pending} من أصل {total}",
+                "openOf": "مفتوح {open} من أصل {total}",
+                "successRate": "معدل نجاح {rate}%",
+                "usersCount": "مستخدم {count}",
+                "recentLogs": "سجلات النظام الأخيرة",
+                "logMessage": "الرسالة",
+                "logActor": "الفاعل",
+                "logTime": "الطابع الزمني",
+                "logCompany": "الشركة",
+                "recentSignups": "صندوق طلبات التسجيل المعلقة",
+                "recentContacts": "صندوق رسائل الدعم الفني",
+                "sender": "المرسل",
+                "companyName": "اسم الشركة",
+                "pack": "الباقة",
+                "aiFeatureUsage": "توزيع استخدام الذكاء الاصطناعي",
+                "aiFeatureTitle": "الميزة",
+                "aiFeatureCalls": "استدعاءات واجهة البرمجة (API Calls)",
+                "apiMethods": "طرق HTTP للواجهة البرمجية",
+                "apiMethodsSubtitle": "توزيع نقاط نهاية الواجهة البرمجية حسب طريقة HTTP",
+                "failedRate": "{rate}% معدل الخطأ",
+                "success": "ناجح",
+                "failed": "فاشل"
+            },
+            "periods": {
+                "day": "اليوم",
+                "days": "7 أيام",
+                "week": "أسبوعي",
+                "month": "30 يوم",
+                "3months": "3 أشهر",
+                "year": "سنوي",
+                "all": "كل الأوقات"
+            }
+        },
+        "sidebar": {
+            "overview": "نظرة عامة",
+            "meetings": "الاجتماعات",
+            "companies": "الشركات",
+            "users": "المستخدمون",
+            "logs": "السجلات",
+            "config": "الإعدادات",
+            "packs": "الباقات والأسعار",
+            "linkApp": "ربط التطبيق",
+            "companyApis": "واجهات برمجة التطبيقات",
+            "admins": "المسؤولون",
+            "references": "المراجع",
+            "newsletters": "النشرات الإخبارية",
+            "chatSessions": "جلسات الدردشة",
+            "aiTokens": "رموز الذكاء الاصطناعي",
+            "contactMessages": "رسائل التواصل",
+            "signupRequests": "طلبات التسجيل"
+        },
+        "configurations": {
+            "title": "إعدادات النظام",
+            "subtitle": "إدارة الإعدادات العامة للمنصة (SMTP، الهوية البصرية، الجوانب القانونية).",
+            "smtp": {
+                "title": "خادم البريد (SMTP)",
+                "description": "يستخدم لإرسال الدعوات ومحاضر الاجتماعات عبر البريد الإلكتروني.",
+                "email": "بريد الخادم",
+                "emailPlaceholder": "مثال: smtp@example.com",
+                "host": "مضيف SMTP",
+                "hostPlaceholder": "مثال: smtp.gmail.com",
+                "port": "المنفذ",
+                "fromEmail": "بريد الإرسال",
+                "fromName": "اسم العرض",
+                "ssl": "استخدام SSL/TLS"
+            },
+            "branding": {
+                "title": "الهوية البصرية",
+                "subtitle": "الشعارات والرموز المفضلة",
+                "logo": "اسم ملف الشعار",
+                "logoPlaceholder": "مثال: logo.svg",
+                "favicon": "اسم ملف الأيقونة",
+                "faviconPlaceholder": "مثال: favicon.ico"
+            },
+            "contact": {
+                "title": "تفاصيل الاتصال",
+                "subtitle": "معلومات الدعم العام",
+                "phone": "هاتف الدعم",
+                "email": "بريد الدعم",
+                "address": "العنوان الفعلي"
+            },
+            "social": {
+                "title": "شبكات التواصل الاجتماعي",
+                "subtitle": "روابط التواجد الرقمي",
+                "facebook": "رابط فيسبوك",
+                "facebookPlaceholder": "https://facebook.com/...",
+                "linkedin": "رابط لينكد إن",
+                "linkedinPlaceholder": "https://linkedin.com/...",
+                "tiktok": "رابط تيك توك",
+                "tiktokPlaceholder": "https://tiktok.com/..."
+            },
+            "legal": {
+                "title": "المستندات القانونية",
+                "description": "محتوى شروط الاستخدام وسياسة الخصوصية.",
+                "terms": "شروط الاستخدام",
+                "termsPlaceholder": "أدخل محتوى وثيقة شروط الاستخدام الرسمية...",
+                "privacy": "سياسة الخصوصية",
+                "privacyPlaceholder": "أدخل محتوى وثيقة سياسة الخصوصية الرسمية..."
+            },
+            "aiTokens": {
+                "title": "رموز الذكاء الاصطناعي",
+                "description": "إدارة مفاتيح API لـ Gemini و Groq و OpenRouter",
+                "longDescription": "إضافة وإدارة مفاتيح API لمزودي الذكاء الاصطناعي الخاص بك، ومراقبة الاستخدام اليومي لكل مفتاح، ومعرفة المفاتيح النشطة أو المستنفدة.",
+                "button": "إدارة رموز الذكاء الاصطناعي"
+            }
+        },
+        "admins": {
+            "title": "مديرو الحسابات",
+            "subtitle": "إدارة المديرين لكل شركة مسجلة.",
+            "subtitleCompany": "المديرون للشركة",
+            "add": "مدير جديد",
+            "single": "المدير",
+            "multiple": "مديرين",
+            "empty": "لم يتم العثور على مديرين",
+            "table": {
+                "extId": "المعرف الخارجي",
+                "token": "الربط",
+                "noEmail": "لا يوجد بريد"
+            },
+            "status": {
+                "linked": "متصل",
+                "notLinked": "غير متصل"
+            },
+            "form": {
+                "addTitle": "إضافة مدير",
+                "editTitle": "تعديل المدير",
+                "fullname": "الاسم الكامل",
+                "fullnamePlaceholder": "مثال: فلان الفلاني",
+                "email": "البريد الإلكتروني",
+                "emailPlaceholder": "مثال: user@example.com",
+                "username": "اسم المستخدم",
+                "usernamePlaceholder": "مثال: username",
+                "extId": "المعرف الخارجي",
+                "extIdPlaceholder": "مثال: 12345",
+                "passwordPlaceholder": "••••••••",
+                "passwordEdit": "مفتاح الأمان (اتركه فارغاً للمحافظة على الحالي)",
+                "passwordEditPlaceholder": "••••••••"
+            }
+        },
+        "apis": {
+            "title": "نقاط اتصال API",
+            "subtitle": "إدارة نقاط دخول API لتكامل البيانات.",
+            "subtitleCompany": "APIs للشركة",
+            "subtitleId": "APIs لمعرف الشركة",
+            "add": "نقطة اتصال جديدة",
+            "import": "استيراد Swagger",
+            "single": "نقطة الاتصال",
+            "multiple": "نقاط اتصال",
+            "empty": "لم يتم العثور على نقاط اتصال API",
+            "table": {
+                "method": "الأسلوب",
+                "endpoint": "نقطة النهاية",
+                "mappings": "المسارات",
+                "mappingsLabel": "مفاتيح تم تعيينها",
+                "formatTip": "تكوين تنسيق الاستجابة"
+            },
+            "form": {
+                "addTitle": "إضافة نقطة اتصال",
+                "editTitle": "تعديل نقطة الاتصال",
+                "templates": "قوالب سريعة",
+                "endpoint": "رابط نقطة الاتصال",
+                "endpointPlaceholder": "مثال: /api/users",
+                "method": "أسلوب HTTP",
+                "payload": "مثال على الحمولة (JSON)",
+                "payloadPlaceholder": "'{' \n  \"username\": \"johndoe\",\n  \"password\": \"secret_password\"\n '}'",
+                "response": "مثال على الرد (JSON)",
+                "responsePlaceholder": "'{' \n  \"status\": true,\n  \"data\": '{' \n    \"token\": \"abc...\",\n    \"user\": '{' \"id\": 1, \"name\": \"John\" '}' \n  '}' \n '}'"
+            },
+            "swagger": {
+                "title": "استيراد من Swagger/OpenAPI",
+                "description": "امسح توثيق Swagger لاستيراد نقاط الاتصال تلقائياً.",
+                "url": "رابط Swagger JSON",
+                "placeholder": "https://api.example.com/swagger.json",
+                "fetch": "فحص",
+                "found": "نقاط اتصال تم العثور عليها",
+                "toggle": "تحديد/إلغاء تحديد الكل",
+                "deselectAll": "إلغاء تحديد الكل",
+                "noSummary": "لا يوجد ملخص",
+                "importSelected": "استيراد نقاط الاتصال المحددة"
+            },
+            "format": {
+                "title": "تنسيق الاستجابة",
+                "description": "قم بتعيين المفاتيح من استجابة API الخارجية إلى مفاتيح Axia القياسية.",
+                "empty": "لم يتم تكوين أي مسارات.",
+                "theirKey": "المفتاح الخارجي (مثال: user_name)",
+                "axiaKey": "مفتاح Axia (مثال: fullname)",
+                "add": "إضافة مسار"
+            }
+        },
+        "companies": {
+            "title": "إدارة الشركات",
+            "subtitle": "إدارة المنظمات الشريكة وإعداداتها.",
+            "add": "شركة جديدة",
+            "single": "الشركة",
+            "multiple": "شركات",
+            "empty": "لا توجد شركات مسجلة.",
+            "table": {
+                "services": "الخدمات النشطة",
+                "noSchema": "لا يوجد مخطط"
+            },
+            "form": {
+                "addTitle": "إضافة شركة",
+                "editTitle": "تعديل الشركة",
+                "description": "المعلومات الأساسية للمنظمة.",
+                "name": "اسم الشركة",
+                "namePlaceholder": "مثال: Axia Meetings",
+                "logo": "رابط الشعار",
+                "logoPlaceholder": "مثال: https://...",
+                "url": "رابط الموقع / التطبيق",
+                "urlPlaceholder": "مثال: axia-meetings.com",
+                "schema": "مخطط قاعدة البيانات (إذا كان متعدد المستأجرين)",
+                "schemaPlaceholder": "مثال: company_schema",
+                "timeLimit": "حد وقت الاجتماع",
+                "userLimit": "حد عدد المستخدمين",
+                "userLimitPlaceholder": "مثال: 10"
+            },
+            "config": {
+                "title": "تكوين الخدمات",
+                "assignDescription": "ربط نقاط اتصال API بخدمات النظام لـ {name}.",
+                "noCompanySelected": "لم يتم اختيار شركة.",
+                "noApisWarning": "هذه الشركة ليس لديها نقاط اتصال API مكونة بعد.",
+                "addApisFirst": "أضف نقاط اتصال API أولاً",
+                "loginLabel": "خدمة المصادقة",
+                "loginDesc": "نقطة الاتصال المستخدمة للتحقق من الهوية.",
+                "loginTip": "يجب أن تقبل نقطة الاتصال هذه أسلوب POST وترجع رمزاً صالحاً.",
+                "usersLabel": "خدمة مزامنة المستخدمين",
+                "usersDesc": "نقطة اتصال لجلب قائمة المشاركين.",
+                "usersTip": "تستخدم لاستيراد الأعضاء أثناء إنشاء الاجتماع.",
+                "notifLabel": "خدمة التنبيهات",
+                "notifDesc": "تفعيل التنبيهات في الوقت الفعلي عبر API.",
+                "msgLabel": "خدمة البريد الإلكتروني",
+                "msgDesc": "نقطة اتصال لإرسال رسائل بريد إلكتروني مخصصة.",
+                "smsLabel": "خدمة الرسائل القصيرة SMS",
+                "smsDesc": "نقطة اتصال لإرسال الرموز عبر SMS.",
+                "noApis": "لم يتم تكوين أي APIs",
+                "assign": "تعيين APIs إلى",
+                "additionalServices": "خدمات إضافية"
+            },
+            "ai": {
+                "title": "الذكاء الاصطناعي",
+                "enabled": "تم تفعيل ميزات الذكاء الاصطناعي",
+                "disabled": "تم تعطيل ميزات الذكاء الاصطناعي",
+                "clickToEnable": "انقر لتفعيل الذكاء الاصطناعي",
+                "clickToDisable": "انقر لتعطيل الذكاء الاصطناعي",
+                "on": "مفعل",
+                "off": "معطل"
+            },
+            "new": "شركة جديدة",
+            "edit": "تعديل الشركة"
+        },
+        "users": {
+            "title": "إدارة المستخدمين",
+            "subtitle": "إدارة مستخدمي شركتك.",
+            "allCompanies": "جميع الشركات",
+            "import": "استيراد من التطبيق",
+            "add": "إضافة مستخدم",
+            "single": "المستخدم",
+            "multiple": "مستخدمين",
+            "empty": "لم يتم العثور على مستخدمين",
+            "table": {
+                "extId": "المعرف الخارجي",
+                "username": "اسم المستخدم"
+            },
+            "form": {
+                "addTitle": "إضافة مستخدم",
+                "editTitle": "تعديل المستخدم",
+                "fullname": "الاسم الكامل",
+                "fullnamePlaceholder": "مثال: فلان الفلاني",
+                "email": "البريد الإلكتروني",
+                "emailPlaceholder": "مثال: user@example.com",
+                "phone": "الهاتف",
+                "phonePlaceholder": "مثال: +216 12 345 678",
+                "extId": "المعرف الخارجي",
+                "extIdPlaceholder": "مثال: 12345",
+                "username": "اسم المستخدم",
+                "usernamePlaceholder": "مثال: username",
+                "password": "كلمة المرور",
+                "passwordPlaceholder": "••••••••",
+                "passwordEdit": "كلمة مرور جديدة (اتركها فارغة للإبقاء على الحالية)",
+                "passwordEditPlaceholder": "••••••••",
+                "role": "الدور",
+                "company": "الشركة"
+            },
+            "roles": {
+                "developer": "مطور",
+                "admin": "مدير",
+                "participant": "مشارك"
+            },
+            "importModal": {
+                "title": "استيراد المستخدمين من التطبيق",
+                "description": "سيقوم هذا بجلب المستخدمين من تطبيقك المرتبط واستيرادهم إلى Axia Meetings. سيتم تجنب التكرارات.",
+                "selectAdmin": "حساب المسؤول لمفتاح Import API",
+                "selectAdminPlaceholder": "اختر مسؤولاً...",
+                "success": "{count, plural, =0 {لم يتم استيراد مستخدمين} one {تم استيراد مستخدم واحد} other {تم استيراد # مستخدمين}}",
+                "errorNoCompany": "يرجى اختيار شركة قبل استيراد المستخدمين.",
+                "errorNoAdmin": "يرجى اختيار حساب مسؤول لاستخدامه في عملية الاستيراد."
+            },
+            "toast": {
+                "usernameRequired": "اسم المستخدم مطلوب",
+                "passwordRequired": "كلمة المرور مطلوبة",
+                "updated": "تم تحديث المستخدم",
+                "created": "تم إنشاء المستخدم",
+                "deleted": "تم حذف المستخدم",
+                "bulkDeleted": "تم حذف {count} مستخدمين",
+                "participantOnlyError": "يمكن للمسؤول حذف المشاركين فقط",
+                "fetchError": "خطأ في جلب المستخدمين",
+                "saveError": "خطأ في حفظ المستخدم",
+                "deleteError": "خطأ في حذف المستخدم",
+                "importFailed": "فشل الاستيراد",
+                "importError": "خطأ في استيراد المستخدمين"
+            }
+        },
+        "link": {
+            "title": "ربط الحساب",
+            "description": "اربط حسابك المحلي بهوية شركة خارجية.",
+            "dev": {
+                "selectCompany": "الشركة",
+                "companyDesc": "سياق المنظمة الإدارية",
+                "selectAdmin": "المسؤول المحلي",
+                "adminDesc": "تحديد المستخدم المسؤول المستهدف",
+                "selectionRequired": "يرجى اختيار شركة ومسؤول لعرض الحالة."
+            },
+            "info": {
+                "howTitle": "كيف يعمل هذا؟",
+                "howDesc": "يسمح الربط لـ Axia باستخدام بيانات اعتماد شركتك لمزامنة البيانات (المشاركين، المصادقة).",
+                "howTip": "لا يتم تخزين بيانات اعتمادك الخارجية كنص صريح أبداً؛ يتم استخدامها للحصول على رمز وصول آمن.",
+                "proTip": "نصيحة للمحترفين"
+            },
+            "status": {
+                "linked": "الحساب مرتبط",
+                "notLinked": "الربط مطلوب",
+                "active": "متصل كـ {username}",
+                "tokenPrefix": "رمز آمن",
+                "action": "يرجى تقديم بيانات اعتماد شركتك لتنشيط الخدمات."
+            },
+            "form": {
+                "title": "التعريف بالشركة",
+                "usernamePlaceholder": "اسم المستخدم الخارجي",
+                "passwordPlaceholder": "كلمة المرور الخارجية",
+                "link": "ربط الحساب الآن",
+                "authRequired": "المصادقة مطلوبة"
+            },
+            "manage": {
+                "title": "إدارة الربط",
+                "description": "حسابك متزامن حالياً. يمكنك إلغاء الربط في أي وقت.",
+                "unlink": "إلغاء ربط الحساب",
+                "proTip": "حافظ على ربط حسابك لضمان سلاسة المزامنة."
+            }
+        },
+        "logs": {
+            "title": "سجلات النشاط",
+            "subtitle": "عمليات تدقيق الأمن والتشغيل.",
+            "analyze": "تحليل الذكاء الاصطناعي",
+            "analyzing": "جاري التحليل...",
+            "report": "تقرير التحليل",
+            "risk": "مستوى المخاطر {level}",
+            "anomalies": "الحالات الشاذة",
+            "activities": "أهم الأنشطة",
+            "recommendations": "التوصيات",
+            "companyInsights": "نتائج الشركات",
+            "system": "النظام",
+            "detail": {
+                "payload": "الحمولة",
+                "response": "الاستجابة"
+            }
+        }
+    },
+    "Meetings": {
+        "aiSummary": {
+            "title": "ملخص الذكاء الاصطناعي"
+        },
+        "title": "إدارة الاجتماعات",
+        "subtitle": "خطط وتتبع جلسات عملك.",
+        "new": "اجتماع جديد",
+        "empty": "لم يتم العثور على اجتماعات",
+        "emptyDesc": "ابدأ بجدولة أول اجتماع إداري لك اليوم.",
+        "header": {
+            "viewGrid": "شبكة",
+            "viewList": "قائمة"
+        },
+        "reschedule": {
+            "title": "إعادة جدولة الاجتماع",
+            "subtitle": "اختر تاريخاً ووقتاً جديداً لهذه الجلسة.",
+            "description": "اختر تاريخاً ووقتاً جديداً لـ {subject}.",
+            "button": "إعادة جدولة"
+        },
+        "card": {
+            "at": "في",
+            "join": "انضمام",
+            "start": "بدء",
+            "details": "تفاصيل",
+            "participants": "{count, plural, =0 {لا يوجد مشاركين} one {مشارك واحد} other {# مشاركين}}",
+            "noDocuments": "لا توجد مستندات",
+            "invitedBy": "تمت الدعوة من قبل {name}",
+            "status": {
+                "SCHEDULED": "مجدول",
+                "STARTED": "بدأ",
+                "FINISHED": "منتهي",
+                "CANCELLED": "ملغى"
+            },
+            "time": "الوقت",
+            "attendees": "الحضور",
+            "location": "الموقع",
+            "virtual": "مؤتمر افتراضي",
+            "notSpecified": "غير محدد"
+        },
+        "toast": {
+            "loadError": "فشل تحميل الاجتماعات",
+            "deleteSuccess": "تم حذف الاجتماع",
+            "deleteError": "خطأ أثناء حذف الاجتماع",
+            "errorFields": "الموضوع والتاريخ والوقت مطلوبون",
+            "errorSubject": "يرجى إدخال موضوع الاجتماع أولاً",
+            "errorCompany": "يرجى اختيار شركة لهذا الاجتماع."
+        },
+        "participation": "المشاركة",
+        "form": {
+            "edit": "تعديل الاجتماع",
+            "editDesc": "تحديث معلومات الاجتماع الحالي.",
+            "create": "إنشاء اجتماع",
+            "createDesc": "املأ التفاصيل لتنظيم جلسة جديدة.",
+            "sections": {
+                "basic": "التكوين الأساسي",
+                "logistics": "اللوجستيات والجدولة",
+                "description": "وصف تفصيلي"
+            },
+            "durationLimit": "حد المدة",
+            "maxLimit": "الحد الأقصى",
+            "participantsDesc": "اختر أعضاء داخليين أو أضف بريداً إلكترونياً خارجياً",
+            "agendaDesc": "بنود جدول الأعمال ونقاط التصويت",
+            "documentsDesc": "مشاركة الملفات ذات الصلة",
+            "subject": "موضوع الاجتماع",
+            "subjectPlaceholder": "مثال: اجتماع مجلس الإدارة للربع الثالث",
+            "date": "تاريخ الاجتماع",
+            "time": "وقت البدء",
+            "location": "الموقع / الرابط",
+            "locationPlaceholderOnline": "رابط زووم، جوجل ميت، إلخ.",
+            "locationPlaceholderInPerson": "غرفة الاجتماعات، المكتب...",
+            "duration": "المدة المقدرة",
+            "durations": {
+                "oneHour": "ساعة واحدة",
+                "twoHours": "ساعتان",
+                "threeHours": "3 ساعات",
+                "fourHours": "4 ساعات",
+                "fiveHours": "5 ساعات"
+            },
+            "type": "نوع الاجتماع",
+            "mode": "الوضع",
+            "modes": {
+                "inPerson": "حضوري",
+                "online": "عبر الإنترنت",
+                "hybrid": "هجين"
+            },
+            "isonline": "اجتماع عبر الإنترنت",
+            "descriptionPlaceholder": "تفاصيل إضافية أو ملاحظات تحضيرية...",
+            "notifyLabel": "إرسال الإشعارات",
+            "notifyDescAdd": "إخطار المشاركين عبر البريد الإلكتروني عند الإنشاء.",
+            "notifyDescEdit": "إخطار الأعضاء بالتغييرات التي تم إجراؤها.",
+            "participants": "المشاركون",
+            "participantsTip": "افصل بين رسائل البريد الإلكتروني بفواصل لإضافة ضيوف خارجيين.",
+            "addParticipant": "إضافة مشارك",
+            "points": "جدول الأعمال",
+            "pointPlaceholder": "موضوع للمناقشة...",
+            "pointTypes": {
+                "simple": "معلومات",
+                "vote": "تصويت / قرار"
+            },
+            "addPoint": "إضافة نقطة",
+            "documents": "المستندات",
+            "addDocument": "إضافة مستند",
+            "requiredFields": "الموضوع والتاريخ والوقت مطلوبون.",
+            "updated": "تم تحديث الاجتماع.",
+            "created": "تم إنشاء الاجتماع.",
+            "selectCompany": "اختر الشركة"
+        },
+        "modals": {
+            "edit": {
+                "title": "تعديل الاجتماع",
+                "description": "تعديل تفاصيل الاجتماع والخدمات اللوجستية.",
+                "basicInfo": "المعلومات الأساسية",
+                "subject": "الموضوع",
+                "type": "نوع الاجتماع",
+                "logistics": "الخدمات اللوجستية",
+                "date": "التاريخ",
+                "time": "الوقت",
+                "mode": "الوضع",
+                "duration": "المدة",
+                "location": "الموقع",
+                "generateDescription": "وصف بواسطة AI",
+                "agendaItems": "عناصر جدول الأعمال",
+                "describeItem": "وصف عنصر جدول الأعمال..."
+            },
+            "reschedule": {
+                "title": "إعادة جدولة الاجتماع",
+                "newDate": "التاريخ الجديد",
+                "newTime": "الوقت الجديد"
+            },
+            "cancel": {
+                "title": "إلغاء الاجتماع",
+                "description": "هل أنت متأكد من رغبتك في إلغاء \"{subject}\"؟ سيتم إخطار جميع المشاركين."
+            },
+            "delete": {
+                "title": "حذف الاجتماع",
+                "description": "حذف \"{subject}\" نهائيًا؟ لا يمكن التراجع عن هذا الإجراء."
+            },
+            "polish": {
+                "title": "تأكيد تحسين AI",
+                "description": "هل ترغب في استبدال الوصف الحالي بهذه النسخة المحسنة بواسطة AI؟",
+                "confirm": "تطبيق التحسين"
+            }
+        },
+        "ai": {
+            "summary": "ملخص AI",
+            "pv": "محضر AI",
+            "polish": "وصف AI",
+            "suggest": "اقتراحات AI",
+            "timer": "AI يقوم بالتحليل...",
+            "confirmTitle": "اقتراح وصف AI",
+            "confirmDesc": "قام AI بإنشاء وصف جديد. هل ترغب في تطبيقه؟",
+            "change": "تغيير",
+            "subjectRequired": "الموضوع مطلوب لاقتراحات AI.",
+            "success": "تم إضافة {count} نقاط لجدول الأعمال!",
+            "assistant": "مساعد الذكاء الاصطناعي",
+            "analyzing": "جاري التحليل...",
+            "generating": "جاري التوليد...",
+            "pointsGenerated": "تم توليد {count} نقاط!",
+            "generationFailed": "فشل التوليد",
+            "generationError": "خطأ في التوليد"
+        },
+        "types": {
+            "ORDINAIRE": "عادية",
+            "EXTRAORDINAIRE": "استثنائية",
+            "COMPLEMENTAIRE": "تكميلية",
+            "DELEGUES": "مفوضين",
+            "ordinaire": "عادية",
+            "extraordinaire": "استثنائية",
+            "complementaire": "تكميلية",
+            "delegues": "مفوضين"
+        },
+        "modes": {
+            "IN_PERSON": "حضوري",
+            "ONLINE": "عبر الإنترنت فقط",
+            "HYBRID": "هجين"
+        },
+        "durations": {
+            "ONE_HOUR": "ساعة واحدة",
+            "TWO_HOURS": "ساعتان",
+            "THREE_HOURS": "3 ساعات",
+            "FOUR_HOURS": "4 ساعات",
+            "FIVE_HOURS": "5 ساعات"
+        },
+        "single": "اجتماع",
+        "multiple": "اجتماعات",
+        "status": {
+            "scheduled": "مجدول",
+            "started": "مباشر",
+            "finished": "منتهي",
+            "cancelled": "ملغى"
+        },
+        "live": {
+            "title": "مباشر"
+        },
+        "cancel": {
+            "title": "إلغاء الاجتماع",
+            "description": "إلغاء {subject}؟",
+            "button": "إلغاء"
+        }
+    },
+    "Newsletters": {
+        "title": "مشتركو النشرة الإخبارية",
+        "subtitle": "تم جمع {count} مشترك من الصفحة الرئيسية.",
+        "exportCsv": "تصدير CSV",
+        "csvFilename": "newsletters_export_ar.csv",
+        "table": {
+            "email": "البريد الإلكتروني",
+            "subscribedAt": "تاريخ الاشتراك",
+            "actions": "الإجراءات"
+        },
+        "searchPlaceholder": "البحث عن مشتركين...",
+        "emptyMessage": "لا يوجد مشتركون بعد",
+        "delete": {
+            "title": "إزالة مشترك",
+            "description": "إزالة \"{email}\" من قائمة النشرة الإخبارية؟",
+            "confirm": "إزالة"
+        },
+        "bulkDelete": {
+            "title": "إزالة {count} مشتركين",
+            "description": "إزالة {count} مشتركين نهائياً؟",
+            "confirm": "إزالة {count}"
+        },
+        "toast": {
+            "removed": "تمت إزالة المشترك",
+            "bulkRemoved": "تمت إزالة {count} مشتركين",
+            "fetchError": "خطأ في جلب النشرات الإخبارية",
+            "deleteError": "خطأ في الحذف"
+        }
+    },
+    "Packs": {
+        "title": "باقات الأسعار",
+        "subtitle": "إدارة خطط الاشتراك المعروضة على الصفحة الرئيسية.",
+        "currency": "د.ت",
+        "add": "إضافة باقة",
+        "searchPlaceholder": "البحث عن باقات...",
+        "empty": "لم يتم إنشاء باقات بعد",
+        "table": {
+            "pack": "الباقة",
+            "monthly": "شهري",
+            "yearly": "سنوي",
+            "features": "الميزات",
+            "featuresCount": "{count, plural, =0 {لا توجد ميزات} one {ميزة واحدة} other {# ميزات}}",
+            "more": "+{count} أخرى"
+        },
+        "form": {
+            "addTitle": "إضافة باقة",
+            "editTitle": "تعديل الباقة",
+            "description": "حدد اسم الباقة والأسعار وقائمة الميزات.",
+            "name": "اسم الباقة *",
+            "namePlaceholder": "مثال: احترافية",
+            "priceMonth": "السعر الشهري (د.ت) *",
+            "priceYear": "السعر السنوي (د.ت) *",
+            "features": "الميزات / الأسطر",
+            "addLine": "إضافة سطر",
+            "featurePlaceholder": "الميزة {index}"
+        },
+        "delete": {
+            "title": "حذف الباقة",
+            "description": "حذف \"{name}\"؟ ستفقد جميع الميزات.",
+            "bulkTitle": "حذف {count} باقات",
+            "bulkDescription": "حذف {count} باقات وجميع ميزاتها نهائياً؟"
+        },
+        "toast": {
+            "required": "الاسم والأسعار مطلوبة",
+            "updated": "تم تحديث الباقة",
+            "created": "تم إنشاء الباقة",
+            "deleted": "تم حذف الباقة",
+            "bulkDeleted": "تم حذف {count} باقات"
+        }
+    },
+    "References": {
+        "title": "المراجع / الشركاء",
+        "subtitle": "إدارة الشركاء الموثوقين المعروضين في الصفحة الرئيسية.",
+        "add": "إضافة مرجع",
+        "searchPlaceholder": "البحث عن مراجع...",
+        "empty": "لم يتم إضافة مراجع بعد",
+        "table": {
+            "reference": "المرجع",
+            "website": "الموقع الإلكتروني"
+        },
+        "form": {
+            "addTitle": "إضافة مرجع",
+            "editTitle": "تعديل المرجع",
+            "description": "يتم عرض شعارات الشركاء في قسم المراجع بالصفحة الرئيسية.",
+            "name": "اسم الشركة *",
+            "namePlaceholder": "مثال: شركة أكمي",
+            "logo": "رابط الشعار أو اسم الملف *",
+            "logoPlaceholder": "مثال: logo.png أو https://...",
+            "website": "رابط الموقع الإلكتروني *",
+            "websitePlaceholder": "مثال: https://acme.com"
+        },
+        "delete": {
+            "title": "حذف المرجع",
+            "description": "حذف \"{name}\"؟ لا يمكن التراجع عن هذا الإجراء.",
+            "bulkTitle": "حذف {count} مراجع",
+            "bulkDescription": "حذف {count} مراجع نهائياً؟"
+        },
+        "toast": {
+            "required": "جميع الحقول مطلوبة",
+            "updated": "تم تحديث المرجع",
+            "created": "تم إنشاء المرجع",
+            "deleted": "تم حذف المرجع",
+            "bulkDeleted": "تم حذف {count} مراجع"
+        }
+    },
+    "AiTokens": {
+        "title": "رموز الذكاء الاصطناعي",
+        "subtitle": "إدارة مفاتيح API باستعمال Groq←Gemini←OpenRouter",
+        "add": "إضافة رمز",
+        "refresh": "تحديث",
+        "stats": {
+            "activeKeys": "المفاتيح النشطة",
+            "todayCalls": "طلبات اليوم",
+            "successRate": "معدل النجاح",
+            "exhaustedToday": "المستنفدة اليوم"
+        },
+        "empty": {
+            "title": "لا توجد رموز ذكاء اصطناعي مهيأة",
+            "subtitle": "أضف مفتاح API الأول الخاص بك لتمكين ميزات الذكاء الاصطناعي"
+        },
+        "table": {
+            "provider": "المزود",
+            "name": "الاسم",
+            "providerName": "المزود / الاسم",
+            "apiKey": "مفتاح API",
+            "todayUsed": "المستخدم اليوم",
+            "remaining": "المتبقي",
+            "success": "النجاح",
+            "byFeature": "حسب الميزة",
+            "status": "الحالة",
+            "label": "الحالة",
+            "details": "التفاصيل",
+            "actions": "الإجراءات"
+        },
+        "provider": {
+            "label": "المزود",
+            "chatOrder": "محادثة #{order}",
+            "genOrder": "توليد #{order}",
+            "expired": "منتهي",
+            "noUsageToday": "لا يوجد استخدام اليوم",
+            "resetsAt": "إعادة التعيين منتصف الليل UTC",
+            "more": "+{count} أخرى"
+        },
+        "features": {
+            "chat": "الدردشة",
+            "chat-report": "تقرير الدردشة",
+            "ai-summary": "الملخص",
+            "ai-pv": "المحضر",
+            "polish-text": "تحسين",
+            "suggest-agenda": "جدول الأعمال",
+            "log-analyze": "السجلات",
+            "unknown": "أخرى"
+        },
+        "form": {
+            "addTitle": "إضافة رمز ذكاء اصطناعي",
+            "editTitle": "تعديل رمز الذكاء الاصطناعي",
+            "provider": "المزود *",
+            "nameLabel": "الاسم / التسمية",
+            "namePlaceholder": "مثال: مفتاح Gemini رقم 1",
+            "apiKey": "مفتاح API *",
+            "apiKeyPlaceholder": "الصق مفتاح API الخاص بك هنا",
+            "baseUrl": "الرابط الأساسي (اختياري)",
+            "baseUrlPlaceholder": "https://openrouter.ai/api/v1",
+            "dailyLimit": "الحد اليومي (طلب/يوم)",
+            "dailyLimitPlaceholder": "مثال: 200 لـ Gemini، 14400 لـ Groq",
+            "expiration": "تاريخ الانتهاء",
+            "activeLabel": "نشط — يستخدم بواسطة ميزات الذكاء الاصطناعي",
+            "activeDesc": "الرمز مفعل لجميع ميزات الذكاء الاصطناعي",
+            "inactiveDesc": "الرمز معطل حالياً",
+            "save": "حفظ",
+            "saving": "جاري الحفظ..."
+        },
+        "delete": {
+            "title": "حذف الرمز",
+            "description": "حذف \"{name}\"؟ لا يمكن التراجع عن هذا الإجراء.",
+            "confirm": "حذف"
+        },
+        "toast": {
+            "added": "تم إضافة الرمز",
+            "updated": "تم تحديث الرمز",
+            "deleted": "تم حذف الرمز",
+            "loadError": "فشل تحميل رموز الذكاء الاصطناعي",
+            "saveError": "خطأ في حفظ الرمز",
+            "deleteError": "خطأ في حذف الرمز",
+            "toggleError": "فشل التبديل",
+            "apiKeyRequired": "مفتاح API مطلوب"
+        }
+    },
+    "ChatSessions": {
+        "title": "جلسات الدردشة",
+        "subtitle": "{total} جلسة إجمالية · آخر تحديث {time}",
+        "live": "مباشر",
+        "paused": "متوقف مؤقتاً",
+        "refresh": "تحديث",
+        "generateReport": "إنشاء تقرير ذكاء اصطناعي",
+        "report": {
+            "title": "تقرير تحليل الذكاء الاصطناعي",
+            "close": "إغلاق",
+            "analyzing": "جاري تحليل {count} جلسة...",
+            "failed": "فشل إنشاء التقرير. حاول مرة أخرى.",
+            "stats": {
+                "sessions": "الجلسات",
+                "avgMessages": "متوسط الرسائل",
+                "satisfaction": "الرضا"
+            },
+            "satisfaction": {
+                "POOR": "ضعيف",
+                "FAIR": "مقبول",
+                "GOOD": "جيد",
+                "EXCELLENT": "ممتاز"
+            },
+            "severity": {
+                "LOW": "منخفض",
+                "MEDIUM": "متوسط",
+                "HIGH": "مرتفع"
+            },
+            "summary": "الملخص",
+            "topTopics": "أبرز المواضيع",
+            "issues": "مشكلات يجب حلها",
+            "improvements": "تحسينات موصى بها"
+        },
+        "session": {
+            "active": "● نشط",
+            "closed": "○ مغلق",
+            "noUserMessages": "لا توجد رسائل مستخدم بعد",
+            "noMessages": "لا توجد رسائل بعد",
+            "liveUpdates": "مباشر · تحديث كل 5 ثوانٍ · {time}",
+            "sessionClosed": "الجلسة مغلقة",
+            "msgCount": "{count} رسائل",
+            "user": "مستخدم",
+            "title": "تفاصيل المحادثة",
+            "deleted": "تم حذف جلسة الدردشة",
+            "bulkDeleted": "تم حذف {count} جلسات دردشة",
+            "deleteError": "خطأ أثناء حذف جلسة المحادثة",
+            "deleteBulkError": "خطأ أثناء حذف جلسات المحادثة"
+        },
+        "empty": {
+            "title": "لا توجد جلسات دردشة بعد",
+            "subtitle": "ستظهر الجلسات هنا في الوقت الفعلي أثناء دردشة المستخدمين"
+        },
+        "pagination": {
+            "pageInfo": "صفحة {page} من {total}",
+            "previous": "السابق",
+            "next": "التالي"
+        },
+        "roles": {
+            "PUBLIC": "عام",
+            "DEVELOPER": "مطور",
+            "ADMIN": "مسؤول",
+            "PARTICIPANT": "مشارك"
+        }
+    },
+    "JoinMeeting": {
+        "title": "دعوة للاجتماع",
+        "info": {
+            "date": "التاريخ",
+            "time": "الوقت",
+            "location": "الموقع",
+            "mode": "الوضع",
+            "modes": {
+                "ONLINE": "عبر الإنترنت",
+                "PRESENTIAL": "حضورياً",
+                "HYBRID": "هجين"
+            },
+            "invitedAs": "مدعو بصفتك:",
+            "locationOnline": "عبر الإنترنت"
+        },
+        "question": "هل ستحضر هذا الاجتماع؟",
+        "accept": "قبول",
+        "decline": "رفض",
+        "status": {
+            "accepted": {
+                "title": "لقد قبلت الدعوة!",
+                "message": "ستتلقى المزيد من التفاصيل مع اقتراب موعد الاجتماع.",
+                "joinLive": "الانضمام للاجتماع المباشر"
+            },
+            "declined": {
+                "title": "لقد رفضت الدعوة",
+                "message": "لقد قمت برفض دعوة هذا الاجتماع.",
+                "change": "تغيير ردي"
+            }
+        },
+        "toast": {
+            "invalidLink": "رابط دعوة غير صالح",
+            "invalidInvitation": "دعوة غير صالحة",
+            "errorLoading": "خطأ في تحميل البيانات",
+            "accepted": "تم قبول الدعوة بنجاح",
+            "declined": "تم رفض الدعوة بنجاح",
+            "errorResponding": "خطأ في إرسال الرد"
+        }
+    },
+    "LiveMeeting": {
+        "toasts": {
+            "requireAcceptance": "يجب قبول الدعوة أولاً",
+            "unauthorized": "دخول غير مصرح به",
+            "livekitUnavailable": "LiveKit غير مهيأ — الفيديو/الصوت غير متاحين.",
+            "voteEnded": "انتهى التصويت.",
+            "handRaised": "{name} رفع يده",
+            "wordGranted": "تم منح الكلمة",
+            "wordRefused": "تم رفض طلب الكلمة",
+            "wordEnded": "انتهت الكلمة",
+            "joinRequested": "{name} يريد الانضمام للاجتماع",
+            "joinAccepted": "تم السماح لك بدخول الاجتماع",
+            "joinRejected": "تم رفض طلب دخولك",
+            "meetingStarted": "بدأ الاجتماع رسمياً!",
+            "meetingStartedAdmin": "بدأ الاجتماع — تم إرسال رسائل التنبيه للمشاركين",
+            "notRegistered": "أنت غير مسجل كمشارك رسمي.",
+            "voteRecorded": "تم تسجيل التصويت",
+            "notAuthorizedWord": "غير مصرح لك بطلب الكلمة.",
+            "handRaisedSuccess": "تم إرسال طلب الكلمة",
+            "finishedSuccess": "انتهى الاجتماع. تم إنشاء محضر الاجتماع.",
+            "finishedError": "خطأ في إغلاق الاجتماع",
+            "docAdded": "تم إضافة مستند"
+        },
+        "loading": {
+            "preparing": "جاري تجهيز الغرفة..."
+        },
+        "status": {
+            "soon": {
+                "title": "سيبدأ قريباً",
+                "message": "لم يبدأ المضيف الجلسة بعد. يرجى البقاء في هذه الصفحة؛ سيتم إدخالك تلقائياً بمجرد بدء الاجتماع."
+            },
+            "waiting": {
+                "title": "غرفة الانتظار",
+                "message": "تم إرسال طلب دخولك إلى المنظمين. يرجى الانتظار حتى يتم التحقق من دخولك.",
+                "cancel": "إلغاء الطلب"
+            },
+            "finished": "منتهي"
+        },
+        "header": {
+            "live": "جلسة مباشرة",
+            "statusLive": "مباشر",
+            "endButton": "إنهاء الاجتماع",
+            "endConfirm": "هل أنت متأكد أنك تريد إنهاء هذا الاجتماع؟ سيتم إنشاء محضر الاجتماع تلقائياً."
+        },
+        "banner": {
+            "ready": "هل أنت جاهز للبدء؟",
+            "desc": "بدء الاجتماع سيقوم بتنبيه جميع المشاركين وفتح الغرفة للجميع.",
+            "start": "ابدأ الاجتماع الآن",
+            "starting": "جاري البدء..."
+        },
+        "video": {
+            "waiting": "في انتظار الاتصال بالبث...",
+            "waitingAdmin": "الاجتماع جاهز للبدء. استخدم الزر أدناه أو اللافتة أعلاه للبدء.",
+            "preparing": "جاري تحضير الاتصال الآمن...",
+            "livekitConnectivity": "اتصال LiveKit"
+        },
+        "tabs": {
+            "agenda": "جدول الأعمال",
+            "participants": "المشاركون",
+            "documents": "المستندات"
+        },
+        "agenda": {
+            "voteInProgress": "التصويت جارٍ",
+            "submittedToVote": "تم تقديمه للتصويت",
+            "launchVote": "بدء التصويت",
+            "voteTypes": {
+                "for": "موافق (نعم)",
+                "against": "معارض (لا)",
+                "neutral": "ممتنع"
+            },
+            "stopVote": "إيقاف التصويت"
+        },
+        "participants": {
+            "requests": "طلبات الدخول",
+            "handRaises": "طلبات الكلمة",
+            "all": "كل المشاركين"
+        },
+        "documents": {
+            "add": "إضافة مستند",
+            "shared": "المستندات المشتركة",
+            "empty": "لا توجد مستندات",
+            "open": "فتح",
+            "download": "تحميل",
+            "fileDocument": "ملف • وثيقة"
+        },
+        "actions": {
+            "requestWord": "طلب الكلمة",
+            "requestPending": "الطلب قيد الانتظار...",
+            "permissionGranted": "تم منح الإذن",
+            "stopIntervention": "إنهاء المداخلة"
+        },
+        "permissions": {
+            "muteNote": "يتم كتم صوت الميكروفون بشكل افتراضي. اطلب الإذن للتدخل وتفعيل الميكروفون بمجرد حصولك على الإذن."
+        },
+        "overlays": {
+            "ending": {
+                "title": "إغلاق الاجتماع",
+                "desc": "يرجى الانتظار بينما نقوم بإنهاء الجلسة وتسجيل البيانات..."
+            },
+            "voteResults": {
+                "title": "نتائج التصويت",
+                "autoClose": "إغلاق تلقائي..."
+            }
+        },
+        "modals": {
+            "endConfirm": {
+                "title": "تأكيد الإنهاء",
+                "desc": "سيؤدي هذا الإجراء إلى إنهاء الاجتماع لجميع المشاركين.",
+                "irreversible": "هذه العملية غير قابلة للتراجع."
+            },
+            "meetingOver": {
+                "title": "انتهى الاجتماع",
+                "desc": "أنهى المسؤول هذه الجلسة. شكراً لمشاركتكم.",
+                "backHome": "العودة إلى الرئيسية"
+            }
+        },
+        "connection": {
+            "reconnecting": "جارٍ إعادة الاتصال…",
+            "videoReconnecting": "جارٍ إعادة اتصال الفيديو…",
+            "duplicateTab": "انضممت إلى هذا الاجتماع من علامة تبويب أو جهاز آخر، لذلك تم إيقاف الفيديو هنا.",
+            "rejoinVideo": "إعادة الانضمام إلى الفيديو",
+            "voteNotSaved": "لم يتم حفظ تصويتك. يرجى التصويت مرة أخرى."
+        }
+    },
+    "PV": {
+        "toasts": {
+            "loadError": "تعذر تحميل بيانات المحضر",
+            "genericError": "حدث خطأ ما",
+            "exportSuccess": "تم تحميل المحضر بصيغة Word بنجاح!",
+            "exportError": "فشل تصدير Word",
+            "generationError": "خطأ أثناء إنشاء ملف Word"
+        },
+        "loading": {
+            "message": "جاري إنشاء محضر عالي الدقة..."
+        },
+        "controls": {
+            "back": "رجوع",
+            "format": "تنسيق A4 فاخر",
+            "exportWord": "تصدير Word (.docx)",
+            "exporting": "جاري الإنشاء...",
+            "print": "طباعة المحضر"
+        },
+        "header": {
+            "title": "محضر اجتماع",
+            "at": "في",
+            "country": "تونس",
+            "ago": "جمعية عامة عادية",
+            "age": "جمعية عامة استثنائية",
+            "ref": "مرجع"
+        },
+        "sections": {
+            "general": {
+                "title": "1. معلومات عامة",
+                "subject": "الموضوع",
+                "chairedBy": "برئاسة",
+                "mode": "الوضع",
+                "date": "التاريخ",
+                "time": "الوقت",
+                "duration": "المدة",
+                "location": "الموقع",
+                "locationDefault": "الإدارة العامة",
+                "platform": "المنصة",
+                "platformOnline": "عبر الإنترنت",
+                "platformPresential": "حضورياً"
+            },
+            "agenda": {
+                "title": "2. جدول الأعمال والأهداف",
+                "defaultDesc": "عرض نتائج الدورة، ومناقشة النقاط الاستراتيجية، واعتماد القرارات اللازمة، وتحديد الإجراءات المستقبلية."
+            },
+            "points": {
+                "title": "3. بنود جدول الأعمال والقرارات",
+                "table": {
+                    "number": "#",
+                    "point": "البند / القرار",
+                    "type": "النوع",
+                    "for": "موافق",
+                    "against": "معارض",
+                    "abstain": "ممتنع"
+                }
+            },
+            "stats": {
+                "title": "إحصائيات الحضور",
+                "total": "إجمالي المدعوين",
+                "present": "حاضر",
+                "absent": "غائب",
+                "location": "الموقع"
+            },
+            "signature": {
+                "title": "التوقيع والختم",
+                "stamp": "ختم الشركة"
+            }
+        },
+        "modals": {
+            "overwrite": {
+                "title": "تم اكتشاف محضر موجود",
+                "description": "تم بالفعل إنشاء مستند محضر لهذا الاجتماع. هل تريد استبداله بنسخة جديدة؟ سيتم حذف الملف القديم نهائيًا.",
+                "confirm": "استبدال وإعادة إنشاء",
+                "cancel": "الاحتفاظ بالموجود"
+            }
+        }
+    },
+    "VoteModal": {
+        "title": "تصويت تفاعلي",
+        "question": "يرجى الإدلاء بصوتك لبند جدول الأعمال الحالي.",
+        "options": {
+            "yes": "أوافق",
+            "no": "لا أوافق",
+            "neutral": "أمتنع"
+        },
+        "disclaimer": "تصويتك مؤمن بالتشفير وملزم قانونياً."
+    },
+    "Chat": {
+        "title": "دعم أكسيا",
+        "subtitle": "متصل",
+        "welcome": "👋 مرحبًا! أنا دعم أكسيا. كيف يمكنني مساعدتك اليوم؟",
+        "placeholder": "اكتب رسالتك...",
+        "error": "عذرًا، حدث خطأ ما. يرجى المحاولة مرة أخرى.",
+        "export": "تصدير المحادثة",
+        "poweredBy": "بدعم من أكسيا AI",
+        "privacyNotice": "محادثتك خاصة وآمنة ومشفرة. لن يتم مشاركة معلوماتك الشخصية."
+    },
+    "MeetingDetails": {
+        "back": "العودة للاجتماعات",
+        "status": {
+            "scheduled": "مجدول",
+            "started": "مباشر",
+            "finished": "منتهي",
+            "cancelled": "ملغى"
+        },
+        "durations": {
+            "ONE_HOUR": "ساعة واحدة",
+            "TWO_HOURS": "ساعتان",
+            "THREE_HOURS": "3 ساعات",
+            "FOUR_HOURS": "4 ساعات",
+            "FIVE_HOURS": "5 ساعات"
+        },
+        "modes": {
+            "IN_PERSON": "حضوري",
+            "ONLINE": "عبر الإنترنت",
+            "HYBRID": "هجين"
+        },
+        "actions": {
+            "reschedule": "إعادة جدولة",
+            "generatePv": "إنشاء محضر",
+            "wordExport": "تصدير Word",
+            "join": "انضمام للجلسة",
+            "start": "بدء الاجتماع"
+        },
+        "ai": {
+            "assistant": "مساعد AI",
+            "summary": "ملخص AI",
+            "pv": "محضر AI",
+            "description": "✨ وصف AI",
+            "analyzing": "جاري التحليل...",
+            "generating": "جاري الإنشاء...",
+            "pointsGenerated": "تم اقتراح {count} نقاط من قبل AI!",
+            "suggest": "اقتراح",
+            "polish": "وصف AI"
+        },
+        "info": {
+            "date": "تاريخ الاجتماع",
+            "timeAndDuration": "الوقت والمدة",
+            "mode": "وضع الاجتماع",
+            "location": "الموقع",
+            "description": "الوصف والأهداف"
+        },
+        "agenda": {
+            "title": "جدول الأعمال",
+            "points": "{count} نقاط",
+            "noPoints": "لا توجد عناصر في جدول الأعمال",
+            "submittedToVote": "مقدم للتصويت",
+            "votes": {
+                "for": "{count} مع",
+                "against": "{count} ضد",
+                "neutral": "{count} محايد"
+            }
+        },
+        "participants": {
+            "title": "المشاركون"
+        },
+        "documents": {
+            "title": "المستندات المرفقة",
+            "clickToView": "انقر للعرض",
+            "noDocuments": "لا توجد مستندات"
+        },
+        "aiSummary": {
+            "title": "ملخص AI",
+            "productive": "إنتاجي",
+            "critical": "حرج",
+            "decisions": "القرارات الرئيسية",
+            "actions": "الإجراءات المطلوبة",
+            "viewFull": "عرض الملخص الكامل",
+            "fullTitle": "✨ ملخص AI للاجتماع",
+            "voteResults": "🗳️ نتائج التصويت",
+            "attendance": "الحضور",
+            "summaryPlaceholder": "اكتب ملخص الاجتماع هنا...",
+            "noSummary": "لا يوجد ملخص بعد",
+            "writeSummary": "كتابة ملخص"
+        },
+        "modals": {
+            "edit": {
+                "title": "تعديل الاجتماع",
+                "description": "تحديث تفاصيل الاجتماع.",
+                "basicInfo": "المعلومات الأساسية",
+                "logistics": "التخطيط والموقع",
+                "subject": "الموضوع / هدف الاجتماع",
+                "type": "نوع الاجتماع",
+                "date": "التاريخ",
+                "time": "وقت البدء",
+                "mode": "الوضع",
+                "duration": "المدة",
+                "location": "الموقع / الرابط",
+                "generateDescription": "الوصف بواسطة AI",
+                "agendaItems": "عناصر جدول الأعمال",
+                "describeItem": "وصف العنصر...",
+                "addDocument": "إضافة مستند",
+                "errorRequired": "الموضوع والتاريخ والوقت مطلوبون",
+                "foundations": "أسس الاجتماع",
+                "subjectPlaceholder": "موضوع الاجتماع",
+                "securityContext": "سياق الأمن",
+                "adminAccess": "وصول إداري",
+                "timeVenue": "الوقت والمكان",
+                "locationPlaceholder": "العنوان الفعلي أو الافتراضي",
+                "contextualDescription": "الوصف السياقي"
+            },
+            "reschedule": {
+                "title": "إعادة جدولة الاجتماع",
+                "newDate": "التاريخ الجديد",
+                "newTime": "الوقت الجديد"
+            },
+            "cancel": {
+                "title": "إلغاء الاجتماع",
+                "description": "إلغاء \"{subject}\"؟ سيتم إخطار المشاركين."
+            },
+            "delete": {
+                "title": "حذف الاجتماع",
+                "description": "حذف \"{subject}\"؟ لا يمكن التراجع عن هذا الإجراء."
+            },
+            "polish": {
+                "title": "اقتراح وصف AI",
+                "description": "قام AI بإنشاء وصف جديد لاجتماعك. هل ترغب في تطبيقه؟",
+                "confirm": "تطبيق"
+            }
+        },
+        "aiSubtitle": "التحسين الإداري في الوقت الحقيقي"
+    },
+    "Contact": {
+        "badge": "تواصل معنا",
+        "title": "اتصل بنا",
+        "subtitle": "هل لديك سؤال أو تحتاج إلى مساعدة؟ يسعدنا سماع منك.",
+        "info": {
+            "title": "لنتحدث",
+            "desc": "تواصل معنا عبر النموذج وسيرد عليك فريقنا قريباً.",
+            "phone": "الهاتف",
+            "email": "البريد الإلكتروني",
+            "address": "العنوان",
+            "responseTime": "وقت الرد",
+            "responseValue": "خلال 24 ساعة",
+            "responseDesc": "نهدف إلى الرد على جميع الاستفسارات خلال يوم عمل واحد."
+        },
+        "form": {
+            "title": "إرسال رسالة",
+            "subtitle": "املأ النموذج وسنرد عليك.",
+            "name": "اسمك",
+            "namePlaceholder": "مثال: فلان الفلاني",
+            "email": "عنوان البريد",
+            "emailPlaceholder": "مثال: user@example.com",
+            "subject": "الموضوع",
+            "subjectPlaceholder": "مثال: سؤال حول الأسعار",
+            "message": "الرسالة",
+            "messagePlaceholder": "أخبرنا كيف يمكننا مساعدتك...",
+            "submit": "إرسال الرسالة"
+        },
+        "success": {
+            "title": "تم إرسال الرسالة!",
+            "desc": "شكراً على تواصلك. سنرد عليك خلال 24 ساعة.",
+            "another": "إرسال رسالة أخرى"
+        },
+        "toast": {
+            "required": "البريد والموضوع والرسالة مطلوبة",
+            "success": "تم إرسال الرسالة بنجاح!",
+            "error": "فشل الإرسال. يرجى المحاولة مرة أخرى."
+        }
+    },
+    "Signup": {
+        "badge": "إنشاء حساب",
+        "title": "اختر خطة مساحة العمل الخاصة بك",
+        "subtitle": "حدد الخطة المثالية لحجم مؤسستك",
+        "step1": "اختر خطة",
+        "step2": "معلوماتك",
+        "free": "مجاني",
+        "perMonth": "/شهرياً",
+        "perYear": "/سنوياً",
+        "noPacks": "لا توجد خطط متاحة",
+        "noPacksDesc": "يرجى التواصل معنا لمعلومات الأسعار.",
+        "skipPack": "تجاوز اختيار الخطة",
+        "selectPack": "اختيار الخطة",
+        "selectedPlan": "الخطة المختارة",
+        "changePlan": "تغيير الخطة",
+        "whatsIncluded": "ما تتضمنها",
+        "feature1": "وصول كامل إلى لوحة التحكم",
+        "feature2": "أدوات اجتماعات بالذكاء الاصطناعي",
+        "feature3": "دعم مولوية",
+        "workspace": "مساحة عمل أكسيا",
+        "startYour": "ابدأ",
+        "journey": "رحلتك.",
+        "heroSubtitle": "قم بتهيئة بيئة الاجتماعات المخصصة لتمكين فريقك اليوم.",
+        "milestone1Title": "اختر خطة مخصصة",
+        "milestone1Desc": "ابحث عن الباقة التي تناسب مؤسستك.",
+        "milestone2Title": "تسجيل شركتك",
+        "milestone2Desc": "تأمين نطاق فريد وملفات تعريف المستخدمين.",
+        "milestone3Title": "موافقة إدارية سريعة",
+        "milestone3Desc": "نقوم بتشغيل مساحة عمل الاجتماعات الخاصة بك على الفور.",
+        "allRightsReserved": "جميع الحقوق محفوظة.",
+        "backToWebsite": "العودة إلى الموقع",
+        "termsOfUse": "شروط الاستخدام",
+        "privacyPolicy": "سياسة الخصوصية",
+        "backToPlans": "العودة إلى الخطط",
+        "form": {
+            "title": "تفاصيل حسابك",
+            "subtitle": "أنشئ حساب المسؤول وملف الشركة.",
+            "personalInfo": "المعلومات الشخصية",
+            "companyInfo": "معلومات الشركة",
+            "fullname": "الاسم الكامل",
+            "fullnamePlaceholder": "مثال: فلان الفلاني",
+            "email": "عنوان البريد",
+            "emailPlaceholder": "مثال: user@example.com",
+            "password": "كلمة المرور",
+            "confirmPassword": "تأكيد كلمة المرور",
+            "companyName": "اسم الشركة",
+            "companyNamePlaceholder": "مثال: شركة أكمي",
+            "companyUrl": "رابط الموقع / التطبيق",
+            "companyUrlPlaceholder": "مثال: https://acme.com",
+            "submit": "إرسال الطلب",
+            "security": "بياناتك مؤمنة ومشفرة"
+        },
+        "success": {
+            "title": "تم تقديم الطلب!",
+            "desc": "طلب التسجيل قيد المراجعة. سيتم إخطارك بمجرد تفعيل حسابك.",
+            "note": "بانتظار موافقة المطور",
+            "login": "العودة إلى تسجيل الدخول"
+        },
+        "toast": {
+            "selectPack": "يرجى اختيار خطة أولاً",
+            "required": "يرجى ملء جميع الحقول المطلوبة",
+            "passwordMismatch": "كلمتا المرور غير متطابقتين",
+            "passwordLength": "يجب أن تحتوي كلمة المرور على 10 أحرف على الأقل، منها حرف ورقم",
+            "success": "تم تقديم طلب التسجيل بنجاح!",
+            "error": "فشل التقديم. يرجى المحاولة مرة أخرى."
+        }
+    },
+    "ContactMessages": {
+        "title": "رسائل التواصل",
+        "subtitle": "{total} رسائل — {replied} تمت الإجابة عليها",
+        "awaiting": "بانتظار",
+        "repliedLabel": "تمت الإجابة",
+        "replied": "تمت الإجابة",
+        "pending": "معلقة",
+        "searchPlaceholder": "بحث في الرسائل...",
+        "emptyMessage": "لم يتم العثور على رسائل تواصل.",
+        "table": {
+            "sender": "المرسل",
+            "subject": "الموضوع",
+            "date": "التاريخ",
+            "status": "الحالة",
+            "actions": "الإجراءات"
+        },
+        "detail": {
+            "subject": "الموضوع",
+            "message": "الرسالة",
+            "replied": "تم إرسال الرد",
+            "editReply": "تعديل الرد",
+            "writeReply": "كتابة رد",
+            "replyPlaceholder": "اكتب ردك هنا...",
+            "sendReply": "إرسال الرد"
+        },
+        "toast": {
+            "fetchError": "فشل تحميل الرسائل",
+            "replyRequired": "محتوى الرد لا يمكن أن يكون فارغاً",
+            "replySent": "تم حفظ الرد بنجاح!",
+            "replyError": "فشل إرسال الرد",
+            "deleted": "تم حذف الرسالة بنجاح",
+            "bulkDeleted": "تم حذف الرسائل المحددة بنجاح"
+        },
+        "delete": {
+            "title": "حذف الرسالة",
+            "description": "هل أنت متأكد من حذف هذه الرسالة؟ لا يمكن التراجع عن هذا الإجراء.",
+            "bulkTitle": "حذف رسائل متعددة",
+            "bulkDescription": "هل أنت متأكد من حذف {count} من الرسائل المحددة؟ لا يمكن التراجع عن هذا الإجراء."
+        }
+    },
+    "SignupRequests": {
+        "title": "طلبات التسجيل",
+        "subtitle": "{total} طلب تسجيل إجمالياً",
+        "searchPlaceholder": "بحث في الطلبات...",
+        "emptyMessage": "لم يتم العثور على طلبات تسجيل.",
+        "status": {
+            "pending": "معلقة",
+            "approved": "موافق عليه",
+            "rejected": "مرفوضة"
+        },
+        "stats": {
+            "pending": "معلقة",
+            "approved": "موافق عليها",
+            "rejected": "مرفوضة"
+        },
+        "table": {
+            "requester": "مقدم الطلب",
+            "company": "الشركة",
+            "pack": "الباقة",
+            "date": "التاريخ",
+            "status": "الحالة"
+        },
+        "detail": {
+            "email": "البريد",
+            "company": "اسم الشركة",
+            "url": "الموقع الإلكتروني",
+            "pack": "الباقة المختارة",
+            "submitted": "تاريخ التقديم",
+            "reviewed": "تاريخ المراجعة",
+            "provisionedId": "تم التجهيز",
+            "provisioned": "تم تجهيز الحساب",
+            "provisionedDesc": "تم إنشاء حساب الشركة وحساب المسؤول بنجاح.",
+            "rejectionReason": "سبب الرفض",
+            "rejectionReasonLabel": "سبب الرفض (اختياري)",
+            "rejectionPlaceholder": "اشرح لماذا يتم رفض هذا الطلب..."
+        },
+        "actions": {
+            "approve": "موافقة وتجهيز",
+            "reject": "رفض"
+        },
+        "modal": {
+            "approveTitle": "موافقة وتجهيز الحساب",
+            "approveDesc": "سينشئء هذا حساب شركة لـ {company} وحساب مسؤول لـ {name}. لا يمكن التراجع عن هذا الإجراء.",
+            "approveConfirm": "موافقة وإنشاء الحساب",
+            "rejectTitle": "رفض الطلب",
+            "rejectDesc": "هل أنت متأكد من رفض طلب تسجيل {name}؟",
+            "rejectConfirm": "رفض الطلب"
+        },
+        "toast": {
+            "fetchError": "فشل تحميل طلبات التسجيل",
+            "approved": "تمت الموافقة على الطلب وتجهيز الحساب!",
+            "rejected": "تم رفض الطلب.",
+            "actionError": "فشل معالجة الطلب",
+            "deleted": "تم حذف طلب التسجيل بنجاح",
+            "bulkDeleted": "تم حذف طلبات التسجيل المحددة بنجاح"
+        },
+        "delete": {
+            "title": "حذف الطلب",
+            "description": "هل أنت متأكد من حذف طلب التسجيل هذا؟ لا يمكن التراجع عن هذا الإجراء.",
+            "bulkTitle": "حذف طلبات متعددة",
+            "bulkDescription": "هل أنت متأكد من حذف {count} من طلبات التسجيل المحددة؟ لا يمكن التراجع عن هذا الإجراء."
+        }
+    },
+    "PvView": {
+        "badge": "محضر",
+        "pageTitle": "محضر الاجتماع",
+        "loading": "جارٍ تحميل المحضر...",
+        "viewer": "رابط شخصي لـ {email}",
+        "info": {
+            "date": "التاريخ",
+            "time": "الساعة",
+            "organization": "المؤسسة",
+            "location": "المكان"
+        },
+        "states": {
+            "invalidTitle": "رابط غير صالح أو منتهي الصلاحية",
+            "invalidMessage": "لم يعد هذا الرابط صالحًا. يرجى التواصل مع منظم الاجتماع للحصول على رابط جديد.",
+            "notFinishedTitle": "الاجتماع لم ينتهِ بعد",
+            "notFinishedMessage": "سيكون المحضر متاحًا فور انتهاء الاجتماع. يرجى العودة لاحقًا باستخدام الرابط نفسه.",
+            "noPvTitle": "المحضر غير متاح بعد",
+            "noPvMessage": "لم يُنشر أي محضر لهذا الاجتماع حتى الآن.",
+            "errorTitle": "خطأ في التحميل",
+            "errorMessage": "تعذّر تحميل المحضر. تحقق من اتصالك ثم أعد المحاولة.",
+            "retry": "إعادة المحاولة"
+        },
+        "sections": {
+            "minutes": "المحضر",
+            "attendance": "قائمة الحضور",
+            "votes": "جدول الأعمال ونتائج التصويت",
+            "documents": "تنزيل المحضر"
+        },
+        "attendance": {
+            "participant": "المشارك",
+            "status": "الحضور",
+            "present": "حاضر",
+            "absent": "غائب",
+            "summary": "{present} حاضر من أصل {total}"
+        },
+        "votes": {
+            "for": "موافق",
+            "against": "معارض",
+            "abstain": "ممتنع",
+            "total": "المصوّتون",
+            "adopted": "تمت المصادقة",
+            "rejected": "مرفوض",
+            "inconclusive": "غير حاسم",
+            "noVotes": "لا توجد أصوات مسجلة",
+            "info": "معلومة",
+            "vote": "تصويت"
+        },
+        "documents": {
+            "download": "تنزيل",
+            "open": "فتح",
+            "word": "مستند Word",
+            "html": "مستند HTML",
+            "file": "ملف"
+        },
+        "poweredBy": "مدعوم من منظومة Axia Agile",
+        "emails": {
+            "subject": "محضر: {subject}",
+            "title": "المحضر متاح",
+            "greeting": "مرحبًا،",
+            "intro": "محضر الاجتماع المذكور أدناه متاح الآن.",
+            "labelSubject": "الموضوع",
+            "labelDate": "التاريخ",
+            "labelTime": "الساعة",
+            "labelOrganization": "المؤسسة",
+            "button": "الاطلاع على المحضر",
+            "note": "هذا الرابط شخصي. يعمل بعد انتهاء الاجتماع وتنتهي صلاحيته بعد {days} يومًا.",
+            "fallback": "إذا لم يعمل الزر، انسخ هذا الرابط في متصفحك:"
+        }
+    }
+}

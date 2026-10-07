@@ -1,0 +1,159 @@
+.custom-livekit-theme {
+    height: 100% !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+.custom-livekit-theme .lk-video-conference {
+    background-color: transparent !important;
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+}
+.custom-livekit-theme .lk-video-conference-inner {
+    flex: 1 !important;
+    height: 100% !important;
+}
+.custom-livekit-theme .lk-participant-tile {
+    border-radius: 2.5rem !important;
+    border: 2px solid rgba(255,255,255,0.05) !important;
+    overflow: hidden !important;
+    background-color: rgba(15, 23, 42, 0.5) !important;
+    backdrop-filter: blur(10px) !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2) !important;
+}
+.custom-livekit-theme .lk-participant-placeholder {
+    border-radius: 2.5rem !important;
+}
+.custom-livekit-theme .lk-participant-tile .lk-participant-name {
+    background: rgba(0,0,0,0.5) !important;
+    backdrop-filter: blur(5px) !important;
+    border-radius: 1rem !important;
+    padding: 0.25rem 0.75rem !important;
+    font-size: 0.75rem !important;
+    font-weight: 700 !important;
+    bottom: 1rem !important;
+    left: 1rem !important;
+}
+/* Hide redundant labels and force compact icon-only layout */
+.custom-livekit-theme .lk-button-label,
+.custom-livekit-theme .lk-button span,
+.custom-livekit-theme [class*="lk-button-label"] {
+    display: none !important;
+}
+
+/* More specific way to hide text while keeping icons */
+.custom-livekit-theme .lk-button {
+    font-size: 0 !important;
+    line-height: 0 !important;
+    color: transparent !important;
+    border-radius: 1.25rem !important;
+    background-color: rgba(255,255,255,0.05) !important;
+    border: 1px solid rgba(255,255,255,0.1) !important;
+    width: 3.2rem !important;
+    height: 3.2rem !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+}
+
+.custom-livekit-theme .lk-button:hover {
+    background-color: #002B5B !important;
+    transform: translateY(-3px) !important;
+    border-color: rgba(255,255,255,0.3) !important;
+}
+
+.custom-livekit-theme .lk-button svg,
+.custom-livekit-theme .lk-button .lk-icon {
+    width: 1.4rem !important;
+    height: 1.4rem !important;
+    display: block !important;
+    color: white !important;
+    font-size: 1.4rem !important;
+}
+
+/* UNIVERSAL HIDE: Remove unwanted features for EVERYONE */
+.custom-livekit-theme .lk-device-menu,
+.custom-livekit-theme .lk-settings-toggle,
+.custom-livekit-theme .lk-media-device-select,
+.custom-livekit-theme .lk-disconnect-button,
+.custom-livekit-theme .lk-chat-toggle,
+.custom-livekit-theme .lk-start-audio-button,
+.custom-livekit-theme .lk-button-group-menu,
+.custom-livekit-theme .lk-track-toggle .lk-button:last-child {
+    display: none !important;
+}
+
+.custom-livekit-theme .lk-control-bar {
+    background-color: rgba(11, 17, 32, 0.95) !important;
+    backdrop-filter: blur(20px) !important;
+    border-radius: 2rem !important;
+    margin-bottom: 1.5rem !important;
+    border: 1px solid rgba(255,255,255,0.1) !important;
+    padding: 0.6rem 1.2rem !important;
+    width: fit-content !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8) !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 100 !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.6rem !important;
+    min-height: auto !important;
+    max-width: 90% !important;
+}
+
+.custom-livekit-theme .lk-button-group {
+    gap: 0.6rem !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    background: transparent !important;
+    border: none !important;
+}
+.custom-livekit-theme .lk-focus-layout {
+    padding: 1.5rem !important;
+}
+
+/* Ensure buttons don't have extra spacing from hidden children */
+.custom-livekit-theme .lk-track-toggle,
+.custom-livekit-theme .lk-button-group {
+    display: flex !important;
+    gap: 0 !important;
+}
+
+/* ROLE-BASED VISIBILITY */
+
+/* Participant: Completely hide control bar until approved */
+.role-participant:not(.hand-accepted) .lk-control-bar {
+    display: none !important;
+}
+
+/* Ensure only Mic, Cam, and Screen Share exist in the bar */
+/* Hide 3rd+ button groups if they exist */
+.custom-livekit-theme .lk-control-bar .lk-button-group:nth-child(n+3) {
+    display: none !important;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.05);
+    border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(255,255,255,0.1);
+}
